@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://i.postimg.cc/9fqYVvxh/logo.png" type="image/x-icon">
+    <title>Git Bootcamp</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/Git_icon.svg.png" type="image/x-icon">
 </head>
 
 <body>
     <main>
         <aside class="sidebar " data-sidebar>
             <div class="sidebar-info">
-                <figure class="avatar-box">
-                    <img src="https://i.postimg.cc/JzBWVhW4/my-avatar.png" alt="avatar" width="80">
+                <figure class="avatar-box" style="padding: 10px;">
+                    <img class="avara-img" src="./assets/img/Git_icon.svg.png">
                 </figure>
 
                 <div class="info-content">
-                    <h1 class="name" title="Richard Hanrick">Richard Hanrick</h1>
-                    <p class="title">Web Developer</p>
+                    <h1 class="name" title="Richard Hanrick">Git Bootcamp</h1>
+                    <p class="title">1404 - 1405</p>
                 </div>
 
                 <div class="my-body">
@@ -45,8 +45,8 @@
                     </div>
 
                     <button class="info-more-btn" data-sidebar-btn style="margin-top: 12px;">
-                        <svg id="info-more-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5"
-                            style="width: 20px; height:20px;">
+                        <svg id="info-more-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor" class="size-5" style="width: 20px; height:20px;">
                             <path fill-rule="evenodd"
                                 d="M10 3a.75.75 0 0 1 .75.75v10.638l3.96-4.158a.75.75 0 1 1 1.08 1.04l-5.25 5.5a.75.75 0 0 1-1.08 0l-5.25-5.5a.75.75 0 1 1 1.08-1.04l3.96 4.158V3.75A.75.75 0 0 1 10 3Z"
                                 clip-rule="evenodd" />
@@ -124,26 +124,34 @@
         <div class="main-content">
             <nav class="navbar">
                 <ul class="navbar-list">
-                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>sec1</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>sec2</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>sec3</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>sec4</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>sec5</button></li>
                 </ul>
             </nav>
 
-            <article class="about active" data-page="about">
+            <article class="about active" data-page="sec1">
                 <header>
-                    <h2 class="h2 article-title">About me</h2>
+                    <h2 class="h2 article-title">About This Bootcamp</h2>
                 </header>
 
                 <section class="about-text">
-                    <p>I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and
-                        print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
-                    <p>My job is to build your website so that it is functional and user-friendly but at the same time
-                        attractive. Moreover, I add personal touch to your product and make sure that is eye-catching
-                        and easy to use. My aim is to bring across your message and identity in the most creative way. I
-                        created web design for many famous brand companies.</p>
+                    <p>This intensive 2-hour bootcamp is designed to help students learn Git from the ground up.
+                        We will explore how Git works, why developers use it, and how it enables teamwork in real
+                        software projects.</p>
+                    <p>By the end of the session, you’ll understand the essential commands, workflows, and collaboration tools used in modern development teams.</p>
+                </section>
+
+                <header>
+                    <h2 class="h2 article-title">What Is Git?</h2>
+                </header>
+
+                <section class="about-text">
+                    <p>Git is a powerful version control system that helps developers track changes, collaborate efficiently, and manage code across different versions.</p>
+                    <p>It is the industry standard for teamwork in software engineering and the foundation of platforms like GitHub and GitLab.</p>
+                    <p>Whether you're building personal projects or joining a professional team, Git is an essential tool every developer must know.</p>
                 </section>
 
                 <section class="service">
@@ -338,7 +346,7 @@
 
             </article>
 
-            <article class="resume " data-page="resume">
+            <article class="resume " data-page="sec2">
                 <header>
                     <h2 class="h2 article-title">Resume</h2>
                 </header>
@@ -463,7 +471,7 @@
                 </section>
             </article>
 
-            <article class="portfolio " data-page="portfolio">
+            <article class="portfolio " data-page="sec3">
                 <header>
                     <h2 class="h2 article-title">Portfolio</h2>
                 </header>
@@ -635,7 +643,7 @@
                 </section>
             </article>
 
-            <article class="blog " data-page="blog">
+            <article class="blog " data-page="sec4">
                 <header>
                     <h2 class="h2 article-title">Blog</h2>
                 </header>
@@ -784,7 +792,7 @@
                 </section>
             </article>
 
-            <article class="contact " data-page="contact">
+            <article class="contact " data-page="sec5">
                 <header>
                     <h2 class="h2 article-title">Contact</h2>
                 </header>
@@ -821,7 +829,7 @@
         </div>
     </main>
 
-    <script src="main.js"></script>
+    <script src="./assets/js/main.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
