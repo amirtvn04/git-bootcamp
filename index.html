@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -10,829 +10,1195 @@
 </head>
 
 <body>
-    <main>
-        <aside class="sidebar " data-sidebar>
-            <div class="sidebar-info">
-                <figure class="avatar-box" style="padding: 10px;">
-                    <img class="avara-img" src="./assets/img/Git_icon.svg.png">
-                </figure>
+<main>
+    <aside class="sidebar " data-sidebar>
+        <div class="sidebar-info">
+            <figure class="avatar-box" style="padding: 10px;">
+                <img class="avara-img" src="./assets/img/Git_icon.svg.png">
+            </figure>
 
-                <div class="info-content">
-                    <h1 class="name" title="Richard Hanrick">Git Bootcamp</h1>
-                    <p class="title">1404 - 1405</p>
+            <div class="info-content">
+                <h1 class="name" title="Richard Hanrick">بوت کمپ گیت</h1>
+                <p class="title">1404 - 1405</p>
+            </div>
+
+            <div class="my-body">
+                <div id="theme-toggle" class="darkThemeBtn">
+                    <input id="darkmode-toggle" type="checkbox">
+                    <label for="darkmode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                             class="size-5 sun">
+                            <path
+                                    d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2ZM10 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15ZM10 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM15.657 5.404a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06ZM6.464 14.596a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06ZM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10ZM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10ZM14.596 15.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06ZM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06Z"/>
+                        </svg>
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                             class="size-5 moon">
+                            <path fill-rule="evenodd"
+                                  d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z"
+                                  clip-rule="evenodd"/>
+                        </svg>
+
+                    </label>
+                    <span class="fake-body"></span>
                 </div>
 
-                <div class="my-body">
-                    <div id="theme-toggle" class="darkThemeBtn">
-                        <input id="darkmode-toggle" type="checkbox">
-                        <label for="darkmode-toggle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                class="size-5 sun">
-                                <path
-                                    d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2ZM10 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15ZM10 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM15.657 5.404a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06ZM6.464 14.596a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06ZM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10ZM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10ZM14.596 15.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.06ZM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06Z" />
-                            </svg>
+                <button class="info-more-btn" data-sidebar-btn style="margin-top: 12px;">
+                    <svg id="info-more-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                         fill="currentColor" class="size-5" style="width: 20px; height:20px;">
+                        <path fill-rule="evenodd"
+                              d="M10 3a.75.75 0 0 1 .75.75v10.638l3.96-4.158a.75.75 0 1 1 1.08 1.04l-5.25 5.5a.75.75 0 0 1-1.08 0l-5.25-5.5a.75.75 0 1 1 1.08-1.04l3.96 4.158V3.75A.75.75 0 0 1 10 3Z"
+                              clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
 
+        <div class="sidebar-info-more">
+            <div class="separator"></div>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                class="size-5 moon">
-                                <path fill-rule="evenodd"
-                                    d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-
-                        </label>
-                        <span class="fake-body"></span>
+            <ul class="contacts-list">
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="mail-outline"></ion-icon>
                     </div>
 
-                    <button class="info-more-btn" data-sidebar-btn style="margin-top: 12px;">
-                        <svg id="info-more-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                            fill="currentColor" class="size-5" style="width: 20px; height:20px;">
-                            <path fill-rule="evenodd"
-                                d="M10 3a.75.75 0 0 1 .75.75v10.638l3.96-4.158a.75.75 0 1 1 1.08 1.04l-5.25 5.5a.75.75 0 0 1-1.08 0l-5.25-5.5a.75.75 0 1 1 1.08-1.04l3.96 4.158V3.75A.75.75 0 0 1 10 3Z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
+                    <div class="contact-info">
+                        <p class="contact-title">Email</p>
+
+                        <a href="mailto:richard@example.com" class="contact-link">richardexample.com</a>
+                    </div>
+                </li>
+
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Phone</p>
+
+                        <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+                    </div>
+                </li>
+
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Birthday</p>
+
+                        <time datetime="1982-06-23">June 23, 1982</time>
+                    </div>
+                </li>
+
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Location</p>
+
+                        <address>Sacramento, California, USA</address>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="separator"></div>
+
+            <ul class="social-list">
+                <li class="social-item"><a href="#" class="social-link">
+                    <ion-icon
+                            name="logo-facebook"></ion-icon>
+                </a></li>
+                <li class="social-item"><a href="#" class="social-link">
+                    <ion-icon
+                            name="logo-twitter"></ion-icon>
+                </a></li>
+                <li class="social-item"><a href="#" class="social-link">
+                    <ion-icon
+                            name="logo-instagram"></ion-icon>
+                </a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="main-content">
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item">
+                    <button class="navbar-link active" data-nav-link>sec1</button>
+                </li>
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>sec2</button>
+                </li>
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>sec3</button>
+                </li>
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>sec4</button>
+                </li>
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>sec5</button>
+                </li>
+            </ul>
+        </nav>
+
+        <article class="about active" data-page="sec1">
+            <header>
+                <h2 class="h2 article-title">۰.۱ - مقدمات گیت و کنترل نسخه</h2>
+            </header>
+
+            <section class="about-text">
+                <p>در مسیر توسعه‌ی نرم‌افزار، تغییرات پیوسته و همیشگی هستند. برنامه‌نویسان هر روز کد می‌نویسند، اصلاح
+                    می‌کنند، ویژگی‌های جدید اضافه می‌کنند و گاهی لازم است تغییرات انجام‌شده را بررسی کنند یا به نسخه‌ی
+                    قبلی بازگردند. در پروژه‌های تیمی این موضوع حساس‌تر می‌شود؛ زیرا چندین توسعه‌دهنده ممکن است همزمان
+                    روی بخش‌های مختلف پروژه کار کنند و طبیعی است که گاهی تغییرات با یکدیگر تداخل داشته باشند. تصور کنید
+                    یکی از اعضای تیم بخشی از کد را تغییر داده و فرد دیگری همان قسمت را با نسخه‌ی متفاوت ویرایش کرده
+                    باشد. اگر مکانیزمی برای مدیریت این تغییرات وجود نداشته باشد، پروژه می‌تواند به سرعت دچار آشفتگی شود.
+                    <br>
+                    اینجاست که مفهوم Version Control یا سیستم کنترل نسخه ظاهر می‌شود. Version Control ابزاری است که
+                    تغییرات فایل‌ها را در گذر زمان ثبت و ذخیره می‌کند. این سیستم به توسعه‌دهندگان اجازه می‌دهد نسخه‌های
+                    مختلف پروژه را مشاهده کنند، تغییرات را با جزئیات بررسی نمایند، به نسخه‌های قدیمی‌تر بازگردند و مسیر
+                    تکامل پروژه را دقیقاً دنبال کنند. در حقیقت Version Control از پروژه مثل یک «خط زمانی مستند» نگهداری
+                    می‌کند تا هیچ تغییری بدون تاریخچه و توضیح باقی نماند.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">کنترل نسخه دقیقاً چه کاربردهایی دارد؟</h2>
+            </header>
+
+            <section class="about-text">
+                <p>در ساده‌ترین حالت، کنترل نسخه مجموعه‌ای از امکانات را فراهم می‌کند که در توسعه‌ی واقعی بسیار حیاتی
+                    هستند:
+                </p>
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>- امکان بازگرداندن پروژه به نسخه‌های قبل در صورت اشتباه یا خراب شدن کد</li>
+                    <li>- بررسی تغییرات انجام شده و فهم اینکه دقیقاً چه چیزی تغییر کرده است</li>
+                    <li>- ذخیره‌ی تاریخچه‌ی رشد پروژه و تصمیمات توسعه‌</li>
+                    <li>- همکاری همزمان چند برنامه‌نویس روی یک پروژه بدون تداخل و آشفتگی</li>
+                    <li>- داشتن نسخه‌های متعدد بدون کپی‌کاری دستی فایل‌ها</li>
+                </ul>
+                </p>
+                <p>
+                    برای درک اهمیت آن کافیست شرایطی را تصور کنیم که فردی بخشی از پروژه را تغییر داده اما بعد مشخص شده که
+                    این تغییر اشتباه بوده است. بدون Version Control برگشت به حالت قبل دردسر زیادی دارد و گاهی تقریباً
+                    ناممکن است. اما با سیستم کنترل نسخه، تنها با یک فرمان می‌توان پروژه را به هر نقطه از گذشته
+                    بازگرداند.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">روش‌های رایج قبل از سیستم‌های حرفه‌ای کنترل نسخه</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    قبل از وجود ابزارهای مدرن، بسیاری از افراد از راهکارهای ابتدایی برای ذخیره و نگهداری نسخه‌ها استفاده
+                    می‌کردند؛
+                    مانند ایجاد چند پوشه با نام‌های مختلف:
+                </p>
+                <div class="code-example" dir="ltr">
+                    project-v1<br>
+                    project-v2-final<br>
+                    project-v2-final-fixed<br>
+                    project-final-original-last-this-is-the-final
                 </div>
-            </div>
+                <p>
+                    این روش ساده به نظر می‌رسد اما به شدت خطاپذیر و غیرقابل اعتماد است. نام‌گذاری‌ها به مرور پیچیده
+                    می‌شوند، پیدا کردن نسخه صحیح سخت می‌شود و کوچک‌ترین بی‌دقتی می‌تواند منجر به از دست رفتن اطلاعات یا
+                    جایگزینی اشتباه فایل‌ها شود.
+                    <br><br>
+                    پس از این دوره، ابزارهایی به نام Local Version Control معرفی شدند که تاریخچه نسخه‌ها را روی همان
+                    سیستم ذخیره می‌کردند. این ابزارها نسبت به روش دستی بسیار بهتر بودند اما همچنان یک مشکل اساسی داشتند:
+                    اگر سیستم خراب می‌شد، تمام تاریخچه از بین می‌رفت. همچنین همکاری تیمی همچنان دشوار بود.
+                    <br><br>
+                    بعد از آن Centralized Version Control Systems (CVCS) معرفی شدند. در این روش، یک سرور مرکزی وجود داشت
+                    که تمام نسخه‌های پروژه در آن ذخیره می‌شد و برنامه‌نویسان فایل‌ها را از آن دریافت کرده و سپس تغییرات
+                    جدید را به سرور ارسال می‌کردند. این روش نظم بیشتری ایجاد کرد و امکان همکاری چند نفره را فراهم ساخت
+                    اما یک ضعف بزرگ داشت: اگر سرور مرکزی دچار مشکل می‌شد یا از دسترس خارج می‌گردید، پروژه عملاً متوقف
+                    می‌شد و حتی احتمال از دست رفتن اطلاعات نیز وجود داشت.
+                </p>
+            </section>
 
-            <div class="sidebar-info-more">
-                <div class="separator"></div>
+            <header>
+                <h2 class="h2 article-title">Git و Distributed Version Control — راه‌حل مدرن دنیا
+                </h2>
+            </header>
 
-                <ul class="contacts-list">
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
-
-                            <a href="mailto:richard@example.com" class="contact-link">richardexample.com</a>
-                        </div>
+            <section class="about-text">
+                <p>
+                    برای حل این مشکلات، سیستم‌های کنترل نسخه‌ی توزیع‌شده (DVCS) معرفی شدند و Git محبوب‌ترین آن‌هاست.
+                    تفاوت اصلی DVCS با سیستم‌های قبلی در این است که این بار تنها یک سرور مرکزی وجود ندارد؛ بلکه هر
+                    توسعه‌دهنده هنگام Clone کردن پروژه، یک نسخه کامل از تمام تاریخچه پروژه را دریافت می‌کند. این یعنی هر
+                    نسخه‌ی محلی (Local Repository) خود یک نسخه‌ی کامل و مستقل از پروژه است.
+                </p>
+                <p>مزیت بزرگ این معماری:</p>
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>
+                        - عدم وجود نقطه شکست واحد
+                        اگر سرور خراب شود یا اینترنت قطع باشد، پروژه همچنان روی سیستم توسعه‌دهنده موجود است.
                     </li>
-
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Phone</p>
-
-                            <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-                        </div>
+                    <li>
+                        - کارکرد کاملاً آفلاین
+                        برنامه‌نویس حتی بدون اینترنت می‌تواند Commit‌ بزند، Branch بسازد و تاریخچه را مشاهده کند.
                     </li>
-
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="calendar-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Birthday</p>
-
-                            <time datetime="1982-06-23">June 23, 1982</time>
-                        </div>
+                    <li>
+                        - سرعت بالا و مدیریت بهینه‌ی فایل‌ها
                     </li>
+                    <li>
+                        - مناسب برای پروژه‌های کوچک تا بسیار بزرگ
+                        از پروژه‌های دانشجویی تا توسعه‌ی هسته لینوکس!
+                    </li>
+                    <li>
+                        - امکان ساخت Branch برای توسعه‌ی ویژگی‌های جدید بدون تاثیر روی کد اصلی
+                    </li>
+                    <li>
+                        - توانایی Merge کردن و مدیریت Conflict به صورت حرفه‌ای
+                    </li>
+                </ul>
+                </p>
+                به همین دلیل Git به استاندارد اصلی صنعت تبدیل شده است. تقریباً تمام شرکت‌‌ها، تیم‌های توسعه و حتی
+                پروژه‌های آزاد به Git وابسته‌اند و اگر قصد فعالیت حرفه‌ای در دنیای نرم‌افزار دارید، یادگیری Git نه
+                یک مزیت، بلکه یک الزام است.
 
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
+            </section>
 
-                        <div class="contact-info">
-                            <p class="contact-title">Location</p>
+            <header>
+                <h2 class="h2 article-title">جمع‌بندی فصل</h2>
+            </header>
 
-                            <address>Sacramento, California, USA</address>
+            <section class="about-text">
+                <p>
+                    Version Control سیستمی برای ثبت و کنترل تغییرات پروژه است و به شما امکان می‌دهد کدهای خود را با اطمینان
+                    مدیریت کنید، تغییرات را پیگیری کنید، به عقب بازگردید و به‌صورت گروهی کار کنید بدون آنکه پروژه بی‌نظم شود.
+                    Git قدرتمندترین ابزار در این حوزه است که با ساختار توزیع‌شده خود سرعت، امنیت و انعطاف بسیار بالایی دارد.
+                </p>
+                <p>
+                    در ادامه‌ی این جزوه وارد دنیای عملی Git خواهیم شد، آن را روی سیستم نصب خواهیم کرد، اولین مخزن (Repository)
+                    خود را می‌سازیم، Commit و Branch ایجاد می‌کنیم و گام‌به‌گام تا سطح استفاده در یک شرکت پیش می‌رویم.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">۰.۲ - Git چیست؟</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    وقتی شروع به یادگیری Git می‌کنید، لازم است ذهن خود را از آنچه ممکن است دربارهٔ سیستم‌های کنترل نسخه
+                    (مثل CVS یا Subversion) شنیده باشید، پاک کنید. چرا که Git بر پایهٔ منطق متفاوتی طراحی شده است و اگر آن
+                    را مانند سیستم‌های قدیمی فرض کنید، ممکن است دچار سردرگمی شوید.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">Git با «اسنپ‌شات» کار می‌کند، نه با «لیست تغییرات»</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    بیشتر سیستم‌های کنترل نسخه سنتی، تغییرات را به‌صورت فهرستی از دلتاها (تغییرات بین نسخه‌ها) ثبت می‌کنند.
+                    یعنی ذخیره‌سازی به‌صورت «فایل در نسخه قبلی» + «تغییرات نسبت به آن» است.
+                </p>
+                <p>
+                    اما Git متفاوت است: هر بار که شما commit می‌کنید، Git در واقع یک «عکس فوری (snapshot)» از کل محتوای پروژه
+                    در آن لحظه می‌گیرد و ذخیره می‌کند. اگر فایلی تغییر نکرده باشد، Git دوباره آن را ذخیره نمی‌کند — فقط لینک
+                    به همان نسخه قبلی نگه می‌دارد.
+                </p>
+                <p>
+                    این یعنی Git پروژه را مانند یک فایل‌سیستم بسیار سبک اما با امکانات کامل version control در نظر می‌گیرد؛
+                    نه صرفاً مجموعه‌ای از تغییرات.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">بیشتر عملیات Git به‌صورت محلی انجام می‌شود</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    یکی از ویژگی‌های مهم Git این است که تقریباً تمام عملیات (مثل commit، مشاهده تاریخچه، بازگرداندن، branch و merge)
+                    روی کامپیوتر شخصی (local) انجام می‌شود. نیازی نیست برای هر تغییر به سرور مرکزی متصل باشید.
+                </p>
+                <p>این مزیت باعث می‌شود:</p>
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>- کارها با سرعت خیلی بالا انجام شوند</li>
+                    <li>
+                        - حتی در حالت آفلاین (بدون دسترسی به اینترنت) بتوانید کد بنویسید، commit بزنید و تاریخچه را مدیریت کنید.
+                    </li>
+                    <li>
+                        - در صورت وجود سرور مرکزی هم — اگر سرور از کار بیفتد یا اینترنت قطع شود — هیچ نگرانی بابت از دست رفتن
+                        تاریخچه ندارید؛ چون تمام تاریخچه به‌صورت محلی محفوظ است.
+                    </li>
+                </ul>
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">Git ایمن و با «تمامیت داده» (Integrity) بالا است</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    Git طوری طراحی شده که محتویات فایل‌ها و پروژه را با هش (hash) ذخیره کند — یعنی محتوای واقعی فایل مهم است،
+                    نه فقط نام آن. اگر محتوای فایل تغییر کند، هش آن متفاوت می‌شود. این ویژگی کمک می‌کند تا تغییرات به‌صورت دقیق
+                    ردیابی شوند، و اگر فایلی خراب یا تغییر غیرمجاز داده شود، Git آن را تشخیص می‌دهد.
+                </p>
+                <p>
+                    همچنین، Git تقریباً همه داده‌ها را «می‌افزاید» (append-only)؛ یعنی تاریخچه قابل بازیابی است و تغییرهایی که
+                    ثبت شدند، به‌راحتی قابل پاک شدن یا از بین رفتن نیستند — مگر عمداً چنین کاری کنید.
+                </p>
+                <p>
+                    به همین دلیل Git برای پروژه‌هایی که امنیت تاریخچه، قابلیت بازگشت، و شفافیت مهم است — بسیار مناسب است.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">سه حالت اصلی در Git (Working Directory, Staging Area, Repository)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>در Git، فایل‌ها می‌توانند در یکی از سه حالت باشند:</p>
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>
+                        <strong>Modified (تغییر داده شده)</strong>: فایل را ویرایش کرده‌اید، اما هنوز آن را برای commit آماده نکرده‌اید.
+                    </li>
+                    <li>
+                        <strong>Staged</strong>: تغییرات فایل انتخاب شده‌اند تا در commit بعدی ثبت شوند (در اصطلاح، به منطقه staging اضافه شدند).
+                    </li>
+                    <li>
+                        <strong>Committed</strong>: فایل و تغییرات آن با مؤلفه‌های کامل (مثل تاریخ و نام کاربر) در تاریخچه مخزن ذخیره شدند.
+                    </li>
+                </ul>
+                </p>
+                <p>روند کار معمول Git بدین صورت است:</p>
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>شما روی فایل‌ها کار می‌کنید (ویرایش، حذف، اضافه).</li>
+                    <li>وقتی آماده بودید، تغییرات را Stage می‌کنید (git add …).</li>
+                    <li>
+                        سپس commit می‌کنید (git commit -m "پیام مناسب")، که آن وضعیت را به صورت snapshot در تاریخچه ذخیره می‌کند.
+                    </li>
+                </ul>
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">Git به‌عنوان یک سیستم توزیع‌شده (Distributed Version Control)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    نکتهٔ مهم و بنیادین در Git این است که این یک سیستم توزیع‌شده است (DVCS). یعنی وقتی شما یک مخزن (repository)
+                    را clone می‌کنید، در واقع کل تاریخچه و اطلاعات پروژه را روی سیستم خود دارید — نه فقط یک نسخه ساده.
+                </p>
+                <p>این به معنی آن است که:</p>
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>
+                        - حتی اگر به سرور مرکزی دسترسی نداشته باشید، باز هم می‌توانید commit بزنید، شاخه (branch) بسازید و تاریخچه را مرور کنید.
+                    </li>
+                    <li>
+                        - خطر از بین رفتن تاریخچه در صورت خرابی سرور یا قطعی اینترنت به حداقل می‌رسد، چون تاریخچه روی چند کامپیوتر توزیع شده است.
+                    </li>
+                    <li>
+                        - همکاری تیمی انعطاف‌پذیر و سریع‌تر می‌شود: افراد می‌توانند به‌صورت مستقل روی شاخه‌های مختلف کار کنند و سپس تغییراتشان را با هم ترکیب (merge) کنند.
+                    </li>
+                </ul>
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">نتیجه: مزایای Git نسبت به سیستم‌های قدیمی‌تر</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    به طور خلاصه، Git نسبت به سیستم‌های نسخه‌سازی سنتی مزایایی دارد که آن را انتخاب برتر برای پروژه‌های مدرن می‌کند:
+                </p>
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>ذخیره‌سازی بر پایه snapshot به‌جای دلتا ← سرعت، سادگی و اطمینان بیشتر</li>
+                    <li>امکان کار محلی و آفلاین ← توسعه سریع حتی بدون اینترنت</li>
+                    <li>امنیت و تمامیت داده ← تغییرات دستکاری‌شده یا حذف‌شده به راحتی قابل ردیابی است</li>
+                    <li>توزیع‌شدگی ← کمتر وابسته به سرور مرکزی، امکان همکاری انعطاف‌پذیر</li>
+                    <li>ساختار مناسب برای همکاری تیمی ← شاخه‌ها، merge، تاریخچه کامل</li>
+                </ul>
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">۰.۳ - نصب Git روی سیستم‌عامل‌های مختلف</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    برای شروع کار با Git، ابتدا باید آن را روی سیستم نصب کنیم. Git یک ابزار چندسکویی است و روی اکثر
+                    سیستم‌عامل‌ها قابل اجراست. روش نصب در هر سیستم متفاوت است اما معمولاً ساده و سریع انجام می‌شود.
+                    در این فصل، گام‌به‌گام یاد می‌گیریم چگونه Git را روی Windows، Linux و macOS نصب و اجرا کنیم.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">نصب Git روی ویندوز (Windows)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>سیستم‌عامل ویندوز به صورت پیش‌فرض Git ندارد، بنابراین باید آن را دانلود و نصب کنیم.</p>
+                <p><strong>مراحل نصب:</strong></p>
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>ورود به سایت رسمی Git: git-scm.com</li>
+                    <li>دانلود نسخه مناسب ویندوز</li>
+                    <li>اجرای فایل نصب (.exe)</li>
+                    <li>در مراحل نصب، گزینه‌ها را پیش‌فرض بگذارید مگر اینکه نیاز خاصی داشته باشید.</li>
+                    <li>گزینه Git Bash را فعال بگذارید — این ابزار ترمینال مخصوص Git است.</li>
+                    <li>در پایان، Finish را بزنید.</li>
+                </ul>
+                </p>
+                <p><strong>تست نصب:</strong></p>
+                <p>بعد از نصب، Git Bash یا CMD را باز کنید و بنویسید:</p>
+                <div class="code-example" dir="ltr">
+                    git --version
+                </div>
+                <p>اگر شماره نسخه نمایش داده شد، نصب موفق بوده است.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">نصب Git روی macOS</h2>
+            </header>
+
+            <section class="about-text">
+                <p>کاربران macOS سه روش برای نصب دارند:</p>
+                <p><strong>روش ۱ — نصب اتوماتیک از طریق Terminal (ساده‌ترین راه)</strong></p>
+                <p>ترمینال را باز کنید و دستور زیر را اجرا کنید:</p>
+                <div class="code-example" dir="ltr">
+                    git --version
+                </div>
+                <p>
+                    اگر Git نصب نباشد، سیستم پنجره‌ای باز می‌کند و پیشنهاد نصب Xcode Command Line Tools را می‌دهد.
+                    فقط Install را بزنید.
+                </p>
+
+                <p>* این روش سریع‌ترین است و بیشتر کاربران همین را انتخاب می‌کنند.</p>
+                <p><strong>روش ۲ — نصب با Homebrew</strong></p>
+                <p>اگر Homebrew دارید (یا قصد دارید حرفه‌ای‌تر کار کنید):</p>
+                <div class="code-example" dir="ltr">
+                    brew install git
+                </div>
+                <p><strong>روش ۳ — نصب از طریق وب‌سایت رسمی</strong></p>
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>ورود به: git-scm.com</li>
+                    <li>دانلود نسخه macOS</li>
+                    <li>نصب مانند برنامه‌های معمولی</li>
+                </ul>
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">نصب Git روی لینوکس</h2>
+            </header>
+
+            <section class="about-text">
+                <p>در بسیاری از توزیع‌های لینوکس Git از قبل نصب است. ابتدا بررسی کنید:</p>
+                <div class="code-example" dir="ltr">
+                    git --version
+                </div>
+                <p>اگر نصب نبود، بسته به توزیع، یکی از دستورات زیر را اجرا کنید:</p>
+                <p><strong>Debian / Ubuntu</strong></p>
+                <div class="code-example" dir="ltr">
+                    sudo apt update<br>
+                    sudo apt install git
+                </div>
+                <p><strong>Fedora</strong></p>
+                <div class="code-example" dir="ltr">
+                    sudo dnf install git
+                </div>
+                <p><strong>Arch Linux</strong></p>
+                <div class="code-example" dir="ltr">
+                    sudo pacman -S git
+                </div>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">تست نهایی نصب روی هر سیستم</h2>
+            </header>
+
+            <section class="about-text">
+                <p>بعد از نصب، برای اطمینان از آماده بودن محیط کار، چند دستور اولیه اجرا کنید:</p>
+                <div class="code-example" dir="ltr">
+                    git --version       # نمایش نسخه گیت<br>
+                    git config --list   # نمایش تنظیمات پیکربندی
+                </div>
+                <p>اگر خروجی نمایش داده شد، Git آماده استفاده است.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">نکات و مشکلات رایج</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>- اگر git در CMD اجرا نمی‌شود، مسیر PATH تنظیم نشده — Git Bash را تست کنید.</li>
+                    <li>- روی macOS معمولاً نیاز به Command Line Tools است.</li>
+                    <li>- روی لینوکس گاهی باید بسته‌های وابسته را آپدیت کنید.</li>
+                    <li>
+                        - پس از نصب، فراموش نکنید فصل "ستاپ اولیه Git" را انجام دهید:
+                        <div class="code-example" dir="ltr" style="margin-top: 10px; margin-bottom: 10px;">
+                            git config --global user.name "Your Name"<br>
+                            git config --global user.email "youremail@example.com"
                         </div>
                     </li>
                 </ul>
+                </p>
+            </section>
 
-                <div class="separator"></div>
+            <header>
+                <h2 class="h2 article-title">جمع‌بندی</h2>
+            </header>
 
-                <ul class="social-list">
-                    <li class="social-item"><a href="#" class="social-link"><ion-icon
-                                name="logo-facebook"></ion-icon></a></li>
-                    <li class="social-item"><a href="#" class="social-link"><ion-icon
-                                name="logo-twitter"></ion-icon></a></li>
-                    <li class="social-item"><a href="#" class="social-link"><ion-icon
-                                name="logo-instagram"></ion-icon></a></li>
+            <section class="about-text">
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>ویندوز → نصب از سایت رسمی</li>
+                    <li>مک → ساده‌ترین راه با فرمان git --version و نصب خودکار</li>
+                    <li>لینوکس → نصب از مخزن بسته‌ها (apt, dnf, pacman)</li>
                 </ul>
-            </div>
-        </aside>
+                </p>
+                <p>اکنون Git روی سیستم فعال است و می‌توانیم اولین مخزن را ایجاد کنیم و با دستورات اصلی شروع به کار نماییم.</p>
+            </section>
 
-        <div class="main-content">
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>sec1</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>sec2</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>sec3</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>sec4</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>sec5</button></li>
+            <header>
+                <h2 class="h2 article-title">۰.۴ – ستاپ اولیه Git</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    پس از نصب Git روی کامپیوتر، برای اینکه Git برای شما به درستی کار کند — باید چند تنظیم پایه انجام دهید.
+                    این تنظیمات را معمولاً یک بار در هر سیستم انجام می‌دهیم و برای تمام مخازنی (repositories) که در آن سیستم
+                    ایجاد می‌کنیم، اعمال می‌شوند.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">چرا تنظیم اولیه مهم است؟</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    وقتی commit می‌زنید، Git اطلاعات هویت شما (نام و ایمیل) را ذخیره می‌کند — این اطلاعات بعداً در تاریخچه
+                    commitها می‌ماند.
+                </p>
+                <p>
+                    اگر ویرایشگر پیش‌فرض Git را مشخص نکنید، هر زمان که Git منتظر نوشتن پیام commit شود (یا برای ادغام)، ممکن است
+                    Git شما را درگیر ویرایشگر پیش‌فرض سیستم کند که برای تازه‌کارها گیج‌کننده است.
+                </p>
+                <p>
+                    اگر نیاز دارید شاخه (branch) پیش‌فرض متفاوتی برای مخازن جدید تعیین کنید (مثلاً به جای "master" از "main"
+                    استفاده کنید)، این تنظیم هم از طریق config قابل انجام است.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">تنظیمات پایه — دستورات لازم</h2>
+            </header>
+
+            <section class="about-text">
+                <p><strong>تنظیم هویت (Name & Email)</strong></p>
+                <div class="code-example" dir="ltr">
+                    git config --global user.name "Your Name"<br>
+                    git config --global user.email "youremail@example.com"
+                </div>
+                <p>
+                    این دستورها نام و ایمیل شما را به‌صورت سراسری روی سیستم تعریف می‌کنند. بعد از این، هر commit شما با همین
+                    نام و ایمیل ثبت خواهد شد.
+                </p>
+                <p>
+                    اگر بخواهید برای یک پروژه مشخص نام یا ایمیل متفاوتی تنظیم کنید، کافی است همان دستور را بدون گزینه --global
+                    داخل پوشه‌ی آن پروژه اجرا کنید.
+                </p>
+                <p><strong>تنظیم ویرایشگر پیش‌فرض برای Git</strong></p>
+                <p>
+                    اگر می‌خواهید هنگام نوشتن پیام commit یا در مواقعی که Git نیاز به ویرایشگر دارد (مثلاً merge) راحت باشید:
+                </p>
+                <div class="code-example" dir="ltr">
+                    git config --global core.editor nano   # (یا vim, code, notepad++ و غیره)
+                </div>
+                <p>
+                    اگر این تنظیم را انجام ندهید، Git از ویرایشگر پیش‌فرض سیستم استفاده می‌کند — که ممکن است برای همه مناسب نباشد.
+                </p>
+                <p><strong>تعیین نام شاخه پیش‌فرض برای مخازن جدید</strong></p>
+                <p>
+                    از نسخه‌ی ۲٫۲۸ به بعد Git به شما اجازه می‌دهد شاخه پیش‌فرض مخزن جدید را به دلخواه تعیین کنید
+                    (مثلاً "main" به جای "master"):
+                </p>
+                <div class="code-example" dir="ltr">
+                    git config --global init.defaultBranch main
+                </div>
+                <p>
+                    با این کار، وقتی git init یا ساخت مخزن جدید انجام شود، شاخه اصلی با نام تنظیم‌شده ایجاد می‌شود.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">چک کردن تنظیمات</h2>
+            </header>
+
+            <section class="about-text">
+                <p>برای دیدن تمام تنظیماتی که Git الان برای شما فعال کرده است:</p>
+                <div class="code-example" dir="ltr">
+                    git config --list
+                </div>
+                <p>اگر بخواهید بدانید مقدار یک تنظیم خاص چیست:</p>
+                <div class="code-example" dir="ltr">
+                    git config user.name<br>
+                    git config user.email
+                </div>
+                <p>همچنین برای دیدن اینکه هر تنظیم از کدام فایل گزینه خوانده شده است:</p>
+                <div class="code-example" dir="ltr">
+                    git config --list --show-origin
+                </div>
+                <p>
+                    این کار به شما کمک می‌کند تا اگر تنظیمی را اشتباه داده‌اید یا می‌خواهید ببینید دقیقاً کدام فایل پیکربندی
+                    (global, system, local) آن را نگه داشته است.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">نتیجه</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    ستاپ اولیه Git کاری ساده اما بسیار مهم است. با تنظیم هویت، ویرایشگر و شاخه پیش‌فرض، محیط کاری‌تان مشخص و
+                    استاندارد می‌شود، و بعدها هنگام commit، merge و استفاده‌ی واقعی از Git — دیگر سردرگمی نخواهید داشت.
+                </p>
+                <p>
+                    در فصل بعدی، آماده می‌شویم تا اولین مخزن (repository) را ایجاد کنیم و با مراحل کار با Git یعنی
+                    add → commit → history آشنا شویم.
+                </p>
+            </section>
+        </article>
+
+        <article class="resume " data-page="sec2">
+            <header>
+                <h2 class="h2 article-title">Resume</h2>
+            </header>
+
+            <section class="timeline">
+                <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </div>
+
+                    <h3 class="h3">Education</h3>
+                </div>
+
+                <ol class="timeline-list">
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">University school of the arts</h4>
+                        <span>2008 - 2010</span>
+                        <p class="timeline-text">There I learnt a wide range of topics that are essential to
+                            understanding both the theory and practical aspects of computing. This involves
+                            programming fundamentals, computer architecture, operating systems, databases, software
+                            engineering, problem solving, collaboration and communication soft skills.</p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">New York Academy of Art</h4>
+                        <span>2006 - 2007</span>
+                        <p class="timeline-text">I chose my master degree in technology. There I deepened my
+                            knowledge, enhanced my skills in the area and learnt how to increase my career prospects
+                            in a competitive job market.</p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">High School of Art and Design</h4>
+                        <span>2003 - 2005</span>
+                        <p class="timeline-text">There I learnt foundational courses and computer sciences
+                            fundamentals. In the institution, I chose my specialization in web-development that
+                            involves front-end and back-end technologies, user interface designs and content
+                            management systems.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="timeline">
+                <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </div>
+
+                    <h3 class="h3">Experience</h3>
+                </div>
+
+                <ol class="timeline-list">
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">Creative director</h4>
+                        <span>2015 - Present</span>
+                        <p class="timeline-text">I can develop and oversee creative concepts for projects and
+                            campaigns managing a team of designers, writers, and other creative professionals.</p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">Art director</h4>
+                        <span>2013 - 2015</span>
+                        <p class="timeline-text">I create and develop visual concepts that align with the project's
+                            goals and objectives, supervising the design process and managing timelines and budgets
+                            for design projects.</p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">Web designer</h4>
+                        <span>2010 - 2013</span>
+                        <p class="timeline-text">I create logos, color schemes and typography for a brand's
+                            identity. Also I develop graphics for websites, social media and digital ads with
+                            applications that enhance user experience.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="skill">
+                <h3 class="h3 skills-title">My Skills</h3>
+
+                <ul class="skills-list content-card">
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Web Design</h5>
+                            <data value="80">80%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Graphic Design</h5>
+                            <data value="70">70%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 70%;"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Branding</h5>
+                            <data value="90">90%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">WordPress</h5>
+                            <data value="50">50%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 50%;"></div>
+                        </div>
+                    </li>
                 </ul>
-            </nav>
+            </section>
+        </article>
 
-            <article class="about active" data-page="sec1">
-                <header>
-                    <h2 class="h2 article-title">About This Bootcamp</h2>
-                </header>
+        <article class="portfolio " data-page="sec3">
+            <header>
+                <h2 class="h2 article-title">Portfolio</h2>
+            </header>
 
-                <section class="about-text">
-                    <p>This intensive 2-hour bootcamp is designed to help students learn Git from the ground up.
-                        We will explore how Git works, why developers use it, and how it enables teamwork in real
-                        software projects.</p>
-                    <p>By the end of the session, you’ll understand the essential commands, workflows, and collaboration tools used in modern development teams.</p>
-                </section>
+            <section class="projects">
+                <ul class="filter-list">
+                    <li class="filter-item">
+                        <button class="active" data-filter-btn>All</button>
+                    </li>
+                    <li class="filter-item">
+                        <button data-filter-btn>Web Design</button>
+                    </li>
+                    <li class="filter-item">
+                        <button data-filter-btn>Applications</button>
+                    </li>
+                    <li class="filter-item">
+                        <button data-filter-btn>Web Development</button>
+                    </li>
+                </ul>
 
-                <header>
-                    <h2 class="h2 article-title">What Is Git?</h2>
-                </header>
+                <div class="filter-select-box">
+                    <button class="filter-select " data-select>
+                        <div class="select-value" data-select-value>Select Category</div>
 
-                <section class="about-text">
-                    <p>Git is a powerful version control system that helps developers track changes, collaborate efficiently, and manage code across different versions.</p>
-                    <p>It is the industry standard for teamwork in software engineering and the foundation of platforms like GitHub and GitLab.</p>
-                    <p>Whether you're building personal projects or joining a professional team, Git is an essential tool every developer must know.</p>
-                </section>
+                        <div class="select-icon">
+                            <ion-icon name="chevron-down"></ion-icon>
+                        </div>
+                    </button>
 
-                <section class="service">
-                    <h3 class="h3 service-title">What I'm doing</h3>
-
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="https://i.postimg.cc/4389jZkP/icon-design.png" alt="icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Web Design</h4>
-                                <p class="service-item-text">The most modern and high-quality design made at a
-                                    professional level.</p>
-                            </div>
+                    <ul class="select-list">
+                        <li class="select-item">
+                            <button data-select-item>All</button>
                         </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="https://i.postimg.cc/ZqgqrqzG/icon-dev.png" alt="icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Web development</h4>
-                                <p class="service-item-text">High-quality development of sites at the professional
-                                    level.</p>
-                            </div>
+                        <li class="select-item">
+                            <button data-select-item>Web Design</button>
                         </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="https://i.postimg.cc/xjLdzYxZ/icon-app.png" alt="icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Mobile apps</h4>
-                                <p class="service-item-text">Professional development of applications for iOS and
-                                    Android.</p>
-                            </div>
+                        <li class="select-item">
+                            <button data-select-item>Applications</button>
                         </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="https://i.postimg.cc/0NL8zHpx/icon-photo.png" alt="icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Photography</h4>
-                                <p class="service-item-text">I make high-quality photos of any category at a
-                                    professional level.</p>
-                            </div>
+                        <li class="select-item">
+                            <button data-select-item>Web Development</button>
                         </li>
                     </ul>
-                </section>
+                </div>
 
-                <section class="testimonials">
-                    <h3 class="h3 testimonials-title">Testimonials</h3>
-
-                    <ul class="testimonials-list has-scrollbar">
-                        <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
-                                <figure class="testimonials-avatar-box">
-                                    <img src="https://i.postimg.cc/zGDHfn3G/avatar-1.png" alt="avatar"
-                                        data-testimonials-avatar width="60">
-                                </figure>
-
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel Lewis</h4>
-
-                                <div class="testimonials-text" data-testimonials-text>
-                                    <p>Richard was hired to create a corporate identity. It's modern, clean and with a
-                                        beautiful design that got a lot of praises from colleagues and visitors. We were
-                                        very pleased with the work done. He has a lot of experience and is very
-                                        concerned about the needs of client.</p>
+                <ul class="project-list">
+                    <li class="project-item active" data-filter-item data-category="web development">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
                                 </div>
-                            </div>
-                        </li>
 
-                        <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
-                                <figure class="testimonials-avatar-box">
-                                    <img src="https://i.postimg.cc/DwY0yHtx/avatar-2.png" alt="avatar"
-                                        data-testimonials-avatar width="60">
-                                </figure>
-
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica Miller</h4>
-
-                                <div class="testimonials-text" data-testimonials-text>
-                                    <p>Working with Richard has been an absolute pleasure. I was impressed with his
-                                        attention to detail, his web design skills and his professional approach to our
-                                        timelines and processes.</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
-                                <figure class="testimonials-avatar-box">
-                                    <img src="https://i.postimg.cc/fRFWhX9F/avatar-3.png" alt="avatar"
-                                        data-testimonials-avatar width="60">
-                                </figure>
-
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily Evans</h4>
-
-                                <div class="testimonials-text" data-testimonials-text>
-                                    <p>I couldn't be happier with the website that Richard created for us. His attention
-                                        to detail and creativity is unmatched. Our clients frequently compliment the
-                                        design, and it has significantly improved our brand image.</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
-                                <figure class="testimonials-avatar-box">
-                                    <img src="https://i.postimg.cc/zXv1Xv81/avatar-4.png" alt="avatar"
-                                        data-testimonials-avatar width="60">
-                                </figure>
-
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry Williams</h4>
-
-                                <div class="testimonials-text" data-testimonials-text>
-                                    <p>I was overwhelmed with the thought of redesigning my online store, but Richard
-                                        made the process seamless. The site is not only visually appealing but also
-                                        optimized for conversions. I've seen a 50% increase in traffic since the launch!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-
-                <div class="modal-container " data-modal-container>
-                    <div class="overlay " data-overlay></div>
-
-                    <section class="testimonials-modal">
-                        <button class="modal-close-btn" data-modal-close-btn><ion-icon
-                                name="close-outline"></ion-icon></button>
-
-                        <div class="modal-img-wrapper">
-                            <figure class="modal-avatar-box">
-                                <img src="https://i.postimg.cc/zGDHfn3G/avatar-1.png" alt="Daniel Lewis" width="80"
-                                    data-modal-img>
+                                <img src="https://i.postimg.cc/qRHpHMyd/project-1.jpg" alt="finance" loading="lazy">
                             </figure>
 
-                            <img src="https://i.postimg.cc/mZ00RwX7/icon-quote.png" alt="quote icon">
-                        </div>
-
-                        <div class="modal-content">
-                            <h4 class="h3 modal-title" data-modal-title>Daniel Lewis</h4>
-                            <time datetime="2023-06-14">14 June, 2023</time>
-
-                            <div class="modal-text" data-modal-text>
-                                <p>Richard was hired to create a corporate identity. It's modern, clean and with a
-                                    beautiful design that got a lot of praises from colleagues and visitors. We were
-                                    very pleased with the work done. He has a lot of experience and is very concerned
-                                    about the needs of client.</p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <section class="clients">
-                    <h3 class="h3 clients-title">Clients</h3>
-
-                    <ul class="clients-list has-scrollbar">
-                        <li class="clients-item">
-                            <a href="#"><img src="https://i.postimg.cc/YqfKyG66/logo-1-color.png" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://i.postimg.cc/fWm6JtgG/logo-2-color.png" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://i.postimg.cc/Bb07xpwd/logo-3-color.png" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://i.postimg.cc/hv1yMmkh/logo-4-color.png" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://i.postimg.cc/ry1P86Dc/logo-5-color.png" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://i.postimg.cc/SsWDN8NV/logo-6-color.png" alt="logo"></a>
-                        </li>
-                    </ul>
-                </section>
-
-            </article>
-
-            <article class="resume " data-page="sec2">
-                <header>
-                    <h2 class="h2 article-title">Resume</h2>
-                </header>
-
-                <section class="timeline">
-                    <div class="title-wrapper">
-                        <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
-
-                        <h3 class="h3">Education</h3>
-                    </div>
-
-                    <ol class="timeline-list">
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">University school of the arts</h4>
-                            <span>2008 - 2010</span>
-                            <p class="timeline-text">There I learnt a wide range of topics that are essential to
-                                understanding both the theory and practical aspects of computing. This involves
-                                programming fundamentals, computer architecture, operating systems, databases, software
-                                engineering, problem solving, collaboration and communication soft skills.</p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">New York Academy of Art</h4>
-                            <span>2006 - 2007</span>
-                            <p class="timeline-text">I chose my master degree in technology. There I deepened my
-                                knowledge, enhanced my skills in the area and learnt how to increase my career prospects
-                                in a competitive job market.</p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">High School of Art and Design</h4>
-                            <span>2003 - 2005</span>
-                            <p class="timeline-text">There I learnt foundational courses and computer sciences
-                                fundamentals. In the institution, I chose my specialization in web-development that
-                                involves front-end and back-end technologies, user interface designs and content
-                                management systems.</p>
-                        </li>
-                    </ol>
-                </section>
-
-                <section class="timeline">
-                    <div class="title-wrapper">
-                        <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
-
-                        <h3 class="h3">Experience</h3>
-                    </div>
-
-                    <ol class="timeline-list">
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Creative director</h4>
-                            <span>2015 - Present</span>
-                            <p class="timeline-text">I can develop and oversee creative concepts for projects and
-                                campaigns managing a team of designers, writers, and other creative professionals.</p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Art director</h4>
-                            <span>2013 - 2015</span>
-                            <p class="timeline-text">I create and develop visual concepts that align with the project's
-                                goals and objectives, supervising the design process and managing timelines and budgets
-                                for design projects.</p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Web designer</h4>
-                            <span>2010 - 2013</span>
-                            <p class="timeline-text">I create logos, color schemes and typography for a brand's
-                                identity. Also I develop graphics for websites, social media and digital ads with
-                                applications that enhance user experience.</p>
-                        </li>
-                    </ol>
-                </section>
-
-                <section class="skill">
-                    <h3 class="h3 skills-title">My Skills</h3>
-
-                    <ul class="skills-list content-card">
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Web Design</h5>
-                                <data value="80">80%</data>
-                            </div>
-
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 80%;"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Graphic Design</h5>
-                                <data value="70">70%</data>
-                            </div>
-
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 70%;"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Branding</h5>
-                                <data value="90">90%</data>
-                            </div>
-
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 90%;"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">WordPress</h5>
-                                <data value="50">50%</data>
-                            </div>
-
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 50%;"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-
-            <article class="portfolio " data-page="sec3">
-                <header>
-                    <h2 class="h2 article-title">Portfolio</h2>
-                </header>
-
-                <section class="projects">
-                    <ul class="filter-list">
-                        <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-                        <li class="filter-item"><button data-filter-btn>Web Design</button></li>
-                        <li class="filter-item"><button data-filter-btn>Applications</button></li>
-                        <li class="filter-item"><button data-filter-btn>Web Development</button></li>
-                    </ul>
-
-                    <div class="filter-select-box">
-                        <button class="filter-select " data-select>
-                            <div class="select-value" data-select-value>Select Category</div>
-
-                            <div class="select-icon">
-                                <ion-icon name="chevron-down"></ion-icon>
-                            </div>
-                        </button>
-
-                        <ul class="select-list">
-                            <li class="select-item"><button data-select-item>All</button></li>
-                            <li class="select-item"><button data-select-item>Web Design</button></li>
-                            <li class="select-item"><button data-select-item>Applications</button></li>
-                            <li class="select-item"><button data-select-item>Web Development</button></li>
-                        </ul>
-                    </div>
-
-                    <ul class="project-list">
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/qRHpHMyd/project-1.jpg" alt="finance" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Finance</h3>
-                                <p class="project-category">Web Development</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/bNrcM2Wt/project-2.png" alt="orizon" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Orizon</h3>
-                                <p class="project-category">Web Development</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web design">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/jSJVqYsq/project-3.jpg" alt="fundo" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Fundo</h3>
-                                <p class="project-category">Web Design</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="applications">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/dtpXxNGb/project-4.png" alt="brawlhalla"
-                                        loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Brawlhalla</h3>
-                                <p class="project-category">Applications</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web design">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/43T0JKLw/project-5.png" alt="dsm." loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">DSM.</h3>
-                                <p class="project-category">Web Design</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web design">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/qR1DX1kZ/project-6.png" alt="metaspark"
-                                        loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Metaspark</h3>
-                                <p class="project-category">Web Design</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/Kj4q9tjc/project-7.png" alt="summary" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Summary</h3>
-                                <p class="project-category">Web Development</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="applications">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/rw2j4B1w/project-8.jpg" alt="task manager"
-                                        loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Task Manager</h3>
-                                <p class="project-category">Applications</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/7LxNsSQv/project-9.png" alt="arrival" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Arrival</h3>
-                                <p class="project-category">Web Development</p>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-
-            <article class="blog " data-page="sec4">
-                <header>
-                    <h2 class="h2 article-title">Blog</h2>
-                </header>
-
-                <section class="blog-posts">
-                    <ul class="blog-posts-list">
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="https://i.postimg.cc/DysCZrWs/blog-1.jpg" alt="Design conferences in 2024"
-                                        loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2024-02-23">Feb 23, 2024</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">Design conferences in 2024</h3>
-                                    <p class="blog-text">In 2024, several exciting design conferences are set to take
-                                        place, offering opportunities for professionals and enthusiasts to connect,
-                                        learn, and share innovative ideas.</p>
+                            <h3 class="project-title">Finance</h3>
+                            <p class="project-category">Web Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item active" data-filter-item data-category="web development">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
                                 </div>
-                            </a>
-                        </li>
 
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="https://i.postimg.cc/QC7qFDMs/blog-2.jpg" alt="Best fonts every designer"
-                                        loading="lazy">
-                                </figure>
+                                <img src="https://i.postimg.cc/bNrcM2Wt/project-2.png" alt="orizon" loading="lazy">
+                            </figure>
 
+                            <h3 class="project-title">Orizon</h3>
+                            <p class="project-category">Web Development</p>
+                        </a>
+                    </li>
 
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2024-01-29">Jan 29, 2024</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-                                    <p class="blog-text">When it comes to typography, choosing the right font is
-                                        essential for effective design. In this article, I'll bring a brief overview of
-                                        some of the best fonts that every designer should consider incorporating into
-                                        their toolkit.</p>
+                    <li class="project-item active" data-filter-item data-category="web design">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
                                 </div>
-                            </a>
-                        </li>
 
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="https://i.postimg.cc/W1T71QcL/blog-3.jpg" alt="Design digest #80"
-                                        loading="lazy">
-                                </figure>
+                                <img src="https://i.postimg.cc/jSJVqYsq/project-3.jpg" alt="fundo" loading="lazy">
+                            </figure>
 
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2023-12-20">Dec 20, 2023</time>
-                                    </div>
+                            <h3 class="project-title">Fundo</h3>
+                            <p class="project-category">Web Design</p>
+                        </a>
+                    </li>
 
-                                    <h3 class="h3 blog-item-title">Design digest #80</h3>
-                                    <p class="blog-text">Hello, my friends. In this Design Digest, I'll show you a
-                                        curated collection of the latest trends, insights, and innovations in the design
-                                        world. This edition highlights key themes and discussions that are shaping the
-                                        future of design.</p>
+                    <li class="project-item active" data-filter-item data-category="applications">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
                                 </div>
-                            </a>
-                        </li>
 
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="https://i.postimg.cc/2S0n8yxh/blog-4.jpg" alt="2023 UI interactions"
-                                        loading="lazy">
-                                </figure>
+                                <img src="https://i.postimg.cc/dtpXxNGb/project-4.png" alt="brawlhalla"
+                                     loading="lazy">
+                            </figure>
 
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2023-11-29">Nov 29, 2023</time>
-                                    </div>
+                            <h3 class="project-title">Brawlhalla</h3>
+                            <p class="project-category">Applications</p>
+                        </a>
+                    </li>
 
-                                    <h3 class="h3 blog-item-title">2023 UI interactions</h3>
-                                    <p class="blog-text">As we move into 2024, 2023 was marked by the rapidly evolution
-                                        of the landscape of UI interactions, driven by advancements in technology and
-                                        user expectations. Dive with me in this text to see the main areas changed in
-                                        this year.</p>
+                    <li class="project-item active" data-filter-item data-category="web design">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
                                 </div>
-                            </a>
-                        </li>
 
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="https://i.postimg.cc/YCCmVkw9/blog-5.jpg"
-                                        alt="The forgotten art of spacing" loading="lazy">
-                                </figure>
+                                <img src="https://i.postimg.cc/43T0JKLw/project-5.png" alt="dsm." loading="lazy">
+                            </figure>
 
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2023-11-12">Nov 12, 2023</time>
-                                    </div>
+                            <h3 class="project-title">DSM.</h3>
+                            <p class="project-category">Web Design</p>
+                        </a>
+                    </li>
 
-                                    <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-                                    <p class="blog-text">In the realm of design, spacing is often an overlooked yet
-                                        crucial element that can significantly impact the overall aesthetic and
-                                        functionality of a composition. This post will emphasize the importance of white
-                                        space, margins, and padding in creating visually appealing and effective
-                                        designs.</p>
+                    <li class="project-item active" data-filter-item data-category="web design">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
                                 </div>
-                            </a>
-                        </li>
 
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="https://i.postimg.cc/zBCBvP16/blog-6.jpg" alt="Design digest #79"
-                                        loading="lazy">
-                                </figure>
+                                <img src="https://i.postimg.cc/qR1DX1kZ/project-6.png" alt="metaspark"
+                                     loading="lazy">
+                            </figure>
 
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2023-10-20">Oct 20, 2023</time>
-                                    </div>
+                            <h3 class="project-title">Metaspark</h3>
+                            <p class="project-category">Web Design</p>
+                        </a>
+                    </li>
 
-                                    <h3 class="h3 blog-item-title">Design digest #79</h3>
-                                    <p class="blog-text">Hi, my friends. In this Design Digest I'll focus in the tools
-                                        and resources that we use daily in our projects. Also, I'll include examples of
-                                        software recommendations, online courses, and design communities that foster
-                                        collaboration and learning.</p>
+                    <li class="project-item active" data-filter-item data-category="web development">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
                                 </div>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-            </article>
 
-            <article class="contact " data-page="sec5">
-                <header>
-                    <h2 class="h2 article-title">Contact</h2>
-                </header>
+                                <img src="https://i.postimg.cc/Kj4q9tjc/project-7.png" alt="summary" loading="lazy">
+                            </figure>
 
-                <section class="mapbox" data-mapbox>
-                    <figure>
-                        <iframe
+                            <h3 class="project-title">Summary</h3>
+                            <p class="project-category">Web Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item active" data-filter-item data-category="applications">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="https://i.postimg.cc/rw2j4B1w/project-8.jpg" alt="task manager"
+                                     loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Task Manager</h3>
+                            <p class="project-category">Applications</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item active" data-filter-item data-category="web development">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="https://i.postimg.cc/7LxNsSQv/project-9.png" alt="arrival" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Arrival</h3>
+                            <p class="project-category">Web Development</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <article class="blog " data-page="sec4">
+            <header>
+                <h2 class="h2 article-title">Blog</h2>
+            </header>
+
+            <section class="blog-posts">
+                <ul class="blog-posts-list">
+                    <li class="blog-post-item">
+                        <a href="#">
+                            <figure class="blog-banner-box">
+                                <img src="https://i.postimg.cc/DysCZrWs/blog-1.jpg" alt="Design conferences in 2024"
+                                     loading="lazy">
+                            </figure>
+
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <p class="blog-category">Design</p>
+                                    <span class="dot"></span>
+                                    <time datetime="2024-02-23">Feb 23, 2024</time>
+                                </div>
+
+                                <h3 class="h3 blog-item-title">Design conferences in 2024</h3>
+                                <p class="blog-text">In 2024, several exciting design conferences are set to take
+                                    place, offering opportunities for professionals and enthusiasts to connect,
+                                    learn, and share innovative ideas.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="blog-post-item">
+                        <a href="#">
+                            <figure class="blog-banner-box">
+                                <img src="https://i.postimg.cc/QC7qFDMs/blog-2.jpg" alt="Best fonts every designer"
+                                     loading="lazy">
+                            </figure>
+
+
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <p class="blog-category">Design</p>
+                                    <span class="dot"></span>
+                                    <time datetime="2024-01-29">Jan 29, 2024</time>
+                                </div>
+
+                                <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+                                <p class="blog-text">When it comes to typography, choosing the right font is
+                                    essential for effective design. In this article, I'll bring a brief overview of
+                                    some of the best fonts that every designer should consider incorporating into
+                                    their toolkit.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="blog-post-item">
+                        <a href="#">
+                            <figure class="blog-banner-box">
+                                <img src="https://i.postimg.cc/W1T71QcL/blog-3.jpg" alt="Design digest #80"
+                                     loading="lazy">
+                            </figure>
+
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <p class="blog-category">Design</p>
+                                    <span class="dot"></span>
+                                    <time datetime="2023-12-20">Dec 20, 2023</time>
+                                </div>
+
+                                <h3 class="h3 blog-item-title">Design digest #80</h3>
+                                <p class="blog-text">Hello, my friends. In this Design Digest, I'll show you a
+                                    curated collection of the latest trends, insights, and innovations in the design
+                                    world. This edition highlights key themes and discussions that are shaping the
+                                    future of design.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="blog-post-item">
+                        <a href="#">
+                            <figure class="blog-banner-box">
+                                <img src="https://i.postimg.cc/2S0n8yxh/blog-4.jpg" alt="2023 UI interactions"
+                                     loading="lazy">
+                            </figure>
+
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <p class="blog-category">Design</p>
+                                    <span class="dot"></span>
+                                    <time datetime="2023-11-29">Nov 29, 2023</time>
+                                </div>
+
+                                <h3 class="h3 blog-item-title">2023 UI interactions</h3>
+                                <p class="blog-text">As we move into 2024, 2023 was marked by the rapidly evolution
+                                    of the landscape of UI interactions, driven by advancements in technology and
+                                    user expectations. Dive with me in this text to see the main areas changed in
+                                    this year.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="blog-post-item">
+                        <a href="#">
+                            <figure class="blog-banner-box">
+                                <img src="https://i.postimg.cc/YCCmVkw9/blog-5.jpg"
+                                     alt="The forgotten art of spacing" loading="lazy">
+                            </figure>
+
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <p class="blog-category">Design</p>
+                                    <span class="dot"></span>
+                                    <time datetime="2023-11-12">Nov 12, 2023</time>
+                                </div>
+
+                                <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+                                <p class="blog-text">In the realm of design, spacing is often an overlooked yet
+                                    crucial element that can significantly impact the overall aesthetic and
+                                    functionality of a composition. This post will emphasize the importance of white
+                                    space, margins, and padding in creating visually appealing and effective
+                                    designs.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="blog-post-item">
+                        <a href="#">
+                            <figure class="blog-banner-box">
+                                <img src="https://i.postimg.cc/zBCBvP16/blog-6.jpg" alt="Design digest #79"
+                                     loading="lazy">
+                            </figure>
+
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <p class="blog-category">Design</p>
+                                    <span class="dot"></span>
+                                    <time datetime="2023-10-20">Oct 20, 2023</time>
+                                </div>
+
+                                <h3 class="h3 blog-item-title">Design digest #79</h3>
+                                <p class="blog-text">Hi, my friends. In this Design Digest I'll focus in the tools
+                                    and resources that we use daily in our projects. Also, I'll include examples of
+                                    software recommendations, online courses, and design communities that foster
+                                    collaboration and learning.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <article class="contact " data-page="sec5">
+            <header>
+                <h2 class="h2 article-title">Contact</h2>
+            </header>
+
+            <section class="mapbox" data-mapbox>
+                <figure>
+                    <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
                             width="400" height="300" loading="lazy"></iframe>
-                    </figure>
-                </section>
+                </figure>
+            </section>
 
-                <section class="contact-form">
-                    <h3 class="h3 form-title">Contact Form</h3>
+            <section class="contact-form">
+                <h3 class="h3 form-title">Contact Form</h3>
 
-                    <form action="#" class="form" data-form>
-                        <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required
-                                data-form-input>
-                            <input type="email" name="email" class="form-input" placeholder="Email Address" required
-                                data-form-input>
-                        </div>
+                <form action="#" class="form" data-form>
+                    <div class="input-wrapper">
+                        <input type="text" name="fullname" class="form-input" placeholder="Full name" required
+                               data-form-input>
+                        <input type="email" name="email" class="form-input" placeholder="Email Address" required
+                               data-form-input>
+                    </div>
 
-                        <textarea name="message" class="form-input" placeholder="Your Message" required
-                            data-form-input=""></textarea>
+                    <textarea name="message" class="form-input" placeholder="Your Message" required
+                              data-form-input=""></textarea>
 
-                        <button class="form-btn" type="submit" disabled data-form-btn>
-                            <ion-icon name="paper-plane"></ion-icon>
-                            <span>Send Message</span>
-                        </button>
-                    </form>
-                </section>
-            </article>
-        </div>
-    </main>
+                    <button class="form-btn" type="submit" disabled data-form-btn>
+                        <ion-icon name="paper-plane"></ion-icon>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </section>
+        </article>
+    </div>
+</main>
 
-    <script src="./assets/js/main.js"></script>
+<script src="./assets/js/main.js"></script>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
