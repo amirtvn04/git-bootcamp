@@ -3,10 +3,10 @@
     src: url(../fonts/bakh-regular.woff);
 }
 
-/*@font-face {*/
-/*    font-family: bakh_bold;*/
-/*    src: url(../fonts/bakh-bold.woff);*/
-/*}*/
+@font-face {
+    font-family: bakh_bold;
+    src: url(../fonts/bakh-bold.woff);
+}
 
 /*@font-face {*/
 /*    font-family: bakh_bold;*/
@@ -246,6 +246,12 @@ article.active {
 .h5 {
     font-size: var(--fs7);
     font-weight: var(--fw500);
+}
+
+.text_bold {
+    font-family: bakh_bold;
+    color: var(--vegas-gold);
+    display: inline;
 }
 
 .article-title {
