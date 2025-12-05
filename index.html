@@ -149,8 +149,17 @@
         </nav>
 
         <article class="about active" data-page="sec1">
+            <h2 class="h2" style="margin-top: 24px">فصل ۰ - مقدمات گیت و کنترل نسخه</h2>
+            <ul class="article-list code-example" style="margin-bottom: 24px">
+                <li><span>فهرست مطالب فصل</span></li>
+                <li><a href="#titr-1">۰.۱ - آشنایی با سیستم کنترل نسخه</a></li>
+                <li><a href="#titr-2">۰.۲ - Git چیست؟</a></li>
+                <li><a href="#titr-3">۰.۳ - نصب Git روی سیستم‌عامل‌های مختلف</a></li>
+                <li><a href="#titr-4">۰.۴ – ستاپ اولیه Git</a></li>
+            </ul>
+
             <header>
-                <h2 class="h2 article-title">۰.۱ - مقدمات گیت و کنترل نسخه</h2>
+                <h2 id="titr-1" class="h2 article-title">۰.۱ - آشنایی با سیستم کنترل نسخه</h2>
             </header>
 
             <section class="about-text">
@@ -291,7 +300,7 @@
             </section>
 
             <header>
-                <h2 class="h2 article-title">۰.۲ - Git چیست؟</h2>
+                <h2 id="titr-2" class="h2 article-title">۰.۲ - Git چیست؟</h2>
             </header>
 
             <section class="about-text">
@@ -374,7 +383,8 @@
                     ردیابی شوند، و اگر فایلی خراب یا تغییر غیرمجاز داده شود، Git آن را تشخیص می‌دهد.
                 </p>
                 <p>
-                    همچنین، Git تقریباً همه داده‌ها را «می‌افزاید» (append-only)؛ یعنی <span class="text_bold">تاریخچه قابل بازیابی است</span> و
+                    همچنین، Git تقریباً همه داده‌ها را «می‌افزاید» (append-only)؛ یعنی <span class="text_bold">تاریخچه قابل بازیابی است</span>
+                    و
                     تغییرهایی که
                     ثبت شدند، به‌راحتی قابل پاک شدن یا از بین رفتن نیستند — مگر عمداً چنین کاری کنید.
                 </p>
@@ -396,11 +406,13 @@
                         آماده نکرده‌اید.
                     </li>
                     <li>
-                        <span class="text_bold">Staged</span>: تغییرات فایل انتخاب شده‌اند تا در commit بعدی ثبت شوند (در اصطلاح، به
+                        <span class="text_bold">Staged</span>: تغییرات فایل انتخاب شده‌اند تا در commit بعدی ثبت شوند
+                        (در اصطلاح، به
                         منطقه staging اضافه شدند).
                     </li>
                     <li>
-                        <span class="text_bold">Committed</span>: فایل و تغییرات آن با مؤلفه‌های کامل (مثل تاریخ و نام کاربر) در
+                        <span class="text_bold">Committed</span>: فایل و تغییرات آن با مؤلفه‌های کامل (مثل تاریخ و نام
+                        کاربر) در
                         تاریخچه مخزن ذخیره شدند.
                     </li>
                 </ul>
@@ -409,7 +421,8 @@
                     <li>شما روی فایل‌ها کار می‌کنید (ویرایش، حذف، اضافه).</li>
                     <li>وقتی آماده بودید، تغییرات را Stage می‌کنید (<span class="text_bold">git add …</span>).</li>
                     <li>
-                        سپس commit می‌کنید (<span class="text_bold">git commit -m "پیام مناسب"</span>)، که آن وضعیت را به صورت snapshot در تاریخچه
+                        سپس commit می‌کنید (<span class="text_bold">git commit -m "پیام مناسب"</span>)، که آن وضعیت را
+                        به صورت snapshot در تاریخچه
                         ذخیره می‌کند.
                     </li>
                 </ul>
@@ -421,34 +434,40 @@
 
             <section class="about-text">
                 <p>
-                    نکتهٔ مهم و بنیادین در Git این است که این یک سیستم <span class="text_bold">توزیع‌شده (DVCS)</span> است. یعنی وقتی شما یک مخزن
+                    نکتهٔ مهم و بنیادین در Git این است که این یک سیستم <span class="text_bold">توزیع‌شده (DVCS)</span>
+                    است. یعنی وقتی شما یک مخزن
                     (repository)
-                    را <span class="text_bold">clone</span> می‌کنید، در واقع <span class="text_bold">کل تاریخچه و اطلاعات پروژه را روی سیستم خود دارید</span> — نه فقط یک نسخه ساده.
+                    را <span class="text_bold">clone</span> می‌کنید، در واقع <span class="text_bold">کل تاریخچه و اطلاعات پروژه را روی سیستم خود دارید</span>
+                    — نه فقط یک نسخه ساده.
                 </p>
                 <p>این به معنی آن است که:</p>
                 <ul style="margin-right: 25px">
                     <li>
-                        <span class="text_bold">حتی اگر به سرور مرکزی دسترسی نداشته باشید</span>، باز هم می‌توانید commit بزنید، شاخه (<span class="text_bold">branch</span>) بسازید
+                        <span class="text_bold">حتی اگر به سرور مرکزی دسترسی نداشته باشید</span>، باز هم می‌توانید
+                        commit بزنید، شاخه (<span class="text_bold">branch</span>) بسازید
                         و تاریخچه را مرور کنید.
                     </li>
                     <li>
-                        - خطر از بین رفتن تاریخچه در صورت خرابی سرور یا قطعی اینترنت <span class="text_bold">به حداقل می‌رسد</span>، چون تاریخچه روی
+                        - خطر از بین رفتن تاریخچه در صورت خرابی سرور یا قطعی اینترنت <span class="text_bold">به حداقل می‌رسد</span>،
+                        چون تاریخچه روی
                         چند کامپیوتر توزیع شده است.
                     </li>
                     <li>
-                        - همکاری تیمی <span class="text_bold">انعطاف‌پذیر و سریع‌تر</span> می‌شود: افراد می‌توانند به‌صورت مستقل روی شاخه‌های مختلف کار
+                        - همکاری تیمی <span class="text_bold">انعطاف‌پذیر و سریع‌تر</span> می‌شود: افراد می‌توانند
+                        به‌صورت مستقل روی شاخه‌های مختلف کار
                         کنند و سپس تغییراتشان را با هم ترکیب (merge) کنند.
                     </li>
                 </ul>
             </section>
 
             <header>
-                <h2 class="h2 article-title">۰.۳ - نصب Git روی سیستم‌عامل‌های مختلف</h2>
+                <h2 id="titr-3" class="h2 article-title">۰.۳ - نصب Git روی سیستم‌عامل‌های مختلف</h2>
             </header>
 
             <section class="about-text">
                 <p>
-                    برای شروع کار با Git، ابتدا باید آن را روی سیستم نصب کنیم. Git یک <span class="text_bold">ابزار چندسکویی</span> است و روی اکثر
+                    برای شروع کار با Git، ابتدا باید آن را روی سیستم نصب کنیم. Git یک <span class="text_bold">ابزار چندسکویی</span>
+                    است و روی اکثر
                     سیستم‌عامل‌ها قابل اجراست. روش نصب در هر سیستم متفاوت است اما معمولاً ساده و سریع انجام می‌شود.
                     در این فصل، گام‌به‌گام یاد می‌گیریم چگونه Git را روی Windows، Linux و macOS نصب و اجرا کنیم.
                 </p>
@@ -465,8 +484,11 @@
                     <li>ورود به <span class="text_bold">سایت رسمی Git: git-scm.com</span></li>
                     <li>دانلود نسخه مناسب ویندوز</li>
                     <li>اجرای فایل نصب (.exe)</li>
-                    <li>در مراحل نصب، گزینه‌ها را <span class="text_bold">پیش‌فرض بگذارید</span> مگر اینکه نیاز خاصی داشته باشید.</li>
-                    <li>گزینه <span class="text_bold">Git Bash</span> را فعال بگذارید — این ابزار ترمینال مخصوص Git است.</li>
+                    <li>در مراحل نصب، گزینه‌ها را <span class="text_bold">پیش‌فرض بگذارید</span> مگر اینکه نیاز خاصی
+                        داشته باشید.
+                    </li>
+                    <li>گزینه <span class="text_bold">Git Bash</span> را فعال بگذارید — این ابزار ترمینال مخصوص Git است.
+                    </li>
                     <li>در پایان، Finish را بزنید.</li>
                 </ul>
                 <p><span class="text_bold">تست نصب:</span></p>
@@ -489,7 +511,8 @@
                     git --version
                 </div>
                 <p>
-                    اگر Git نصب نباشد، سیستم پنجره‌ای باز می‌کند و پیشنهاد <span class="text_bold">نصب Xcode Command Line Tools</span> را می‌دهد.
+                    اگر Git نصب نباشد، سیستم پنجره‌ای باز می‌کند و پیشنهاد <span class="text_bold">نصب Xcode Command Line Tools</span>
+                    را می‌دهد.
                     فقط Install را بزنید.
                 </p>
 
@@ -565,14 +588,16 @@
             </section>
 
             <header>
-                <h2 class="h2 article-title">۰.۴ – ستاپ اولیه Git</h2>
+                <h2 id="titr-4" class="h2 article-title">۰.۴ – ستاپ اولیه Git</h2>
             </header>
 
             <section class="about-text">
                 <p>
-                    پس از نصب Git روی کامپیوتر، برای اینکه Git برای شما به درستی کار کند — باید <span class="text_bold">چند تنظیم پایه</span> انجام
+                    پس از نصب Git روی کامپیوتر، برای اینکه Git برای شما به درستی کار کند — باید <span class="text_bold">چند تنظیم پایه</span>
+                    انجام
                     دهید.
-                    این تنظیمات را معمولاً <span class="text_bold">یک بار در هر سیستم</span> انجام می‌دهیم و برای تمام مخازنی (repositories) که در آن
+                    این تنظیمات را معمولاً <span class="text_bold">یک بار در هر سیستم</span> انجام می‌دهیم و برای تمام
+                    مخازنی (repositories) که در آن
                     سیستم
                     ایجاد می‌کنیم، اعمال می‌شوند.
                 </p>
@@ -584,7 +609,9 @@
 
             <section class="about-text">
                 <p>
-                    وقتی commit می‌زنید، <span class="text_bold">Git اطلاعات هویت شما (نام و ایمیل) را ذخیره می‌کند</span> — این اطلاعات بعداً در
+                    وقتی commit می‌زنید، <span
+                        class="text_bold">Git اطلاعات هویت شما (نام و ایمیل) را ذخیره می‌کند</span> — این اطلاعات بعداً
+                    در
                     تاریخچه
                     commitها می‌ماند.
                 </p>
@@ -611,12 +638,14 @@
                     git config --global user.email "youremail@example.com"
                 </div>
                 <p>
-                    این دستورها <span class="text_bold">نام و ایمیل شما را به‌صورت سراسری</span> روی سیستم تعریف می‌کنند. بعد از این، هر commit شما با
+                    این دستورها <span class="text_bold">نام و ایمیل شما را به‌صورت سراسری</span> روی سیستم تعریف
+                    می‌کنند. بعد از این، هر commit شما با
                     همین
                     نام و ایمیل ثبت خواهد شد.
                 </p>
                 <p>
-                    اگر بخواهید برای یک پروژه مشخص نام یا ایمیل متفاوتی تنظیم کنید، کافی است همان دستور را <span class="text_bold">بدون گزینه
+                    اگر بخواهید برای یک پروژه مشخص نام یا ایمیل متفاوتی تنظیم کنید، کافی است همان دستور را <span
+                        class="text_bold">بدون گزینه
         --global</span>
                     داخل پوشه‌ی آن پروژه اجرا کنید.
                 </p>
@@ -675,13 +704,26 @@
             </header>
 
             <section class="about-text">
-                <p>در این فصل با مفاهیم <span class="text_bold">پایه‌ای و پیش‌نیازهای</span> ورود به دنیای Git آشنا شدیم. ابتدا دریافتیم که <span class="text_bold">کنترل نسخه (Version Control)</span> چیست و چرا در توسعه نرم‌افزار اهمیت دارد. فهمیدیم که بدون وجود سیستم‌های کنترل نسخه، <span class="text_bold">مدیریت تغییرات، پیگیری تاریخچه پروژه و همکاری تیمی</span> کاری دشوار و گاهی غیرممکن می‌شود.</p>
+                <p>در این فصل با مفاهیم <span class="text_bold">پایه‌ای و پیش‌نیازهای</span> ورود به دنیای Git آشنا
+                    شدیم. ابتدا دریافتیم که <span class="text_bold">کنترل نسخه (Version Control)</span> چیست و چرا در
+                    توسعه نرم‌افزار اهمیت دارد. فهمیدیم که بدون وجود سیستم‌های کنترل نسخه، <span class="text_bold">مدیریت تغییرات، پیگیری تاریخچه پروژه و همکاری تیمی</span>
+                    کاری دشوار و گاهی غیرممکن می‌شود.</p>
 
-                <p>سپس <span class="text_bold">Git</span> را به‌عنوان یکی از <span class="text_bold">محبوب‌ترین و قدرتمندترین</span> ابزارهای کنترل نسخه معرفی کردیم؛ ابزاری که <span class="text_bold">توزیع‌شده</span> است، <span class="text_bold">سرعت بالایی</span> دارد و امروزه در اغلب شرکت‌ها و پروژه‌های متن‌باز مورد استفاده قرار می‌گیرد.</p>
+                <p>سپس <span class="text_bold">Git</span> را به‌عنوان یکی از <span class="text_bold">محبوب‌ترین و قدرتمندترین</span>
+                    ابزارهای کنترل نسخه معرفی کردیم؛ ابزاری که <span class="text_bold">توزیع‌شده</span> است، <span
+                            class="text_bold">سرعت بالایی</span> دارد و امروزه در اغلب شرکت‌ها و پروژه‌های متن‌باز مورد
+                    استفاده قرار می‌گیرد.</p>
 
-                <p>در ادامه یاد گرفتیم چگونه Git را بسته به سیستم‌عامل خود <span class="text_bold">نصب کنیم</span> — چه از طریق دانلود مستقیم روی ویندوز، چه نصب با Homebrew یا ابزارهای Command Line در macOS، و همچنین مخازن بسته در توزیع‌های مختلف لینوکس. پس از نصب نیز <span class="text_bold">تنظیمات اولیه</span> را انجام دادیم تا Git بتواند <span class="text_bold">اطلاعات کاربر (نام و ایمیل)</span> را در commitها ثبت کند و تجربه کار حرفه‌ای فراهم شود.</p>
+                <p>در ادامه یاد گرفتیم چگونه Git را بسته به سیستم‌عامل خود <span class="text_bold">نصب کنیم</span> — چه
+                    از طریق دانلود مستقیم روی ویندوز، چه نصب با Homebrew یا ابزارهای Command Line در macOS، و همچنین
+                    مخازن بسته در توزیع‌های مختلف لینوکس. پس از نصب نیز <span class="text_bold">تنظیمات اولیه</span> را
+                    انجام دادیم تا Git بتواند <span class="text_bold">اطلاعات کاربر (نام و ایمیل)</span> را در commitها
+                    ثبت کند و تجربه کار حرفه‌ای فراهم شود.</p>
 
-                <p>حال با پایان فصل ۰، <span class="text_bold">محیط کاری ما آماده است</span> و می‌توانیم وارد مباحث عملی شویم. از اینجا به بعد، وارد دنیای واقعی Git می‌شویم: <span class="text_bold">ساخت اولین مخزن، انجام commit، مشاهده تاریخچه و شروع workflow واقعی توسعه</span>. در فصل آینده قدم‌به‌قدم Git را در عمل لمس خواهیم کرد و اولین پروژه خود را با این ابزار قدرتمند نسخه‌بندی می‌کنیم.</p>
+                <p>حال با پایان فصل ۰، <span class="text_bold">محیط کاری ما آماده است</span> و می‌توانیم وارد مباحث عملی
+                    شویم. از اینجا به بعد، وارد دنیای واقعی Git می‌شویم: <span class="text_bold">ساخت اولین مخزن، انجام commit، مشاهده تاریخچه و شروع workflow واقعی توسعه</span>.
+                    در فصل آینده قدم‌به‌قدم Git را در عمل لمس خواهیم کرد و اولین پروژه خود را با این ابزار قدرتمند
+                    نسخه‌بندی می‌کنیم.</p>
             </section>
         </article>
 
