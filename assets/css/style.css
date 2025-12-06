@@ -35,6 +35,7 @@
     --bittersweet-shimmer: hsl(0, 43%, 51%);
     --white-code: rgba(82, 82, 82, 0.36);
     --border-code: #575757;
+    --indicator: rgba(164, 164, 164, 0.7);
 
     --fs1: 24px;
     --fs2: 18px;
@@ -82,6 +83,7 @@
     --bittersweet-shimmer: hsl(0, 43%, 51%);
     --white-code: #f5f5f5;
     --border-code: #ddd;
+    --indicator: rgba(164, 164, 164, 0.7);
 
     --shadow1: -4px 8px 24px hsla(0, 0%, 0%, .05);
     --shadow2: 0px 16px 30px hsla(0, 60%, 1%, 0.08);
@@ -90,6 +92,104 @@
     --shadow5: 0px 24px 80px hsla(0, 0%, 0%, .12);
 }
 
+.custom-sidebar {
+    padding-right: 1rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 0;
+}
+
+#scroll-container {
+    display: none;
+    position: sticky;
+    top: 3rem;
+    height: calc(100vh - 6rem);
+    width: 8px;
+    background-color: var(--white-code);
+    z-index: 1000;
+    border-radius: 3px;
+
+}
+
+#scroll-container #indicator {
+    position: absolute;
+    left: -0.5px;
+    width: 8px;
+    background-color: var(--vegas-gold);
+    min-height: 5%;
+    border-radius: 3px;
+}
+
+#scroll-container .heading-marker-container {
+    position: absolute;
+    max-width: 7rem;
+    text-decoration: none;
+}
+
+#scroll-container .heading-marker-container::after {
+    content: "";
+}
+
+#scroll-container .heading-indicator {
+    display: block;
+    margin-left: -0.5px;
+    width: 8px;
+    height: 14px;
+    background-color: var(--indicator);
+    border-radius: 3px;
+}
+
+#scroll-container .heading-indicator:after {
+    content: none;
+}
+
+.heading-label {
+    font-family: bakh_bold, serif;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    width: 7rem;
+    margin-left: 1rem;
+    line-height: 1.1;
+    font-size: 0.8rem;
+    transform: translateY(-50%);
+    filter: blur(0.5rem);
+    transition: opacity 0.25s ease, filter 0.25s ease, visibility 0.25s;
+    color: var(--vegas-gold);
+    margin-right: 12px;
+    max-width: 220px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-sidebar:focus-within .heading-label,
+.custom-sidebar:hover .heading-label {
+    opacity: 1;
+    visibility: visible;
+    filter: blur(0);
+}
+
+@media (max-width: 45rem) {
+    #scroll-container {
+        position: fixed;
+        inset: 0 0 auto;
+        height: 4px;
+        width: 100%;
+    }
+
+    #scroll-container #indicator {
+        left: 0;
+        height: 100%;
+    }
+
+    #scroll-container .heading-indicator {
+        width: 5px;
+        height: 4px;
+    }
+}
 
 *,
 *::before,

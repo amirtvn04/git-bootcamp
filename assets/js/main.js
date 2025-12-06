@@ -174,3 +174,182 @@ document.getElementById("theme-toggle").addEventListener("change", () => {
         document.getElementById("darkmode-toggle").checked = false;
     }
 });
+
+// Custom Scrollbar
+class ScrollProgressIndicator {
+    constructor() {
+        this.scrollContainer = document.getElementById("scroll-container");
+        this.indicator = document.getElementById("indicator");
+        this.breakpoint = 700;
+        this.currentLayout = null;
+
+        if (!this.scrollContainer || !this.indicator) {
+            console.warn("Scroll container or indicator not found");
+            return;
+        }
+
+        this.init();
+    }
+
+    init() {
+        this.updateActiveArticle();
+        this.setupEventListeners();
+        this.update();
+    }
+
+    updateActiveArticle() {
+        this.article = document.querySelector("article.active[data-page]");
+
+        if (this.article) {
+            this.headers = this.article.querySelectorAll("h2[id]");
+        } else {
+            this.headers = [];
+        }
+
+        if (this.article && this.headers.length > 0) {
+            this.scrollContainer.style.display = "block";
+        } else {
+            this.scrollContainer.style.display = "none";
+        }
+    }
+
+    setupEventListeners() {
+        document.addEventListener("scroll", () => this.update());
+        window.addEventListener("resize", () => this.update());
+
+        const navLinks = document.querySelectorAll("[data-nav-link]");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                setTimeout(() => {
+                    this.updateActiveArticle();
+                    this.currentLayout = null;
+                    this.update();
+                }, 100);
+            });
+        });
+    }
+
+    getArticleDimensions() {
+        if (!this.article) return null;
+
+        const articleRect = this.article.getBoundingClientRect();
+        const scrollTop = window.scrollY - this.article.offsetTop;
+        const adjustedScrollTop = Math.max(
+            0,
+            Math.min(scrollTop, this.article.scrollHeight)
+        );
+
+        return {
+            articleTop: articleRect.top + window.scrollY,
+            articleHeight: this.article.scrollHeight,
+            articleBottom: articleRect.bottom + window.scrollY,
+            viewportHeight: window.innerHeight,
+            scrollTop: adjustedScrollTop
+        };
+    }
+
+    createHeaderMarker(header, position, isHorizontal) {
+        const markerLink = document.createElement("a");
+        markerLink.href = `#${header.id}`;
+        markerLink.className = "heading-marker-container";
+
+        const line = document.createElement("span");
+        line.className = "heading-indicator";
+        line.setAttribute("aria-hidden", "true");
+
+        markerLink.appendChild(line);
+
+        if (!isHorizontal) {
+            const label = document.createElement("span");
+            label.className = "heading-label";
+            label.textContent = header.textContent.trim();
+            markerLink.appendChild(label);
+        }
+
+        if (isHorizontal) {
+            markerLink.style.left = `${position}%`;
+            markerLink.style.top = "";
+        } else {
+            markerLink.style.top = `${position}%`;
+            markerLink.style.left = "";
+        }
+
+        return markerLink;
+    }
+
+    resetIndicatorStyles() {
+        this.indicator.style.width = "";
+        this.indicator.style.height = "";
+        this.indicator.style.top = "";
+        this.indicator.style.left = "";
+    }
+
+    updateIndicator(isHorizontal) {
+        const dimensions = this.getArticleDimensions();
+        if (!dimensions) return;
+
+        const { articleHeight, viewportHeight, scrollTop } = dimensions;
+
+        if (isHorizontal) {
+            const width = (scrollTop / (articleHeight - viewportHeight)) * 100;
+            const clampedWidth = Math.max(0, Math.min(100, width));
+            this.indicator.style.width = `${clampedWidth}%`;
+            this.indicator.style.left = "0";
+            this.indicator.style.top = "";
+            this.indicator.style.height = "";
+        } else {
+            const height = (viewportHeight / articleHeight) * 100;
+            const position = (scrollTop / articleHeight) * 100;
+            const clampedPosition = Math.max(0, Math.min(100 - height, position));
+            this.indicator.style.height = `${height}%`;
+            this.indicator.style.top = `${clampedPosition}%`;
+            this.indicator.style.left = "";
+            this.indicator.style.width = "";
+        }
+    }
+
+    updateHeaderMarkers(isHorizontal) {
+        if (!this.article || !this.headers || this.headers.length === 0) return;
+
+        const dimensions = this.getArticleDimensions();
+        if (!dimensions) return;
+
+        const { articleHeight } = dimensions;
+
+        this.scrollContainer
+            .querySelectorAll(".heading-marker-container")
+            .forEach((marker) => marker.remove());
+
+        this.headers.forEach((header) => {
+            const headerOffset = header.offsetTop - this.article.offsetTop;
+            const position = (headerOffset / articleHeight) * 100;
+            const marker = this.createHeaderMarker(header, position, isHorizontal);
+            this.scrollContainer.appendChild(marker);
+        });
+    }
+
+    update() {
+        if (!this.article || !this.headers || this.headers.length === 0) {
+            if (this.scrollContainer) {
+                this.scrollContainer.style.display = "none";
+            }
+            return;
+        }
+
+        this.scrollContainer.style.display = "block";
+
+        const isHorizontal = window.innerWidth <= this.breakpoint;
+
+        if (this.currentLayout !== isHorizontal) {
+            this.currentLayout = isHorizontal;
+            this.resetIndicatorStyles();
+            this.updateHeaderMarkers(isHorizontal);
+        }
+
+        this.updateIndicator(isHorizontal);
+    }
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+    new ScrollProgressIndicator();
+});
