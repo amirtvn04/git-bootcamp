@@ -90,7 +90,8 @@
                 <li class="social-item"><a href="https://www.github.com/amirtvn04/" class="social-link" target="_blank">
                     <ion-icon name="logo-github"></ion-icon>
                 </a></li>
-                <li class="social-item"><a href="https://www.instagram.com/amirtvn04/" class="social-link" target="_blank">
+                <li class="social-item"><a href="https://www.instagram.com/amirtvn04/" class="social-link"
+                                           target="_blank">
                     <ion-icon name="logo-instagram"></ion-icon>
                 </a></li>
                 <li class="social-item"><a href="https://t.me/amirtvn04" class="social-link" target="_blank">
@@ -701,32 +702,52 @@
         </article>
 
         <article class="resume " data-page="فصل ۱">
+            <h2 class="h2 article-title">فصل ۱: مقدمات گیت</h2>
+
+            <ul class="article-list code-example" style="margin-bottom: 24px">
+                <li><span>فهرست مطالب فصل</span></li>
+                <li><a href="#titr-1.1">۱.۱ - گرفتن یا ساخت یک مخزن Git</a></li>
+                <li><a href="#titr-1.2">۱.۲ - ثبت تغییرات در مخزن</a></li>
+                <li><a href="#titr-1.3">۱.۳ - مشاهده تاریخچه کامیت‌ها</a></li>
+                <li><a href="#titr-1.4">۱.۴ – بازگرداندن تغییرات</a></li>
+                <li><a href="#titr-1.5">۱.۵ – کار کردن با ریموت‌ها</a></li>
+
+
+            </ul>
+
             <header>
-                <h2 class="h2 article-title">فصل ۲ – گرفتن یا ساخت یک مخزن Git</h2>
+                <h2 id="titr-1.1" class="h2 article-title">فصل ۱.۱ – گرفتن یا ساخت یک مخزن Git</h2>
             </header>
 
             <section class="about-text">
                 <p>
-                    قبل از اینکه بتوانیم از Git استفاده کنیم — یعنی تغییرات را ثبت کنیم، تاریخچه داشته باشیم، شاخه بسازیم و … —
-                    نیاز است پروژه‌مان زیر نظر <span class="text_bold">Git</span> باشد. این یعنی ما باید یک <span class="text_bold">مخزن Git</span> ایجاد کنیم یا یک مخزن آماده را کپی (<span class="text_bold">clone</span>)
-                    کنیم. مخزن جایی است که Git تمام اطلاعات <span class="text_bold">تاریخچه، شاخه‌ها، کامیت‌ها، و metadata</span> پروژه را ذخیره می‌کند.
+                    قبل از اینکه بتوانیم از Git استفاده کنیم — یعنی تغییرات را ثبت کنیم، تاریخچه داشته باشیم، شاخه
+                    بسازیم و … —
+                    نیاز است پروژه‌مان زیر نظر <span class="text_bold">Git</span> باشد. این یعنی ما باید یک <span
+                        class="text_bold">مخزن Git</span> ایجاد کنیم یا یک مخزن آماده را کپی (<span class="text_bold">clone</span>)
+                    کنیم. مخزن جایی است که Git تمام اطلاعات <span class="text_bold">تاریخچه، شاخه‌ها، کامیت‌ها، و metadata</span>
+                    پروژه را ذخیره می‌کند.
                 </p>
             </section>
 
             <header>
-                <h2 class="h2 article-title">✅ دو راه برای داشتن مخزن Git</h2>
+                <h2 class="h2 article-title"> دو راه برای داشتن مخزن Git</h2>
             </header>
 
             <section class="about-text">
                 <p>شما معمولاً <span class="text_bold">دو روش</span> برای به‌دست آوردن یک مخزن Git دارید:</p>
                 <ul style="margin-right: 25px">
-                    <li><span class="text_bold">ساخت مخزن جدید</span> در یک پوشه محلی موجود (برای پروژه‌هایی که خودتان شروع می‌کنید)</li>
-                    <li><span class="text_bold">کلون کردن (clone)</span> یک مخزن Git موجود (مثلاً پروژه‌ای از GitHub یا سرور دیگر، برای مشارکت یا استفاده)</li>
+                    <li><span class="text_bold">ساخت مخزن جدید</span> در یک پوشه محلی موجود (برای پروژه‌هایی که خودتان
+                        شروع می‌کنید)
+                    </li>
+                    <li><span class="text_bold">کلون کردن (clone)</span> یک مخزن Git موجود (مثلاً پروژه‌ای از GitHub یا
+                        سرور دیگر، برای مشارکت یا استفاده)
+                    </li>
                 </ul>
             </section>
 
             <header>
-                <h2 class="h2 article-title">🛠️ روش اول — ساخت مخزن در پوشه محلی</h2>
+                <h2 class="h2 article-title"> روش اول — ساخت مخزن در پوشه محلی</h2>
             </header>
 
             <section class="about-text">
@@ -744,29 +765,35 @@
                     git init
                 </div>
                 <p>
-                    این دستور یک <span class="text_bold">زیرپوشه مخفی به نام .git</span> در پروژه ایجاد می‌کند — ساختار داخلی Git که تمام تاریخچه و تنظیمات
+                    این دستور یک <span class="text_bold">زیرپوشه مخفی به نام .git</span> در پروژه ایجاد می‌کند — ساختار
+                    داخلی Git که تمام تاریخچه و تنظیمات
                     لازم را نگه می‌دارد.
                 </p>
                 <p>
-                    تا اینجا پروژه شما تحت کنترل نسخه قرار گرفته، اما هنوز هیچ فایلی <span class="text_bold">«ردیابی» (tracked) نشده</span> است. برای شروع
-                    کنترل فایل‌ها، باید آن‌ها را <span class="text_bold">اضافه (stage) و در اولین commit ثبت</span> کنید:
+                    تا اینجا پروژه شما تحت کنترل نسخه قرار گرفته، اما هنوز هیچ فایلی <span class="text_bold">«ردیابی» (tracked) نشده</span>
+                    است. برای شروع
+                    کنترل فایل‌ها، باید آن‌ها را <span class="text_bold">اضافه (stage) و در اولین commit ثبت</span>
+                    کنید:
                 </p>
                 <div class="code-example" dir="ltr">
-                    git add .        # اضافه کردن همه فایل‌ها<br>
-                    git commit -m "Initial commit"   # اولین commit
+                    git add . # اضافه کردن همه فایل‌ها<br>
+                    git commit -m "Initial commit" # اولین commit
                 </div>
                 <p>
-                    با این کار، تمام فایل‌های فعلی پروژه <span class="text_bold">تحت نظر Git</span> قرار می‌گیرند و یک نقطه شروع برای تاریخچه پروژه ایجاد می‌شود.
+                    با این کار، تمام فایل‌های فعلی پروژه <span class="text_bold">تحت نظر Git</span> قرار می‌گیرند و یک
+                    نقطه شروع برای تاریخچه پروژه ایجاد می‌شود.
                 </p>
-                <p><span class="text_bold">نتیجه:</span> اکنون یک مخزن Git کامل دارید، با اولین commit و آماده برای ادامه کار.</p>
+                <p><span class="text_bold">نتیجه:</span> اکنون یک مخزن Git کامل دارید، با اولین commit و آماده برای
+                    ادامه کار.</p>
             </section>
 
             <header>
-                <h2 class="h2 article-title">🔄 روش دوم — clone کردن یک مخزن موجود</h2>
+                <h2 class="h2 article-title"> روش دوم — clone کردن یک مخزن موجود</h2>
             </header>
 
             <section class="about-text">
-                <p>اگر می‌خواهید روی پروژه‌ای که قبلاً با Git ساخت شده کار کنید، کافی است آن را <span class="text_bold">clone</span> کنید:</p>
+                <p>اگر می‌خواهید روی پروژه‌ای که قبلاً با Git ساخت شده کار کنید، کافی است آن را <span class="text_bold">clone</span>
+                    کنید:</p>
                 <div class="code-example" dir="ltr">
                     git clone &lt;repository_url&gt;
                 </div>
@@ -778,8 +805,11 @@
                 <ul style="margin-right: 25px">
                     <li>یک پوشه جدید به نام پروژه ایجاد می‌کند</li>
                     <li>داخل آن .git را تنظیم می‌کند</li>
-                    <li><span class="text_bold">تمام تاریخچه پروژه</span> (کامیت‌ها، شاخه‌ها، داده‌ها) را دانلود می‌کند</li>
-                    <li><span class="text_bold">آخرین نسخه کد</span> را برای شما Checkout می‌کند تا بتوانید بلافاصله شروع به کار کنید</li>
+                    <li><span class="text_bold">تمام تاریخچه پروژه</span> (کامیت‌ها، شاخه‌ها، داده‌ها) را دانلود می‌کند
+                    </li>
+                    <li><span class="text_bold">آخرین نسخه کد</span> را برای شما Checkout می‌کند تا بتوانید بلافاصله
+                        شروع به کار کنید
+                    </li>
                 </ul>
                 <p>اگر بخواهید پروژه را در پوشه‌ای با نام متفاوت ذخیره کنید:</p>
                 <div class="code-example" dir="ltr">
@@ -789,15 +819,664 @@
             </section>
 
             <header>
-                <h2 class="h2 article-title">📌 نکات مهم بعد از clone یا init</h2>
+                <h2 class="h2 article-title"> نکات مهم بعد از clone یا init</h2>
             </header>
 
             <section class="about-text">
                 <ul style="margin-right: 25px">
-                    <li>پس از <span class="text_bold">git init</span> یا <span class="text_bold">git clone</span> پوشه‌ی پروژه آماده است؛ اما اگر init کرده‌اید، فراموش نکنید فایل‌ها را <span class="text_bold">add و commit</span> کنید.</li>
-                    <li><span class="text_bold">clone کردن یک repo یعنی شما کل تاریخچه پروژه را دارید</span> — پس حتی اگر سرور اصلی دچار مشکل شود، با کلون محلی پروژه همه داده‌ها محفوظ است.</li>
-                    <li>نام شاخه پیش‌فرض ممکن است متفاوت باشد (مثلاً main یا master)؛ بعداً می‌توانید آن را تغییر دهید.</li>
+                    <li>پس از <span class="text_bold">git init</span> یا <span class="text_bold">git clone</span> پوشه‌ی
+                        پروژه آماده است؛ اما اگر init کرده‌اید، فراموش نکنید فایل‌ها را <span class="text_bold">add و commit</span>
+                        کنید.
+                    </li>
+                    <li><span class="text_bold">clone کردن یک repo یعنی شما کل تاریخچه پروژه را دارید</span> — پس حتی
+                        اگر سرور اصلی دچار مشکل شود، با کلون محلی پروژه همه داده‌ها محفوظ است.
+                    </li>
+                    <li>نام شاخه پیش‌فرض ممکن است متفاوت باشد (مثلاً main یا master)؛ بعداً می‌توانید آن را تغییر
+                        دهید.
+                    </li>
                 </ul>
+            </section>
+
+            <header>
+                <h2 id="titr-1.2" class="h2 article-title">فصل ۱.۲ — ثبت تغییرات در مخزن (Recording Changes to the Repository)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    وقتی یک مخزن Git دارید و فایل‌هایتان را در دایرکتوری کاری دارید، برای ثبت تغییرات باید بدانید که Git
+                    چگونه فایل‌ها را <span class="text_bold">رصد می‌کند</span> و چگونه وضعیت آن‌ها را تغییر می‌دهد. در
+                    این فصل با مفاهیم «<span class="text_bold">tracked / untracked</span>»، «<span class="text_bold">stage / unstaged</span>»،
+                    و روند ثبت تغییرات (<span class="text_bold">add → commit</span>) آشنا می‌شویم.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> وضعیت فایل‌ها در Git
+                </h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    هر فایل در پروژه یا <span class="text_bold">tracked</span> است (یعنی Git آن را می‌شناسد) یا <span
+                        class="text_bold">untracked</span> (فایل جدید یا فایل‌هایی که Git هنوز به آن‌ها نگاه نکرده).
+                </p>
+                <p>
+                    وقتی برای اولین بار مخزن را clone می‌کنید، تمام فایل‌ها <span
+                        class="text_bold">tracked و بدون تغییر</span> هستند (چون Git آن‌ها را از مخزن دریافت کرده)؛ اگر
+                    فایلی اضافه کنید، ابتدا <span class="text_bold">Untracked</span> است تا وقتی خودتان آن را به صراحت
+                    <span class="text_bold">اضافه (stage)</span> کنید.
+                </p>
+            </section>
+
+            <img src="./assets/img/lifecycle.png" alt="lifecycle" style="width: 100%; margin: 20px 0">
+
+            <header>
+                <h2 class="h2 article-title"> آماده‌سازی برای ثبت: <span class="text_bold">git add</span> — دنبال کردن
+                    یا مرحله‌بندی</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    اگر بخواهید فایل جدید را به مخزن اضافه کنید یا تغییرات فایل‌های موجود را در commit بعدی وارد کنید —
+                    باید از:
+                </p>
+                <div class="code-example" dir="ltr">
+                    git add &lt;file-or-directory&gt;
+                </div>
+                <p>
+                    استفاده کنید. این دستور فایل (یا فایل‌ها) را به <span class="text_bold">Stage</span> می‌آورد، به این
+                    معنا که Git بداند تغییرات این فایل باید <span class="text_bold">ذخیره شوند</span>.
+                </p>
+                <p>
+                    پس از اجرای git add اگر:
+                </p>
+                <div class="code-example" dir="ltr">
+                    git status
+                </div>
+                <p>
+                    را اجرا کنید، فایل‌های جدید یا تغییر یافته‌ای که <span class="text_bold">stage شده‌اند</span> زیر
+                    عنوان <span class="text_bold">"Changes to be committed"</span> دیده می‌شوند.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> ویرایش پس از stage — دقت در staging</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    اگر فایلی <span class="text_bold">بعد از stage تغییر کند</span>، Git آن را دوباره به صورت «تغییر
+                    نیافته برای commit» لحاظ نمی‌کند؛ یعنی stage با محتوایی که هنگام اجرای <span class="text_bold">git add</span>
+                    بوده ذخیره می‌شود. برای commit نهایی، اگر تغییر جدید داده‌اید — <span class="text_bold">دوباره باید git add اجرا کنید</span>.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> بررسی وضعیت مخزن: <span
+                        class="text_bold">git status & git status -s</span></h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    <span class="text_bold">git status</span> <span class="text_bold">اطلاعات کامل</span>: شاخه فعلی،
+                    فایل‌های staged، unstaged، untracked را نشان می‌دهد. این <span class="text_bold">راه اصلی</span>
+                    برای فهمیدن وضعیت کنونی پروژه است.
+                </p>
+                <p>
+                    <span class="text_bold">git status -s</span> یا --short نمای جمع و جورتر با علائم اختصاری:
+                </p>
+                <ul style="margin-right: 25px">
+                    <li><span class="text_bold">??</span> ← فایل untracked</li>
+                    <li><span class="text_bold">A</span> ← فایل staged (افزودنی جدید)</li>
+                    <li><span class="text_bold">M</span> ← فایل modified</li>
+                </ul>
+                <p>
+                    دو ستون دارد: ستون چپ وضعیت <span class="text_bold">stage</span>، ستون راست وضعیت <span
+                        class="text_bold">working directory</span>.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> دیدن تغییرات دقیق: <span class="text_bold">git diff</span></h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    <span class="text_bold">git diff</span> تفاوت بین <span class="text_bold">working directory</span> و
+                    <span class="text_bold">staging area</span> را نشان می‌دهد — خطوطی که تغییر داده‌اید ولی هنوز Stage
+                    نکرده‌اید.
+                </p>
+                <p>
+                    اگر بخواهید ببینید چه چیزی برای commit آماده است (<span class="text_bold">staged</span>) نسبت به
+                    آخرین commit، از:
+                </p>
+                <div class="code-example" dir="ltr">
+                    git diff --staged
+                </div>
+                <p>یا</p>
+                <div class="code-example" dir="ltr">
+                    git diff --cached
+                </div>
+                <p>استفاده می‌شود.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> نهایی کردن تغییرات: <span class="text_bold">git commit</span></h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    بعد از staged کردن فایل‌ها، برای <span class="text_bold">ثبت نهاییت تغییرات در تاریخچه مخزن</span>:
+                </p>
+                <div class="code-example" dir="ltr">
+                    git commit -m "توضیح کوتاه درباره تغییرات"
+                </div>
+                <p>یا اگر می‌خواهید پیام را در ویرایشگر وارد کنید:</p>
+                <div class="code-example" dir="ltr">
+                    git commit
+                </div>
+                <p>
+                    ️ <span class="text_bold">Git فقط آن‌چه در staging area هست را در commit ثبت می‌کند</span>. هر
+                    تغییری بعد از git add و قبل از git commit ویرایش شود بدون git add مجدد در commit قرار نمی‌گیرد.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> فایل‌های نادیده‌گرفته‌شده: <span class="text_bold">.gitignore</span></h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    گاهی فایل‌هایی داریم (مثل فایل‌های ساخته‌شده خودکار، فایل‌های لاگ، build، فایل‌های باینری) که <span
+                        class="text_bold">نمی‌خواهیم Git آن‌ها را ردیابی کند</span>. برای این منظور:
+                </p>
+                <ul style="margin-right: 25px">
+                    <li>یک فایل متنی به نام <span class="text_bold">.gitignore</span> در ریشه مخزن می‌سازیم</li>
+                    <li>الگوهایی می‌نویسیم که Git آنها را نادیده بگیرد (مثلاً *.log, temp/, node_modules/ ...)</li>
+                </ul>
+                <p>
+                    این کمک می‌کند که مخزن <span class="text_bold">پاک و مرتب</span> بماند و فایل‌های ناخواسته وارد
+                    تاریخچه نشوند.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> چرخه کار معمول با Git</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                <ul style="margin-right: 25px">
+                    <li><span class="text_bold">تغییر کد</span> / ایجاد فایل جدید</li>
+                    <li><span class="text_bold">git status</span> ← دیدن وضعیت</li>
+                    <li><span class="text_bold">git add &lt;files&gt;</span> ← آماده‌سازی برای commit</li>
+                    <li>(اختیاری) <span class="text_bold">git diff / git status -s</span> ← بررسی تغییرات</li>
+                    <li><span class="text_bold">git commit -m "پیام"</span> ← ثبت تغییرات</li>
+                    <li>دوباره شروع: تغییرات جدید ← add ← commit</li>
+                </ul>
+                </p>
+            </section>
+
+            <header>
+                <h2 id="titr-1.3" class="h2 article-title">فصل ۱.۳ — مشاهده تاریخچه کامیت‌ها (Viewing the Commit History)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    وقتی در پروژه‌تان چند کامیت ثبت کرده‌اید، یا مخزنی را clone کرده‌اید که پیش از شما تاریخچه دارد،
+                    طبیعی است بخواهید «ببینید گذشته پروژه چگونه بوده است»: چه تغییراتی انجام شده، چه زمانی، توسط چه کسی،
+                    و با چه پیام‌هایی. برای این بررسی <span class="text_bold">مهم‌ترین ابزار</span> در Git، دستور <span
+                        class="text_bold">git log</span> است.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> دستور پایه: <span class="text_bold">git log</span></h2>
+            </header>
+
+            <section class="about-text">
+                <p>اجرای ساده:</p>
+                <div class="code-example" dir="ltr">
+                    git log
+                </div>
+                <p>لیستی <span class="text_bold">معکوس (جدید ← قدیم)</span> از کامیت‌ها نمایش می‌دهد. برای هر کامیت
+                    موارد زیر دیده می‌شوند:</p>
+                <ul style="margin-right: 25px">
+                    <li><span class="text_bold">شناسه (SHA-1) کامیت</span></li>
+                    <li><span class="text_bold">نام نویسنده و ایمیل</span></li>
+                    <li><span class="text_bold">تاریخ و ساعت</span></li>
+                    <li><span class="text_bold">پیام کامیت</span></li>
+                </ul>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> گزینه‌ها و حالت‌های مختلف برای مشاهده بهتر تاریخچه</h2>
+            </header>
+
+            <section class="about-text">
+                <p><span class="text_bold">نمای خلاصه (oneline):</span></p>
+                <div class="code-example" dir="ltr">
+                    git log --pretty=oneline
+                </div>
+                <p>هر کامیت در یک خط، شامل <span class="text_bold">شناسه کوتاه + پیام</span></p>
+
+                <p><span class="text_bold">نمای گراف با شاخه‌ها و mergeها (graph):</span></p>
+                <div class="code-example" dir="ltr">
+                    git log --graph --oneline
+                </div>
+                <p><span class="text_bold">مناسب وقتی شاخه (branch) و ادغام (merge) زیادی وجود دارد</span> و می‌خواهید
+                    ساختار تاریخچه را ببینید. </p>
+
+                <p><span class="text_bold">نمای همراه با تغییرات هر commit (patch):</span></p>
+                <div class="code-example" dir="ltr">
+                    git log -p
+                </div>
+                <p>این حالت علاوه بر اطلاعات هر commit، <span class="text_bold">«تفاوت (diff)»</span> بین آن commit و
+                    commit قبلی را نشان می‌دهد — یعنی دقیقاً چه خطوطی اضافه یا حذف شده‌اند.</p>
+
+                <p><span class="text_bold">نمای با آمار تغییرات (stat):</span></p>
+                <div class="code-example" dir="ltr">
+                    git log --stat
+                </div>
+                <p>لیستی از فایل‌های تغییر یافته + <span class="text_bold">تعداد خطوط اضافه/حذف‌شده</span> زیر هر
+                    commit. مناسب برای دید کلی تغییرات بدون جزئیات diff.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> فیلتر و محدود کردن نمایش</h2>
+            </header>
+
+            <section class="about-text">
+                <p>ممکن است تاریخچه پروژه خیلی طولانی باشد. Git امکاناتی دارد برای <span
+                        class="text_bold">فیلتر کردن</span>:</p>
+
+                <p><span class="text_bold">محدود کردن تعداد کامیت‌ها:</span></p>
+                <div class="code-example" dir="ltr">
+                    git log -n 5     # 5 کامیت آخر<br>
+                    git log -2       # 2 کامیت آخر
+                </div>
+
+                <p><span class="text_bold">فیلتر بر اساس تاریخ:</span></p>
+                <div class="code-example" dir="ltr">
+                    git log --since="2025-10-01"<br>
+                    git log --until="2025-11-15"
+                </div>
+
+                <p><span class="text_bold">فیلتر بر اساس نویسنده:</span></p>
+                <div class="code-example" dir="ltr">
+                    git log --author="Ali"
+                </div>
+                <p>فقط کامیت‌هایی که نویسنده‌شان «Ali» است نمایش داده می‌شوند.</p>
+
+                <p><span class="text_bold">جستجو در پیام commit:</span></p>
+                <div class="code-example" dir="ltr">
+                    git log --grep="fix bug"
+                </div>
+                <p>کامیت‌هایی که در پیامشان «fix bug» آمده را نمایش می‌دهد.</p>
+
+                <p><span class="text_bold">جستجو بر اساس تغییرات در کد (pickaxe):</span></p>
+                <div class="code-example" dir="ltr">
+                    git log -S functionName
+                </div>
+                <p>کامیت‌هایی که <span class="text_bold">اضافه/حذف «functionName»</span> در آن‌ها اتفاق افتاده را نمایش
+                    می‌دهد.</p>
+
+                <p><span class="text_bold">محدود کردن بر اساس مسیر یا فایل خاص:</span></p>
+                <div class="code-example" dir="ltr">
+                    git log -- path/to/file
+                </div>
+                <p>فقط کامیت‌هایی نمایش داده می‌شوند که <span class="text_bold">فایل مشخص‌شده</span> در آن‌ها تغییر کرده
+                    باشد.</p>
+            </section>
+
+            <header>
+                <h2 id="titr-1.4" class="h2 article-title">فصل ۱.۴ — بازگرداندن تغییرات (<span class="text_bold">Undoing Things</span>)
+                </h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    گاهی در هنگام کار با Git ممکن است بخواهیم تغییراتی را که داده‌ایم — چه در «<span class="text_bold">Stage</span>»،
+                    چه در «<span class="text_bold">Working Directory</span>»، یا حتی در «<span class="text_bold">تاریخچه (Commit)</span>»
+                    — <span class="text_bold">لغو کنیم</span>. این فصل به مهم‌ترین روش‌های <span
+                        class="text_bold">Undo</span> می‌پردازد.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> اصلاح آخرین Commit
+                </h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    اگر بعد از commit به اشتباه، متوجه شدید که <span
+                        class="text_bold">فایل‌هایی فراموش کردید add کنید</span> یا <span class="text_bold">پیام commit مناسب نیست</span>،
+                    می‌توانید با:
+                </p>
+                <div class="code-example" dir="ltr">
+                    git commit --amend
+                </div>
+                <p><span class="text_bold">آخرین commit را بازنویسی کنید</span>. با این کار:</p>
+                <ul style="margin-right: 25px">
+                    <li>اگر تغییری در staging area باشد → آن‌ها هم <span
+                            class="text_bold">به commit اضافه می‌شوند</span>.
+                    </li>
+                    <li>اگر هیچ تغییری بین commit و اجرا نکردن این دستور نباشد → <span class="text_bold">تنها پیام commit تغییر می‌کند</span>.
+                    </li>
+                </ul>
+                <p>⚠ <span class="text_bold">توجه مهم</span>: این روش فقط برای commit‌هایی مناسب است که <span
+                        class="text_bold">هنوز Push نشده‌اند</span>. بازنویسی commit‌های ارسال‌شده می‌تواند برای همکاری
+                    تیمی خطرناک باشد.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> خارج کردن فایل از Stage (<span class="text_bold">Unstage</span>) — زمانی
+                    که اشتباهی git add زدید</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    فرض کنید تغییراتی داده‌اید و با <span class="text_bold">git add</span> مرحله‌بندی (stage) کرده‌اید،
+                    اما می خواهید آن‌ها را از Stage خارج کنید — برای این کار:
+                </p>
+                <div class="code-example" dir="ltr">
+                    git reset HEAD &lt;file&gt;
+                </div>
+                <p>یا در نسخه‌های جدید Git:</p>
+                <div class="code-example" dir="ltr">
+                    git restore --staged &lt;file&gt;
+                </div>
+                <p>به این ترتیب فایل <span class="text_bold">به حالت Unstaged باز می‌گردد</span>.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> لغو تغییرات محلی — <span class="text_bold">برگرداندن فایل به آخرین نسخه Commit شده</span>
+                </h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    اگر فایلی را ویرایش کرده‌اید ولی تصمیم دارید تغییرات را <span class="text_bold">نپذیرید</span> و
+                    می‌خواهید فایل به همان حالت آخرین commit بازگردد:
+                </p>
+                <div class="code-example" dir="ltr">
+                    git checkout -- &lt;file&gt;
+                </div>
+                <p>یا با Git نسخه جدید:</p>
+                <div class="code-example" dir="ltr">
+                    git restore &lt;file&gt;
+                </div>
+                <p>⚠ <span class="text_bold">این باعث می‌شود تمام تغییرات محلی از بین بروند</span> — بنابراین این دستور
+                    را فقط وقتی استفاده کنید که مطمئن هستید نمی‌خواهید تغییراتتان حفظ شوند.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> برگرداندن (undo) commit  </h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    اگر می‌خواهید <span class="text_bold">commit آخر را لغو کنید</span> و تغییرات را به حالت قبل
+                    بازگردانید، می‌توانید از دستور:
+                </p>
+                <div class="code-example" dir="ltr">
+                    git reset --soft HEAD^
+                </div>
+                <p>یا اگر می‌خواهید <span class="text_bold">commit + stage + تغییرات محلی را هم حذف کنید</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git reset --hard HEAD^
+                </div>
+                <p><span class="text_bold">توضیح:</span></p>
+                <ul style="margin-right: 25px">
+                    <li><span class="text_bold">--soft</span>: فقط <span class="text_bold">HEAD</span> (شاخه) را جابجا
+                        می‌کند، <span class="text_bold">تغییرات در staging و working directory باقی می‌ماند</span>.
+                    </li>
+                    <li><span class="text_bold">--mixed</span> (پیش‌فرض بدون گزینه): <span class="text_bold">staging پاک می‌شود</span>،
+                        ولی تغییرات در working directory می‌ماند.
+                    </li>
+                    <li><span class="text_bold">--hard</span>: <span class="text_bold">همه چیز</span> — staging و
+                        working directory — به حالت آخرین commit باز می‌گردد.
+                    </li>
+                </ul>
+                <p>⚠ <span class="text_bold">مواظب باشید: --hard ممکن است باعث از دست رفتن دائمی تغییرات شود</span> (مگر
+                    قبلاً commit شده باشند). </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> بازگشت تغییرات با commit جدید: <span class="text_bold">git revert</span>
+                </h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    اگر commitی در گذشته دارید که می‌خواهید تغییرات آن را خنثی کنید — <span class="text_bold">بدون اینکه تاریخچه را بازنویسی کنید</span>
+                    — از:
+                </p>
+                <div class="code-example" dir="ltr">
+                    git revert &lt;commit-hash&gt;
+                </div>
+                <p>استفاده کنید. این دستور <span class="text_bold">یک commit جدید می‌سازد</span> که تغییرات commit
+                    انتخابی را معکوس می‌کند — <span class="text_bold">تاریخچه محفوظ می‌ماند</span> و کار تیمی مختل
+                    نمی‌شود.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">⚠ نکات مهم درباره Undo در Git</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                <ul style="margin-right: 25px">
+                    <li>بعضی Undoها (مثل <span class="text_bold">reset --hard</span> یا <span
+                            class="text_bold">checkout</span>) <span
+                            class="text_bold">تغییرات محلی را حذف می‌کنند</span> — پس فقط وقتی استفاده کن که مطمئنی.
+                    </li>
+                    <li>اگر commit‌ها را <span class="text_bold">push کرده‌ای</span>، بازنویسی آن‌ها (مثل <span
+                            class="text_bold">--amend</span> یا <span class="text_bold">reset + force push</span>)
+                        می‌تواند برای همکاران مشکل ایجاد کند.
+                    </li>
+                    <li>برای لغو «stage» یا برگشت به حالت قبل، <span class="text_bold">git reset</span> یا <span
+                            class="text_bold">git restore</span> <span class="text_bold">امن‌تر</span> است نسبت به
+                        بازنویسی تاریخچه.
+                    </li>
+                </ul>
+                </p>
+            </section>
+
+            <header>
+                <h2 id="titr-1.5" class="h2 article-title">فصل ۱.۵ — کار کردن با ریموت‌ها (<span class="text_bold">Working with Remotes</span>)
+                </h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    وقتی یک پروژه با Git دارید و می‌خواهید آن را <span
+                        class="text_bold">با دیگران به اشتراک بگذارید</span> یا روی پروژه‌ای که دیگران شروع کرده‌اند کار
+                    کنید، باید بدانید چگونه با <span
+                        class="text_bold">مخزن(های) راه‌دور (remote repository / remotes)</span> کار کنید. ریموت یعنی
+                    نسخه‌ای از پروژه که <span class="text_bold">روی اینترنت یا شبکه</span> — یا حتی روی یک مکان دیگر روی
+                    همان کامپیوتر — میزبانی می‌شود.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> مشاهده ریموت‌های تعریف‌شده</h2>
+            </header>
+
+            <section class="about-text">
+                <p>برای دیدن <span class="text_bold">لیستی از ریموت‌ها</span> که فعلاً تنظیم کرده‌اید:</p>
+                <div class="code-example" dir="ltr">
+                    git remote
+                </div>
+                <p>برای دیدن <span class="text_bold">URL</span> مربوط به هر ریموت:</p>
+                <div class="code-example" dir="ltr">
+                    git remote -v
+                </div>
+                <p>اگر پروژه را با <span class="text_bold">git clone</span> دریافت کرده باشید، معمولاً یک ریموت با نام
+                    پیش‌فرض <span class="text_bold">origin</span> دارد.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> اضافه کردن یک ریموت جدید</h2>
+            </header>
+
+            <section class="about-text">
+                <p>اگر خواستید ریموت جدیدی به پروژه اضافه کنید — مثلاً مخزن گروهی یا ریموتی دیگر — از دستور زیر استفاده
+                    کنید:</p>
+                <div class="code-example" dir="ltr">
+                    git remote add &lt;shortname&gt; &lt;url&gt;
+                </div>
+                <p>مثال:</p>
+                <div class="code-example" dir="ltr">
+                    git remote add upstream https://github.com/username/project.git
+                </div>
+                <p>بعد از این می‌توانید با نام کوتاه (<span class="text_bold">upstream</span>) به جای URL کامل کار کنید.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> دریافت تغییرات از ریموت — <span class="text_bold">fetch و pull</span>
+                </h2>
+            </header>
+
+            <section class="about-text">
+                <p>اگر می‌خواهید <span class="text_bold">آخرین تغییرات از پروژه راه‌دور</span> را بگیرید:</p>
+                <div class="code-example" dir="ltr">
+                    git fetch &lt;remote&gt;
+                </div>
+                <p>این دستور تمام داده‌هایی که محلی ندارید دانلود می‌کند، اما <span class="text_bold">تغییری در شاخه فعلی شما ایجاد نمی‌کند</span>.
+                </p>
+                <p>اگر شاخه محلی شما طوری تنظیم شده است که ردیاب شاخه ریموت باشد، می‌توانید:</p>
+                <div class="code-example" dir="ltr">
+                    git pull
+                </div>
+                <p>که معادل "<span class="text_bold">فچ + ادغام (merge)</span>" است؛ یعنی تغییرات ریموت دانلود و <span
+                        class="text_bold">در شاخه فعلی ادغام می‌شود</span>.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> ارسال تغییرات به ریموت — <span class="text_bold">push</span></h2>
+            </header>
+
+            <section class="about-text">
+                <p>وقتی آماده شدید که تغییراتی که دادید را <span class="text_bold">روی ریموت قرار دهید</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git push &lt;remote&gt; &lt;branch&gt;
+                </div>
+                <p>مثلاً:</p>
+                <div class="code-example" dir="ltr">
+                    git push origin master
+                </div>
+                <p>دقت داشته باشید که اگر از مخزن اصلی clone کرده‌اید و اجازه نوشتن دارید و بین زمانی که آخرین pull زدید
+                    و الآن کسی تغییر نکرده باشد، push موفق خواهد بود. در غیر این صورت، <span class="text_bold">ابتدا باید تغییرات ریموت را fetch / pull کنید، سپس push</span>.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> مدیریت ریموت‌ها (<span class="text_bold">تغییر نام یا حذف</span>)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>برای <span class="text_bold">تغییر نام کوتاه ریموت</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git remote rename &lt;old-name&gt; &lt;new-name&gt;
+                </div>
+                <p>مثلاً:</p>
+                <div class="code-example" dir="ltr">
+                    git remote rename pb origin
+                </div>
+                <p>برای <span class="text_bold">حذف یک ریموت</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git remote remove &lt;name&gt;
+                </div>
+                <p>یا</p>
+                <div class="code-example" dir="ltr">
+                    git remote rm &lt;name&gt;
+                </div>
+                <p>با این کار ریموت و تمام شاخه‌های ریموت‌-ردیابی‌شده (<span
+                        class="text_bold">remote-tracking branches</span>) مرتبط با آن پاک می‌شوند.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> یادداشت مهم درباره «ریموت»</h2>
+            </header>
+
+            <section class="about-text">
+                <p>ممکن است «<span class="text_bold">remote repository</span>» واقعاً روی <span class="text_bold">همان کامپیوتر شما</span>
+                    باشد — یعنی <span class="text_bold">remote لزوماً به معنی «دور» یا روی اینترنت نیست</span>؛ فقط یعنی
+                    «جای دیگر» نسبت به مخزن محلی.</p>
+                <p>بنابراین حتی اگر repo روی همان سیستم است، همان عملیات <span class="text_bold">فچ / پول / پوش</span>
+                    برای هم کار می‌کنند.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">جمع‌بندی فصل
+                </h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    در فصل ۲ با <span class="text_bold">هسته‌ی اصلی استفاده‌ی روزمره از Git</span> آشنا شدیم؛ یعنی همان
+                    مسیر همیشگی توسعه که افراد در پروژه‌های واقعی طی می‌کنند: <span class="text_bold">ایجاد مخزن، اعمال تغییرات، ثبت آن‌ها و در نهایت اشتراک و همگام‌سازی با دیگران</span>.
+                    در این فصل شما یاد گرفتید که چگونه یک پروژه را وارد Git کنید، تغییرات خود را مرحله‌بندی و commit
+                    نمایید، تاریخچه‌ی کار خود را بررسی کنید، اشتباهات را برگردانید و در نهایت پروژه را به مخازن راه‌دور
+                    متصل کرده و با سایر هم‌تیمی‌ها همکاری کنید.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> مفاهیم کلیدی که یاد گرفتیم:</h2>
+            </header>
+
+            <section class="about-text">
+                <p><span class="text_bold">1.1 گرفتن یک مخزن گیت (Getting a Git Repository)</span></p>
+                <p>آموختید چگونه یک پروژه جدید را با <span class="text_bold">git init</span> گیت‌دار کنید یا پروژه‌ای
+                    موجود را با <span class="text_bold">git clone</span> دریافت کنید. این دو ورودی اصلی برای شروع کار با
+                    هر مخزنی در Git هستند.</p>
+
+                <p><span class="text_bold">1.2 ثبت تغییرات در مخزن (Recording Changes to the Repository)</span></p>
+                <p>یاد گرفتید که Git چگونه با فایل‌ها رفتار می‌کند و آن‌ها را در وضعیت‌های مختلف قرار می‌دهد (<span
+                        class="text_bold">Untracked، Modified، Staged</span>). فرآیند افزودن و ثبت تغییرات با <span
+                        class="text_bold">git add</span> و <span class="text_bold">git commit</span> کلید اصلی مدیریت
+                    نسخه است.</p>
+
+                <p><span class="text_bold">1.3 مشاهده تاریخچه کامیت‌ها (Viewing the Commit History)</span></p>
+                <p>با استفاده از دستورات <span class="text_bold">git log</span> و گزینه‌های مختلف آن، نحوه‌ی بررسی
+                    تاریخچه و دنبال‌کردن روند توسعه پروژه را یاد گرفتید. این بخش برای <span class="text_bold">تحلیل تغییرات گذشته</span>
+                    و <span class="text_bold">دیباگ</span> بسیار مهم است.</p>
+
+                <p><span class="text_bold">1.4 بازگرداندن تغییرات (Undoing Things)</span></p>
+                <p>روش‌هایی برای <span class="text_bold">برگشت از خطاها</span> یا برگرداندن پروژه به حالت‌های قبلی یاد
+                    گرفتید. ابزارهایی مانند <span class="text_bold">git restore، git reset، git checkout</span> به شما
+                    امکان مدیریت اشتباهات و کنترل دقیق نسخه‌ها را می‌دهند.</p>
+
+                <p><span class="text_bold">1.5 کار کردن با ریموت‌ها (Working with Remotes)</span></p>
+                <p>با مفهوم <span class="text_bold">Remote Repository</span> آشنا شدید؛ یعنی مخزنی روی شبکه یا اینترنت
+                    که امکان <span class="text_bold">همکاری بین افراد</span> را ایجاد می‌کند. دستورات <span
+                            class="text_bold">git remote, git fetch, git pull, git push</span> پایه‌ی ارتباط میان مخزن
+                    محلی و سرور هستند.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">نتیجه نهایی</h2>
+            </header>
+
+            <section class="about-text">
+                <p>حال شما می‌دانید چگونه:</p>
+                <ul style="margin-right: 25px">
+                    <li>✔ پروژه‌ای را <span class="text_bold">وارد Git کنید</span></li>
+                    <li>✔ فایل‌ها را <span class="text_bold">نسخه‌بندی و تغییرات را commit</span> نمایید</li>
+                    <li>✔ <span class="text_bold">تاریخچه توسعه را ببینید و تحلیل کنید</span></li>
+                    <li>✔ <span class="text_bold">تغییرات اشتباه را برگردانید</span></li>
+                    <li>✔ پروژه را به <span class="text_bold">مخزن‌های ریموت متصل کنید</span> و با دیگران همکاری داشته
+                        باشید
+                    </li>
+                </ul>
+                <p>فصل ۲، <span class="text_bold">ستون اصلی کار با Git</span> است؛ مسلط‌شدن بر همین دستورات، شما را برای
+                    ورود به محیط‌های تیمی و شرکت‌ها آماده می‌کند.</p>
+                <p>در فصل بعدی سراغ <span class="text_bold">Branching & Merging</span> می‌رویم — مفهومی که Git را از
+                    بقیه ابزارها متمایز می‌کند و <span class="text_bold">هسته‌ی توسعه‌ی گروهی</span> است.</p>
             </section>
         </article>
 
