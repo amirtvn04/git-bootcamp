@@ -481,12 +481,12 @@ article.active {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: var(--onyx);
-    backdrop-filter: blur(10px);
     border: 1px solid var(--jet);
     border-radius: 12px 12px 0 0;
     box-shadow: var(--shadow2);
     z-index: 5;
+    background-color: rgba(139, 143, 143, 0.15);
+    backdrop-filter: blur(50px);
 }
 
 .navbar-list {
@@ -1806,12 +1806,13 @@ body {
     }
 
     .navbar {
-        position: absolute;
-        bottom: auto;
-        top: 0;
+        position: fixed;
+        bottom: 18px;
         left: 0;
+        right: 0;
+        margin: 0 auto;
         width: max-content;
-        border-radius: 20px 0;
+        border-radius: 20px;
         padding: 0 20px;
         box-shadow: none;
     }

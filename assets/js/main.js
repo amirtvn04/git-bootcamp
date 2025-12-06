@@ -2,12 +2,34 @@
 
 //Opening or closing sidebar
 
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+const SIDEBAR_STATE_KEY = 'sidebarActiveState';
 
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); })
+const elementToggleFunc = function (elem) {
+    elem.classList.toggle("active");
+
+    if (elem.classList.contains("active")) {
+        localStorage.removeItem(SIDEBAR_STATE_KEY);
+    } else {
+        localStorage.setItem(SIDEBAR_STATE_KEY, 'inactive');
+    }
+}
+
+const loadSidebarState = function () {
+    const savedState = localStorage.getItem(SIDEBAR_STATE_KEY);
+
+    if (savedState === 'inactive') {
+        sidebar.classList.remove("active");
+    }
+}
+
+loadSidebarState();
+
+sidebarBtn.addEventListener("click", function () {
+    elementToggleFunc(sidebar);
+})
 
 //Activating Modal-testimonial
 

@@ -11,7 +11,7 @@
 
 <body>
 <main>
-    <aside class="sidebar " data-sidebar>
+    <aside class="sidebar active" data-sidebar>
         <div class="sidebar-info">
             <figure class="avatar-box" style="padding: 10px;">
                 <img class="avara-img" src="./assets/img/Git_icon.svg.png">
@@ -61,49 +61,25 @@
             <ul class="contacts-list">
                 <li class="contact-item">
                     <div class="icon-box">
-                        <ion-icon name="mail-outline"></ion-icon>
+                        <ion-icon name="git-compare-outline"></ion-icon>
                     </div>
 
                     <div class="contact-info">
-                        <p class="contact-title">Email</p>
+                        <p class="contact-title">برگزار کننده</p>
 
-                        <a href="mailto:richard@example.com" class="contact-link">richardexample.com</a>
+                        <span class="contact-link">انجمن علمی مهندسی کامپیوتر</span>
                     </div>
                 </li>
 
                 <li class="contact-item">
                     <div class="icon-box">
-                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                        <ion-icon name="person-outline"></ion-icon>
                     </div>
 
                     <div class="contact-info">
-                        <p class="contact-title">Phone</p>
+                        <p class="contact-title">مدرس</p>
 
-                        <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-                    </div>
-                </li>
-
-                <li class="contact-item">
-                    <div class="icon-box">
-                        <ion-icon name="calendar-outline"></ion-icon>
-                    </div>
-
-                    <div class="contact-info">
-                        <p class="contact-title">Birthday</p>
-
-                        <time datetime="1982-06-23">June 23, 1982</time>
-                    </div>
-                </li>
-
-                <li class="contact-item">
-                    <div class="icon-box">
-                        <ion-icon name="location-outline"></ion-icon>
-                    </div>
-
-                    <div class="contact-info">
-                        <p class="contact-title">Location</p>
-
-                        <address>Sacramento, California, USA</address>
+                        <span class="contact-link">امیر توانا</span>
                     </div>
                 </li>
             </ul>
@@ -111,17 +87,14 @@
             <div class="separator"></div>
 
             <ul class="social-list">
-                <li class="social-item"><a href="#" class="social-link">
-                    <ion-icon
-                            name="logo-facebook"></ion-icon>
+                <li class="social-item"><a href="https://www.github.com/amirtvn04/" class="social-link" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
                 </a></li>
-                <li class="social-item"><a href="#" class="social-link">
-                    <ion-icon
-                            name="logo-twitter"></ion-icon>
+                <li class="social-item"><a href="https://www.instagram.com/amirtvn04/" class="social-link" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
                 </a></li>
-                <li class="social-item"><a href="#" class="social-link">
-                    <ion-icon
-                            name="logo-instagram"></ion-icon>
+                <li class="social-item"><a href="https://t.me/amirtvn04" class="social-link" target="_blank">
+                    <ion-icon name="paper-plane"></ion-icon>
                 </a></li>
             </ul>
         </div>
@@ -131,25 +104,25 @@
         <nav class="navbar">
             <ul class="navbar-list">
                 <li class="navbar-item">
-                    <button class="navbar-link active" data-nav-link>sec1</button>
+                    <button class="navbar-link active" data-nav-link>فصل ۰</button>
                 </li>
                 <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>sec2</button>
+                    <button class="navbar-link" data-nav-link>فصل ۱</button>
                 </li>
                 <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>sec3</button>
+                    <button class="navbar-link" data-nav-link>فصل ۲</button>
                 </li>
                 <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>sec4</button>
+                    <button class="navbar-link" data-nav-link>فصل ۳</button>
                 </li>
                 <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>sec5</button>
+                    <button class="navbar-link" data-nav-link>فصل ۴</button>
                 </li>
             </ul>
         </nav>
 
-        <article class="about active" data-page="sec1">
-            <h2 class="h2" style="margin-top: 24px">فصل ۰ - مقدمات گیت و کنترل نسخه</h2>
+        <article class="about active" data-page="فصل ۰">
+            <h2 class="h2">فصل ۰ - شروع به کار</h2>
             <ul class="article-list code-example" style="margin-bottom: 24px">
                 <li><span>فهرست مطالب فصل</span></li>
                 <li><a href="#titr-1">۰.۱ - آشنایی با سیستم کنترل نسخه</a></li>
@@ -727,136 +700,108 @@
             </section>
         </article>
 
-        <article class="resume " data-page="sec2">
+        <article class="resume " data-page="فصل ۱">
             <header>
-                <h2 class="h2 article-title">Resume</h2>
+                <h2 class="h2 article-title">فصل ۲ – گرفتن یا ساخت یک مخزن Git</h2>
             </header>
 
-            <section class="timeline">
-                <div class="title-wrapper">
-                    <div class="icon-box">
-                        <ion-icon name="book-outline"></ion-icon>
-                    </div>
-
-                    <h3 class="h3">Education</h3>
-                </div>
-
-                <ol class="timeline-list">
-                    <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">University school of the arts</h4>
-                        <span>2008 - 2010</span>
-                        <p class="timeline-text">There I learnt a wide range of topics that are essential to
-                            understanding both the theory and practical aspects of computing. This involves
-                            programming fundamentals, computer architecture, operating systems, databases, software
-                            engineering, problem solving, collaboration and communication soft skills.</p>
-                    </li>
-
-                    <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">New York Academy of Art</h4>
-                        <span>2006 - 2007</span>
-                        <p class="timeline-text">I chose my master degree in technology. There I deepened my
-                            knowledge, enhanced my skills in the area and learnt how to increase my career prospects
-                            in a competitive job market.</p>
-                    </li>
-
-                    <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">High School of Art and Design</h4>
-                        <span>2003 - 2005</span>
-                        <p class="timeline-text">There I learnt foundational courses and computer sciences
-                            fundamentals. In the institution, I chose my specialization in web-development that
-                            involves front-end and back-end technologies, user interface designs and content
-                            management systems.</p>
-                    </li>
-                </ol>
+            <section class="about-text">
+                <p>
+                    قبل از اینکه بتوانیم از Git استفاده کنیم — یعنی تغییرات را ثبت کنیم، تاریخچه داشته باشیم، شاخه بسازیم و … —
+                    نیاز است پروژه‌مان زیر نظر <span class="text_bold">Git</span> باشد. این یعنی ما باید یک <span class="text_bold">مخزن Git</span> ایجاد کنیم یا یک مخزن آماده را کپی (<span class="text_bold">clone</span>)
+                    کنیم. مخزن جایی است که Git تمام اطلاعات <span class="text_bold">تاریخچه، شاخه‌ها، کامیت‌ها، و metadata</span> پروژه را ذخیره می‌کند.
+                </p>
             </section>
 
-            <section class="timeline">
-                <div class="title-wrapper">
-                    <div class="icon-box">
-                        <ion-icon name="book-outline"></ion-icon>
-                    </div>
+            <header>
+                <h2 class="h2 article-title">✅ دو راه برای داشتن مخزن Git</h2>
+            </header>
 
-                    <h3 class="h3">Experience</h3>
-                </div>
-
-                <ol class="timeline-list">
-                    <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Creative director</h4>
-                        <span>2015 - Present</span>
-                        <p class="timeline-text">I can develop and oversee creative concepts for projects and
-                            campaigns managing a team of designers, writers, and other creative professionals.</p>
-                    </li>
-
-                    <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Art director</h4>
-                        <span>2013 - 2015</span>
-                        <p class="timeline-text">I create and develop visual concepts that align with the project's
-                            goals and objectives, supervising the design process and managing timelines and budgets
-                            for design projects.</p>
-                    </li>
-
-                    <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Web designer</h4>
-                        <span>2010 - 2013</span>
-                        <p class="timeline-text">I create logos, color schemes and typography for a brand's
-                            identity. Also I develop graphics for websites, social media and digital ads with
-                            applications that enhance user experience.</p>
-                    </li>
-                </ol>
+            <section class="about-text">
+                <p>شما معمولاً <span class="text_bold">دو روش</span> برای به‌دست آوردن یک مخزن Git دارید:</p>
+                <ul style="margin-right: 25px">
+                    <li><span class="text_bold">ساخت مخزن جدید</span> در یک پوشه محلی موجود (برای پروژه‌هایی که خودتان شروع می‌کنید)</li>
+                    <li><span class="text_bold">کلون کردن (clone)</span> یک مخزن Git موجود (مثلاً پروژه‌ای از GitHub یا سرور دیگر، برای مشارکت یا استفاده)</li>
+                </ul>
             </section>
 
-            <section class="skill">
-                <h3 class="h3 skills-title">My Skills</h3>
+            <header>
+                <h2 class="h2 article-title">🛠️ روش اول — ساخت مخزن در پوشه محلی</h2>
+            </header>
 
-                <ul class="skills-list content-card">
-                    <li class="skills-item">
-                        <div class="title-wrapper">
-                            <h5 class="h5">Web Design</h5>
-                            <data value="80">80%</data>
-                        </div>
+            <section class="about-text">
+                <p>اگر پروژه‌ای دارید و می‌خواهید آن را زیر کنترل Git ببرید:</p>
+                <p>ابتدا وارد پوشه پروژه شوید. مثلاً در ویندوز:</p>
+                <div class="code-example" dir="ltr">
+                    cd C:/path/to/your-project
+                </div>
+                <p>یا در لینوکس / مک:</p>
+                <div class="code-example" dir="ltr">
+                    cd /home/user/your-project
+                </div>
+                <p>سپس دستور زیر را اجرا کنید:</p>
+                <div class="code-example" dir="ltr">
+                    git init
+                </div>
+                <p>
+                    این دستور یک <span class="text_bold">زیرپوشه مخفی به نام .git</span> در پروژه ایجاد می‌کند — ساختار داخلی Git که تمام تاریخچه و تنظیمات
+                    لازم را نگه می‌دارد.
+                </p>
+                <p>
+                    تا اینجا پروژه شما تحت کنترل نسخه قرار گرفته، اما هنوز هیچ فایلی <span class="text_bold">«ردیابی» (tracked) نشده</span> است. برای شروع
+                    کنترل فایل‌ها، باید آن‌ها را <span class="text_bold">اضافه (stage) و در اولین commit ثبت</span> کنید:
+                </p>
+                <div class="code-example" dir="ltr">
+                    git add .        # اضافه کردن همه فایل‌ها<br>
+                    git commit -m "Initial commit"   # اولین commit
+                </div>
+                <p>
+                    با این کار، تمام فایل‌های فعلی پروژه <span class="text_bold">تحت نظر Git</span> قرار می‌گیرند و یک نقطه شروع برای تاریخچه پروژه ایجاد می‌شود.
+                </p>
+                <p><span class="text_bold">نتیجه:</span> اکنون یک مخزن Git کامل دارید، با اولین commit و آماده برای ادامه کار.</p>
+            </section>
 
-                        <div class="skills-progress-bg">
-                            <div class="skills-progress-fill" style="width: 80%;"></div>
-                        </div>
-                    </li>
+            <header>
+                <h2 class="h2 article-title">🔄 روش دوم — clone کردن یک مخزن موجود</h2>
+            </header>
 
-                    <li class="skills-item">
-                        <div class="title-wrapper">
-                            <h5 class="h5">Graphic Design</h5>
-                            <data value="70">70%</data>
-                        </div>
+            <section class="about-text">
+                <p>اگر می‌خواهید روی پروژه‌ای که قبلاً با Git ساخت شده کار کنید، کافی است آن را <span class="text_bold">clone</span> کنید:</p>
+                <div class="code-example" dir="ltr">
+                    git clone &lt;repository_url&gt;
+                </div>
+                <p>مثلاً:</p>
+                <div class="code-example" dir="ltr">
+                    git clone https://github.com/username/project-name.git
+                </div>
+                <p>این فرمان:</p>
+                <ul style="margin-right: 25px">
+                    <li>یک پوشه جدید به نام پروژه ایجاد می‌کند</li>
+                    <li>داخل آن .git را تنظیم می‌کند</li>
+                    <li><span class="text_bold">تمام تاریخچه پروژه</span> (کامیت‌ها، شاخه‌ها، داده‌ها) را دانلود می‌کند</li>
+                    <li><span class="text_bold">آخرین نسخه کد</span> را برای شما Checkout می‌کند تا بتوانید بلافاصله شروع به کار کنید</li>
+                </ul>
+                <p>اگر بخواهید پروژه را در پوشه‌ای با نام متفاوت ذخیره کنید:</p>
+                <div class="code-example" dir="ltr">
+                    git clone &lt;repository_url&gt; my-project-copy
+                </div>
+                <p>در این صورت پروژه در پوشه my-project-copy خواهد بود.</p>
+            </section>
 
-                        <div class="skills-progress-bg">
-                            <div class="skills-progress-fill" style="width: 70%;"></div>
-                        </div>
-                    </li>
+            <header>
+                <h2 class="h2 article-title">📌 نکات مهم بعد از clone یا init</h2>
+            </header>
 
-                    <li class="skills-item">
-                        <div class="title-wrapper">
-                            <h5 class="h5">Branding</h5>
-                            <data value="90">90%</data>
-                        </div>
-
-                        <div class="skills-progress-bg">
-                            <div class="skills-progress-fill" style="width: 90%;"></div>
-                        </div>
-                    </li>
-
-                    <li class="skills-item">
-                        <div class="title-wrapper">
-                            <h5 class="h5">WordPress</h5>
-                            <data value="50">50%</data>
-                        </div>
-
-                        <div class="skills-progress-bg">
-                            <div class="skills-progress-fill" style="width: 50%;"></div>
-                        </div>
-                    </li>
+            <section class="about-text">
+                <ul style="margin-right: 25px">
+                    <li>پس از <span class="text_bold">git init</span> یا <span class="text_bold">git clone</span> پوشه‌ی پروژه آماده است؛ اما اگر init کرده‌اید، فراموش نکنید فایل‌ها را <span class="text_bold">add و commit</span> کنید.</li>
+                    <li><span class="text_bold">clone کردن یک repo یعنی شما کل تاریخچه پروژه را دارید</span> — پس حتی اگر سرور اصلی دچار مشکل شود، با کلون محلی پروژه همه داده‌ها محفوظ است.</li>
+                    <li>نام شاخه پیش‌فرض ممکن است متفاوت باشد (مثلاً main یا master)؛ بعداً می‌توانید آن را تغییر دهید.</li>
                 </ul>
             </section>
         </article>
 
-        <article class="portfolio " data-page="sec3">
+        <article class="portfolio " data-page="فصل ۲">
             <header>
                 <h2 class="h2 article-title">Portfolio</h2>
             </header>
@@ -1044,7 +989,7 @@
             </section>
         </article>
 
-        <article class="blog " data-page="sec4">
+        <article class="blog " data-page="فصل ۳">
             <header>
                 <h2 class="h2 article-title">Blog</h2>
             </header>
@@ -1193,7 +1138,7 @@
             </section>
         </article>
 
-        <article class="contact " data-page="sec5">
+        <article class="contact " data-page="فصل ۴">
             <header>
                 <h2 class="h2 article-title">Contact</h2>
             </header>
