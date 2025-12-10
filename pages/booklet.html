@@ -116,9 +116,9 @@
                 <li class="navbar-item">
                     <button class="navbar-link" data-nav-link>فصل ۱</button>
                 </li>
-<!--                <li class="navbar-item">-->
-<!--                    <button class="navbar-link" data-nav-link>فصل ۲</button>-->
-<!--                </li>-->
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>فصل ۲</button>
+                </li>
 <!--                <li class="navbar-item">-->
 <!--                    <button class="navbar-link" data-nav-link>فصل ۳</button>-->
 <!--                </li>-->
@@ -1487,190 +1487,526 @@
         </article>
 
         <article class="portfolio " data-page="فصل ۲">
+            <h2 class="h2 article-title">فصل ۲: انشعاب‌گیری در گیت</h2>
+
+            <ul class="article-list code-example" style="margin-bottom: 24px">
+                <li><span>فهرست مطالب فصل</span></li>
+                <li><a href="#titr-2.1"> ۲.۱ - شاخه‌ها در یک نگاه</a></li>
+                <li><a href="#titr-2.2"> ۲.۲ - شاخه‌بندی و ادغام پایه‌ای</a></li>
+                <li><a href="#titr-2.3"> ۲.۳ - مدیریت شاخه‌ها در Git</a></li>
+                <li><a href="#titr-2.4"> ۲.۴ - روندهای کاری شاخه‌ها</a></li>
+                <li><a href="#titr-2.5"> ۲.۵ - بازپایه‌گذاری در Git</a></li>
+                <li><a href="#titr-2.6">۲.۶ – جمع‌بندی فصل</a></li>
+            </ul>
+
             <header>
-                <h2 class="h2 article-title">Portfolio</h2>
+                <h2 id="titr-2.1" class="h2 article-title">فصل ۲.۱ — شاخه‌ها در یک نگاه (<span class="text_bold">Branches in a Nutshell</span>)</h2>
             </header>
 
-            <section class="projects">
-                <ul class="filter-list">
-                    <li class="filter-item">
-                        <button class="active" data-filter-btn>All</button>
-                    </li>
-                    <li class="filter-item">
-                        <button data-filter-btn>Web Design</button>
-                    </li>
-                    <li class="filter-item">
-                        <button data-filter-btn>Applications</button>
-                    </li>
-                    <li class="filter-item">
-                        <button data-filter-btn>Web Development</button>
-                    </li>
-                </ul>
+            <section class="about-text">
+                <p>
+                    وقتی با پروژه‌های نرم‌افزاری کار می‌کنیم، معمولاً لازم است همزمان <span class="text_bold">چند قابلیت، باگ فیکس یا آزمایش</span> روی ایده‌های مختلف انجام دهیم — اما نخواهیم که این تغییرات همه همزمان و در کد اصلی وارد شوند. اینجاست که <span class="text_bold">شاخه (branch)</span> وارد عمل می‌شود.
+                </p>
+                <p>
+                    <span class="text_bold">نکته مهم: در Git، شاخه‌ها بسیار سبک و سریع هستند</span> — بر خلاف بسیاری از سیستم‌های کنترل نسخه که شاخه‌بندی هزینه‌بر است. Git اجازه می‌دهد چندین بار در روز شاخه بسازید، بین آن‌ها جابجا شوید و تغییرات جداگانه انجام دهید، <span class="text_bold">بی‌آنکه بر شاخه اصلی تأثیر بگذارید</span>.
+                </p>
+            </section>
 
-                <div class="filter-select-box">
-                    <button class="filter-select " data-select>
-                        <div class="select-value" data-select-value>Select Category</div>
+            <header>
+                <h2 class="h2 article-title"> مفهوم شاخه در Git</h2>
+            </header>
 
-                        <div class="select-icon">
-                            <ion-icon name="chevron-down"></ion-icon>
-                        </div>
-                    </button>
+            <section class="about-text">
+                <p>
+                    Git داده‌ها را به صورت سری از <span class="text_bold">snapshot (تصاویر لحظه‌ای)</span> ذخیره می‌کند، نه به صورت لیستی از تغییرات.
+                </p>
+                <p>
+                    هر <span class="text_bold">commit</span> در Git یک شیء است که به آن snapshot اختصاص دارد؛ <span class="text_bold">شاخه</span> در واقع یک "<span class="text_bold">اشاره‌گر سبک</span>" به یکی از این commitهاست.
+                </p>
+                <p>
+                    شاخه <span class="text_bold">پیش‌فرض</span> پس از git init معمولاً با نام <span class="text_bold">master</span> (یا اخیراً <span class="text_bold">main</span>) ساخته می‌شود. اما این شاخه ویژه نیست — مثل هر شاخه دیگر است.
+                </p>
+            </section>
 
-                    <ul class="select-list">
-                        <li class="select-item">
-                            <button data-select-item>All</button>
-                        </li>
-                        <li class="select-item">
-                            <button data-select-item>Web Design</button>
-                        </li>
-                        <li class="select-item">
-                            <button data-select-item>Applications</button>
-                        </li>
-                        <li class="select-item">
-                            <button data-select-item>Web Development</button>
-                        </li>
-                    </ul>
+            <header>
+                <h2 class="h2 article-title"> ساخت و جابجایی شاخه</h2>
+            </header>
+
+            <section class="about-text">
+                <p>برای <span class="text_bold">ساخت شاخه جدید</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git branch &lt;branch-name&gt;
+                </div>
+                <p>این دستور فقط <span class="text_bold">اشاره‌گر جدیدی به همان commit فعلی</span> ایجاد می‌کند؛ تا زمانی که روی شاخه بروید (checkout / switch)، کاری نمی‌کند.</p>
+
+                <p>برای <span class="text_bold">تغییر شاخه</span> (جابجایی HEAD به شاخه دیگر):</p>
+                <div class="code-example" dir="ltr">
+                    git checkout &lt;branch-name&gt;
+                </div>
+                <p>یا در Git‌های جدیدتر:</p>
+                <div class="code-example" dir="ltr">
+                    git switch &lt;branch-name&gt;
                 </div>
 
-                <ul class="project-list">
-                    <li class="project-item active" data-filter-item data-category="web development">
-                        <a href="#">
-                            <figure class="project-img">
-                                <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
+                <p>اگر بخواهید <span class="text_bold">شاخه بسازید و همزمان به آن سوئیچ کنید</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git checkout -b &lt;branch-name&gt;
+                </div>
+                <p>یا:</p>
+                <div class="code-example" dir="ltr">
+                    git switch -c &lt;branch-name&gt;
+                </div>
+            </section>
 
-                                <img src="https://i.postimg.cc/qRHpHMyd/project-1.jpg" alt="finance" loading="lazy">
-                            </figure>
+            <header>
+                <h2 class="h2 article-title"> کارکرد شاخه‌ها — <span class="text_bold">تغییرات جداگانه و ایزوله</span></h2>
+            </header>
 
-                            <h3 class="project-title">Finance</h3>
-                            <p class="project-category">Web Development</p>
-                        </a>
-                    </li>
-
-                    <li class="project-item active" data-filter-item data-category="web development">
-                        <a href="#">
-                            <figure class="project-img">
-                                <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-
-                                <img src="https://i.postimg.cc/bNrcM2Wt/project-2.png" alt="orizon" loading="lazy">
-                            </figure>
-
-                            <h3 class="project-title">Orizon</h3>
-                            <p class="project-category">Web Development</p>
-                        </a>
-                    </li>
-
-                    <li class="project-item active" data-filter-item data-category="web design">
-                        <a href="#">
-                            <figure class="project-img">
-                                <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-
-                                <img src="https://i.postimg.cc/jSJVqYsq/project-3.jpg" alt="fundo" loading="lazy">
-                            </figure>
-
-                            <h3 class="project-title">Fundo</h3>
-                            <p class="project-category">Web Design</p>
-                        </a>
-                    </li>
-
-                    <li class="project-item active" data-filter-item data-category="applications">
-                        <a href="#">
-                            <figure class="project-img">
-                                <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-
-                                <img src="https://i.postimg.cc/dtpXxNGb/project-4.png" alt="brawlhalla"
-                                     loading="lazy">
-                            </figure>
-
-                            <h3 class="project-title">Brawlhalla</h3>
-                            <p class="project-category">Applications</p>
-                        </a>
-                    </li>
-
-                    <li class="project-item active" data-filter-item data-category="web design">
-                        <a href="#">
-                            <figure class="project-img">
-                                <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-
-                                <img src="https://i.postimg.cc/43T0JKLw/project-5.png" alt="dsm." loading="lazy">
-                            </figure>
-
-                            <h3 class="project-title">DSM.</h3>
-                            <p class="project-category">Web Design</p>
-                        </a>
-                    </li>
-
-                    <li class="project-item active" data-filter-item data-category="web design">
-                        <a href="#">
-                            <figure class="project-img">
-                                <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-
-                                <img src="https://i.postimg.cc/qR1DX1kZ/project-6.png" alt="metaspark"
-                                     loading="lazy">
-                            </figure>
-
-                            <h3 class="project-title">Metaspark</h3>
-                            <p class="project-category">Web Design</p>
-                        </a>
-                    </li>
-
-                    <li class="project-item active" data-filter-item data-category="web development">
-                        <a href="#">
-                            <figure class="project-img">
-                                <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-
-                                <img src="https://i.postimg.cc/Kj4q9tjc/project-7.png" alt="summary" loading="lazy">
-                            </figure>
-
-                            <h3 class="project-title">Summary</h3>
-                            <p class="project-category">Web Development</p>
-                        </a>
-                    </li>
-
-                    <li class="project-item active" data-filter-item data-category="applications">
-                        <a href="#">
-                            <figure class="project-img">
-                                <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-
-                                <img src="https://i.postimg.cc/rw2j4B1w/project-8.jpg" alt="task manager"
-                                     loading="lazy">
-                            </figure>
-
-                            <h3 class="project-title">Task Manager</h3>
-                            <p class="project-category">Applications</p>
-                        </a>
-                    </li>
-
-                    <li class="project-item active" data-filter-item data-category="web development">
-                        <a href="#">
-                            <figure class="project-img">
-                                <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-
-                                <img src="https://i.postimg.cc/7LxNsSQv/project-9.png" alt="arrival" loading="lazy">
-                            </figure>
-
-                            <h3 class="project-title">Arrival</h3>
-                            <p class="project-category">Web Development</p>
-                        </a>
-                    </li>
+            <section class="about-text">
+                <p>
+                    فرض کنید شاخه <span class="text_bold">master</span> دارید و می‌خواهید ویژگی جدیدی توسعه دهید. به جای تغییر مستقیم در master:
+                </p>
+                <ul style="margin-right: 25px">
+                    <li><span class="text_bold">شاخه جدیدی</span> (مثلاً feature/new-ui) ایجاد می‌کنید</li>
+                    <li><span class="text_bold">روی آن شاخه کار می‌کنید</span> (اضافه کردن فایل، ویرایش، commit)</li>
+                    <li>meanwhile شاخه اصلی (master) <span class="text_bold">ثابت می‌ماند</span> و اگر نیاز شد، می‌توانید روی آن تغییر دیگر انجام دهید</li>
                 </ul>
+                <p>نتیجه: تغییرات feature جدید <span class="text_bold">کاملاً ایزوله‌اند</span> و تداخلی با کد پایدار ندارند. </p>
+                <p>با این روش، تیم می‌تواند <span class="text_bold">همزمان روی چند قابلیت یا باگ کار کند</span> بدون اینکه تغییرات نهایی با هم قاطی شوند.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> مزایای استفاده از شاخه‌ها</h2>
+            </header>
+
+            <section class="about-text">
+                <ul style="margin-right: 25px">
+                    <li><span class="text_bold">توسعه موازی و همکاری تیمی</span>: هر ویژگی یا باگ در شاخه جداگانه، بدون اثر بر شاخه اصلی</li>
+                    <li><span class="text_bold">ایزوله بودن تغییرات</span>: امکان آزمایش یا تغییر بزرگ بدون خطر خراب شدن کد پایدار</li>
+                    <li><span class="text_bold">حفظ تاریخچه تمیز و قابل فهم</span>: تغییرات هر شاخه مستقل از بقیه است؛ بعد از merge تاریخچه واضح می‌ماند</li>
+                    <li><span class="text_bold">انعطاف و سرعت بالا</span>: ایجاد و جابجایی شاخه‌ها در Git خیلی سریع هستند، بدون نیاز به کپی کامل پروژه</li>
+                </ul>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> مثال ساده کار با شاخه‌ها</h2>
+            </header>
+
+            <section class="about-text">
+                <p>فرض کنید پروژه را تازه کلون کردید و روی شاخه پیش‌فرض (<span class="text_bold">master</span>) هستید:</p>
+                <div class="code-example" dir="ltr">
+                    git checkout -b feature/login-page   # شاخه feature/login-page بساز و برو روی آن<br>
+                    # فایل‌های لازم را اضافه یا ویرایش کن<br>
+                    git add .<br>
+                    git commit -m "Add login page UI"
+                </div>
+                <p>همزمان اگر بخواهید تغییرات دیگری مثل بهبود طراحی در شاخه اصلی انجام دهید:</p>
+                <div class="code-example" dir="ltr">
+                    git checkout master<br>
+                    # تغییرات دیگر<br>
+                    git commit -m "Update README and documentation"
+                </div>
+                <p>حالا هم شاخه master بروز است و هم feature/login-page، <span class="text_bold">بدون تداخل</span>. وقتی ویژگی آماده شد، می‌توان آن را merge کرد.</p>
+            </section>
+
+            <header>
+                <h2 id="titr-2.2" class="h2 article-title">فصل ۲.۲ — شاخه‌بندی و ادغام پایه‌ای (<span class="text_bold">Basic Branching and Merging</span>)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    در این بخش با نحوه <span class="text_bold">ساخت شاخه (branch)</span>، <span class="text_bold">کار مستقل</span> روی شاخه‌های مختلف، و سپس <span class="text_bold">ادغام آن‌ها (merge)</span> آشنا می‌شویم. این قابلیت، یکی از <span class="text_bold">قدرتمندترین ویژگی‌های Git</span> است که فرآیند توسعه، آزمایش و انتشار را برای تیم‌ها و پروژه‌ها بسیار انعطاف‌پذیر می‌کند.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> ساخت شاخه و کار روی آن (<span class="text_bold">Branching</span>)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>برای ساخت شاخه جدید و <span class="text_bold">همزمان جابجایی (checkout)</span> به آن:</p>
+                <div class="code-example" dir="ltr">
+                    git checkout -b &lt;branch-name&gt;
+                </div>
+                <p>این معادل اجرای دو دستور <span class="text_bold">git branch &lt;branch-name&gt;</span> و سپس <span class="text_bold">git checkout &lt;branch-name&gt;</span> است.</p>
+                <p>پس از تغییر شاخه، <span class="text_bold">HEAD به آن شاخه جدید اشاره می‌کند</span> و هر commit‌ای که بزنی روی آن شاخه ثبت می‌شود — <span class="text_bold">بدون دخالت در شاخه اصلی</span> (مثلاً master).</p>
+                <p>اگر شاخه قبلی تغییراتی داشته و commit نشده باشند، قبل از سوئیچ شاخه باید <span class="text_bold">پوشه کاری (working directory) تمیز باشد</span>؛ در غیر این صورت Git اجازه نمی‌دهد شاخه عوض شود.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> ادغام شاخه‌ها (<span class="text_bold">Merging</span>)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>وقتی شاخه‌ای (مثلاً برای یک ویژگی یا اصلاح خاص) <span class="text_bold">تکمیل شد</span>، معمول است آن را وارد شاخه اصلی (مثل master) کنیم:</p>
+                <p>ابتدا بر روی <span class="text_bold">شاخه هدف</span> (مثلاً master) بروید:</p>
+                <div class="code-example" dir="ltr">
+                    git checkout master
+                </div>
+                <p>سپس شاخه مورد نظر را ادغام کنید:</p>
+                <div class="code-example" dir="ltr">
+                    git merge &lt;branch-name&gt;
+                </div>
+
+
+                <p><span class="text_bold">دو حالت ادغام:</span></p>
+                <p><span class="text_bold">Fast-Forward Merge</span></p>
+                <p>اگر شاخهٔ هدف تغییری نداشته باشد و شاخه فرعی دقیقاً <span class="text_bold">ادامه‌ی همان تاریخچه</span> باشد، Git تنها <span class="text_bold">اشاره‌گر شاخه را جلو می‌برد</span> — بدون ساخت commit جدید. </p>
+
+                <p><span class="text_bold">Three-way Merge (ادغام سه طرفه)</span></p>
+                <p>اگر دو شاخه <span class="text_bold">از هم منشعب شده باشند</span> (فعالیت مستقل)، Git <span class="text_bold">سه‌طرفه ادغام می‌کند</span>: snapshot شاخه هدف + snapshot شاخه فرعی + نقطه مشترک قبلی. نتیجه یک <span class="text_bold">merge commit جدید</span> با بیش از یک والد است. </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">⚠ تعارض ادغام (<span class="text_bold">Merge Conflict</span>)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>اگر در شاخه‌ها، <span class="text_bold">تغییرات متفاوتی روی همان بخش از یک فایل</span> انجام شده باشد، Git <span class="text_bold">نمی‌تواند ادغام خودکار انجام دهد</span>. در این حالت:</p>
+                <ul style="margin-right: 25px">
+                    <li>Git فرآیند merge را متوقف می‌کند و فایل(ها) را با <span class="text_bold">نشانه‎‌گذاری تعارض (conflict markers)</span> علامت می‌زند.</li>
+                    <li>با <span class="text_bold">git status</span> می‌توانید بفهمید کدام فایل‌ها نیاز به بررسی دارند.</li>
+                    <li>پس از باز کردن و <span class="text_bold">اصلاح تعارض</span>، فایل(ها) را <span class="text_bold">git add</span> کنید تا حل آن به Git اطلاع داده شود.</li>
+                    <li>در نهایت با <span class="text_bold">git commit</span> ادغام را کامل کنید.</li>
+                </ul>
+                <p>همچنین می‌توانید از ابزارهای گرافیکی یا ادیتورهایی با <span class="text_bold">ادغام تصویری (merge tools)</span> استفاده کنید (مثل git mergetool) تا کار راحت‌تر شود.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> پاک‌کردن شاخه پس از ادغام</h2>
+            </header>
+
+            <section class="about-text">
+                <p>اگر پس از merge دیگر به شاخه فرعی نیازی ندارید، می‌توانید آن را <span class="text_bold">حذف کنید</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git branch -d &lt;branch-name&gt;
+                </div>
+                <p>تا لیست شاخه‌ها <span class="text_bold">تمیز بماند</span> و گیج‌کننده نباشد.</p>
+            </section>
+
+            <header>
+                <h2 id="titr-2.3" class="h2 article-title">فصل ۲.۳ — مدیریت شاخه‌ها (<span class="text_bold">Branch Management</span>) در Git</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    وقتی پروژه با <span class="text_bold">شاخه (branch) زیاد</span> کار می‌کند — شاخه‌های ویژگی، شاخه‌های اصلاح باگ، شاخه‌های موقت و ... — <span class="text_bold">مدیریت شاخه‌ها اهمیت زیادی پیدا می‌کند</span>. Git ابزارهایی دارد که کار با شاخه‌ها را ساده کرده و به شما کمک می‌کند پروژه‌تان منظم بماند.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> مشاهده شاخه‌های موجود</h2>
+            </header>
+
+            <section class="about-text">
+                <p>اجرای ساده:</p>
+                <div class="code-example" dir="ltr">
+                    git branch
+                </div>
+                <p>بدون آرگومان، <span class="text_bold">فهرستی از شاخه‌های محلی</span> پروژه نمایش می‌دهد. شاخه‌ای که در حال حاضر فعال است، با علامت <span class="text_bold">*</span> نشان داده می‌شود.</p>
+                <p>مثال:</p>
+                <div class="code-example" dir="ltr">
+                    iss53<br>
+                    * master<br>
+                    testing
+                </div>
+                <p>برای دیدن <span class="text_bold">آخرین commit هر شاخه</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git branch -v
+                </div>
+                <p>خروجی شامل شناسه commit و پیام کوتاه آن برای هر شاخه است.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> فیلتر شاخه‌ها با وضعیت ادغام — <span class="text_bold">--merged و --no-merged</span></h2>
+            </header>
+
+            <section class="about-text">
+                <p>برای دیدن شاخه‌هایی که <span class="text_bold">قبلاً به شاخه فعلی مرج (merge) شده‌اند</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git branch --merged
+                </div>
+                <p>برای مثال اگر قبلاً شاخه iss53 را merge کرده باشید، فهرست نشان می‌دهد. شاخه‌هایی که بدون * هستند (یعنی شاخه فعلی نیستند) معمولاً <span class="text_bold">ایمن هستند برای حذف</span>.</p>
+
+                <p>برای دیدن شاخه‌هایی که <span class="text_bold">هنوز merge نشده‌اند</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git branch --no-merged
+                </div>
+                <p>اگر شاخه‌ای تغییراتی دارد که merge نشده اند، در این فهرست قرار می‌گیرد. <span class="text_bold">حذف آن با دستور حذف معمولی (git branch -d) شکست می‌خورد و هشدار می‌دهد</span>.</p>
+
+                <p>اگر بخواهید <span class="text_bold">اجباری حذف</span> انجام دهید (با از دست رفتن تاریخچه شاخه)، می‌توانید:</p>
+                <div class="code-example" dir="ltr">
+                    git branch -D &lt;branch-name&gt;
+                </div>
+                <p>⚠ استفاده از <span class="text_bold">-D</span> یعنی شما متعهد می‌شوید که دیگر به شاخه نیازی ندارید.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> تغییر نام شاخه (<span class="text_bold">Rename Branch</span>)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>گاهی لازم است نام شاخه‌ای مناسب‌تر شود — برای مرتب کردن شاخه‌ها یا هماهنگی با سیاست پروژه. برای <span class="text_bold">تغییر نام محلی شاخه</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git branch --move &lt;old-name&gt; &lt;new-name&gt;
+                </div>
+                <p>مثلاً:</p>
+                <div class="code-example" dir="ltr">
+                    git branch --move bad-branch-name corrected-branch-name
+                </div>
+                <p>این تغییر <span class="text_bold">محلی</span> انجام می‌شود و تاریخچه حفظ می‌گردد.</p>
+
+                <p>اگر شاخه را روی <span class="text_bold">ریموت</span> هم دارید و می‌خواهید نام جدید روی ریموت نیز ثبت شود:</p>
+                <p>شاخه جدید را با push بفرستید و upstream آن را تنظیم کنید:</p>
+                <div class="code-example" dir="ltr">
+                    git push --set-upstream origin corrected-branch-name
+                </div>
+                <p>سپس شاخه قدیمی را از ریموت حذف کنید:</p>
+                <div class="code-example" dir="ltr">
+                    git push origin --delete bad-branch-name
+                </div>
+                <p>با این ترتیب، <span class="text_bold">تغییر نام کامل (محلی + ریموت)</span> انجام می‌شود.</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">⚠ نکته درباره تغییر نام شاخه اصلی (مثل <span class="text_bold">master → main</span>)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    تغییر نام شاخه اصلی پروژه (مثلاً از master به main یا هر نام دیگر) <span class="text_bold">کار حساسی است</span>. اگر مخزن روی ریموت است یا همکارانی دارید، باید اطمینان حاصل کنید:
+                </p>
+                <ul style="margin-right: 25px">
+                    <li><span class="text_bold">تمام ارجاعات به نام قدیمی شاخه</span> (در اسکریپت‌ها، تنظیمات CI/CD، مستندات و …) اصلاح شود.</li>
+                    <li><span class="text_bold">شاخه جدید را به ریموت بفرستید (push) و شاخه قدیمی را حذف کنید</span> (push … --delete) پس از اطمینان از همگام‌سازی.</li>
+                    <li>اگر همکاری تیمی دارید، <span class="text_bold">هماهنگی کامل با تیم</span> انجام دهید تا کسی با شاخه قدیمی کار نکند.</li>
+                </ul>
+            </section>
+
+            <header>
+                <h2 id="titr-2.4" class="h2 article-title">فصل ۲.۴ — روندهای کاری شاخه‌ها (<span class="text_bold">Branching Workflows</span>)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    وقتی اصول پایه‌ای شاخه‌بندی و ادغام (branch + merge) در Git رو یاد گرفتید، سؤال بعدی این است: «الان به چه شکلی پروژه را اداره کنیم؟» یعنی <span class="text_bold">ساختار شاخه‌ها و فرآیند همکاری تیمی</span> روی شاخه‌ها چطور باشد. این فصل چند مدل رایج را معرفی می‌کند.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> مدل شاخه‌های بلندمدت (<span class="text_bold">Long-Running Branches</span>)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    در این مدل شما چند شاخه دارید که <span class="text_bold">همه‌وقت بازند</span> و مانند «خط توسعه» یا «خط پایدار» کار می‌کنند. مثلاً <span class="text_bold">شاخه اصلی (master یا main)</span> شاخه‌ای است که فقط شامل <span class="text_bold">کد پایدار و آماده انتشار</span> است. شاخه دیگر (مثلاً develop, next, یا stable) شاخه‌ای است برای <span class="text_bold">کار روزمره، تغییرات در حال توسعه، آزمایش و تست</span>.
+                </p>
+                <p>
+                    ویژگی این مدل: می‌توانید به‌طور مرتب از شاخه توسعه کد تغییر یافته را به شاخه پایدار merge کنید، بدون اینکه شاخه توسعه تعطیل شود — یعنی پروژه قابلیت <span class="text_bold">توسعه پیوسته و انتشار منظم</span> را دارد.
+                </p>
+                <p>
+                    این مدل برای پروژه‌هایی مفید است که <span class="text_bold">چرخه انتشار (release)</span> دارند، یا وقتی نیاز دارید بین کد پایدار و کد در حال توسعه تفکیک داشته باشید.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> شاخه‌های موقت برای ویژگی‌ها / اصلاحات (<span class="text_bold">Topic / Feature Branches</span>)</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    هر زمانی که می‌خواهید ویژگی جدیدی اضافه کنید، باگی رفع کنید یا تغییر خاصی انجام دهید — <span class="text_bold">یک شاخه جدا ایجاد می‌کنید</span> (branch) و روی آن کار می‌کنید. این شاخه می‌تواند کوتاه‌مدت باشد، فقط مخصوص همان تغییر. سپس پس از تکمیل، آن را با شاخه اصلی یا شاخه توسعه merge می‌کنید و <span class="text_bold">شاخه موقت را حذف می‌کنید</span>.
+                </p>
+                <p>
+                    این مدل مزایا دارد: <span class="text_bold">تغییرات ایزوله می‌شوند</span>، شاخه اصلی سالم می‌ماند، و اگر روی ویژگی کار می‌کنید — تاثیری روی بقیه کد ندارد تا وقتی ویژگی کامل و پایدار شود.
+                </p>
+                <p>
+                    معمولاً هر فیچر / باگ / وظیفه جدید — شاخه جدا؛ بعد از merge → شاخه حذف شود. این کار <span class="text_bold">مرتب بودن مخزن و تاریخچه</span> را تضمین می‌کند.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> مدل ترکیبی / سلسله‌مراتبی (Integration / Release / Hotfix Branches) — مثل <span class="text_bold">Gitflow</span></h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    در پروژه‌های پیچیده یا تیمی با چرخه توسعه/ انتشار دقیق، از یک مدل شاخه‌بندی با <span class="text_bold">چند شاخه «وظیفه‌ای» و «نقشی»</span> استفاده می‌شود:
+                </p>
+                <ul style="margin-right: 25px">
+                    <li>شاخه‌ای برای <span class="text_bold">توسعه عمومی</span> (develop / next)</li>
+                    <li>شاخه‌هایی برای <span class="text_bold">ویژگی‌ها</span> (feature)</li>
+                    <li>شاخه‌هایی برای <span class="text_bold">آماده‌سازی انتشار</span> (release)</li>
+                    <li>شاخه‌هایی برای <span class="text_bold">رفع سریع باگ یا هات‌فیکس</span> (hotfix)</li>
+                </ul>
+                <p>
+                    <span class="text_bold">هر شاخه نقش مشخصی دارد</span> و ترکیب آن‌ها طبق سیاست پروژه است: فیچرها روی شاخه feature توسعه داده می‌شوند؛ پس از تست روی develop یا تستِ release؛ و در نهایت به شاخه اصلی merge می‌شوند. این مدل <span class="text_bold">ساختار و نظم خوبی</span> به پروژه می‌دهد.
+                </p>
+                <p>
+                    با این مدل می‌توان به راحتی <span class="text_bold">کنترل کیفیت، مرحله تست، آماده‌سازی برای انتشار و مدیریت هات‌فیکس‌ها</span> را سازمان‌دهی کرد.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> چگونه انتخاب کنیم؟ — <span class="text_bold">نکاتی برای تصمیم درباره Workflow مناسب</span></h2>
+            </header>
+
+            <section class="about-text">
+                <p>بسته به <span class="text_bold">اندازه تیم، تعداد توسعه‌دهندگان، فاز پروژه و نیاز به انتشار مداوم</span>:</p>
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0; text-align: right;">
+                    <tr style="background-color: #f5f5f5;">
+                        <th style="border: 1px solid #ddd; padding: 10px;"><span class="text_bold">شرایط / هدف</span></th>
+                        <th style="border: 1px solid #ddd; padding: 10px;"><span class="text_bold">مدل پیشنهادی</span></th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 10px;">پروژه کوچک یا تک‌نفره — تغییرات ساده</td>
+                        <td style="border: 1px solid #ddd; padding: 10px;"><span class="text_bold">Feature-branch + شاخه اصلی پایدار</span></td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="border: 1px solid #ddd; padding: 10px;">پروژه با چند ویژگی همزمان — نیاز به آزمایش ویژگی‌ها</td>
+                        <td style="border: 1px solid #ddd; padding: 10px;"><span class="text_bold">شاخه‌های موقت + شاخه توسعه + سپس merge</span></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 10px;">پروژه بزرگ با چرخه انتشار — نیاز به نسخه پایدار، تست، هات‌فیکس</td>
+                        <td style="border: 1px solid #ddd; padding: 10px;"><span class="text_bold">مدل چند شاخه‌ای (feature / develop / release / hotfix) مانند Gitflow</span></td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="border: 1px solid #ddd; padding: 10px;">تیم کوچک ولی مداوم deploy / release دارند</td>
+                        <td style="border: 1px solid #ddd; padding: 10px;"><span class="text_bold">شاخه‌های بلندمدت + شاخه feature برای هر task</span></td>
+                    </tr>
+                </table>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> نکات مهم در استفاده از Branching Workflows</h2>
+            </header>
+
+            <section class="about-text">
+                <ul style="margin-right: 25px">
+                    <li><span class="text_bold">شاخه‌ها را زیاد اما منطقی بسازید</span> — Git ساخت شاخه را سبک کرده است، پس استفاده از شاخه موقت برای هر فیچر توصیه می‌شود.</li>
+                    <li>هر شاخه‌ای که کارش تمام شد و merge شد — <span class="text_bold">حذفش کنید</span> تا مخزن تمیز بماند.</li>
+                    <li>قبل از merge مطمئن شوید شاخه مبدا (base) <span class="text_bold">بروز باشد</span>، برای جلوگیری از conflict یا اشتباه.</li>
+                    <li>برای پروژه تیمی، <span class="text_bold">فلو (workflow) را با تیم انتخاب کنید و آن را مستند نمایید</span> — نظم مهم است.</li>
+                </ul>
+            </section>
+
+            <header>
+                <h2 id="titr-2.5" class="h2 article-title">فصل ۲.۵ — بازپایه‌گذاری (<span class="text_bold">Rebasing</span>) در Git</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    گاهی در پروژه می‌خواهیم تغییراتی را که روی یک شاخه انجام داده‌ایم با تغییرات شاخه دیگر ترکیب کنیم — اما می‌خواهیم <span class="text_bold">تاریخچه (commit history) تمیز و خطی باقی بماند</span>. Rebasing یک روش جایگزین برای ادغام (merge) است که به همین هدف کمک می‌کند.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> بازپایه‌گذاری چیست؟</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    در حالت عادی وقتی دو شاخه جدا از هم تغییر کرده‌اند و بخواهیم آن‌ها را ادغام کنیم، از <span class="text_bold">merge</span> استفاده می‌کنیم؛ Git تاریخچه را به صورت <span class="text_bold">درختی</span> (با شاخه و شاخه) نگه می‌دارد.
+                </p>
+                <p>
+                    با بازپایه‌گذاری (<span class="text_bold">rebase</span>) به جای ادغام نهایی، Git تغییراتی که در شاخه فعلی داده شده‌اند را برداشته، و مثل «پچ» (patch) روی شاخه مقصد «<span class="text_bold">دوباره اعمال</span>» می‌کند. نتیجه: شاخه فعلی انگار از نو بر پایه شاخه مقصد ساخته شده — یعنی <span class="text_bold">تاریخچه‌ای خطی (linear history)</span>.
+                </p>
+                <p>
+                    به عبارتی: rebase مثل این است که «می‌گوییم کارمان را تازه شروع کرده‌ایم روی <span class="text_bold">جدیدترین نسخه شاخه مقصد</span>».
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> چگونه <span class="text_bold">rebase</span> کنیم — دستورات اصلی</h2>
+            </header>
+
+            <section class="about-text">
+                <p>فرض کنید روی شاخه <span class="text_bold">feature</span> کار می‌کنید و می‌خواهید آن را روی آخرین وضعیت شاخه <span class="text_bold">master</span> بیارید:</p>
+                <div class="code-example" dir="ltr">
+                    git checkout feature<br>
+                    git rebase master
+                </div>
+                <p>Git تغییرات شاخه feature را می‌گیرد و روی سر شاخه master «دوباره» اعمال می‌کند.</p>
+
+                <p>همچنین اگر شاخه موضوعی (topic branch) دارید و می‌خواهید آن را روی شاخه‌ای دیگر <span class="text_bold">بازپایه کنید</span>:</p>
+                <div class="code-example" dir="ltr">
+                    git rebase --onto &lt;newBase&gt; &lt;oldBase&gt; &lt;topicBranch&gt;
+                </div>
+                <p>برای مثال، اگر شاخه client از server منشعب شده و می‌خواهید فقط تغییرات client را مستقیماً روی master قرار دهید:</p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> مزایای <span class="text_bold">rebase</span> نسبت به <span class="text_bold">merge</span></h2>
+            </header>
+
+            <section class="about-text">
+                <ul style="margin-right: 25px">
+                    <li><span class="text_bold">تاریخچه‌ی خطی و تمیز</span> — بدون merge commit‌های متعدد و شاخه‌های درهم.</li>
+                    <li>به نگهدارنده پروژه کمک می‌کند که کد دریافتی را <span class="text_bold">ساده‌تر بررسی کند</span> — مثل fast-forward merge.</li>
+                    <li>مناسب برای شاخه‌های <span class="text_bold">محلی</span> یا زمانی که تغییرات هنوز منتشر (<span class="text_bold">push</span>) نشده‌اند: می‌توان قبل از push کردن، تاریخچه را مرتب کرد.</li>
+                </ul>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">⚠ خطرات و نکات احتیاطی</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    وقتی rebase انجام می‌دهید، در واقع commitهای اصلی شاخه را <span class="text_bold">پاک و commitهای جدیدی می‌سازید</span> — یعنی <span class="text_bold">تاریخچه تغییر می‌کند</span>. اگر آن commitها <span class="text_bold">به اشتراک رفته‌اند (push شده‌اند</span> و دیگران بر اساس آن‌ها کار کرده‌اند)، بازنویسی تاریخچه می‌تواند باعث سردرگمی، duplicate شدن commitها و مشکلات ادغام شود.
+                </p>
+                <p>
+                    بنابراین: <span class="text_bold">هرگز commitهایی را که عمومی شده‌اند (push شده‌اند) بازپایه‌گذاری نکنید</span> (یا اگر لازم است، حتماً با <span class="text_bold">force-push + هماهنگی تیم</span> همراه باشد).
+                </p>
+                <p>
+                    اگر مجبور به rebase روی شاخه مشترک شدید، تیم باید بداند و همه با گزینه‌هایی مثل <span class="text_bold">git pull --rebase</span> کار کنند تا تاریخچه مشترک به هم نخورد.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title"> چه زمانی از <span class="text_bold">rebase</span> استفاده کنیم؟</h2>
+            </header>
+
+            <section class="about-text">
+                <ul style="margin-right: 25px">
+                    <li>وقتی <span class="text_bold">شاخه محلی دارید</span>، هنوز push نکرده‌اید و می‌خواهید قبل از ادغام تاریخچه مرتب باشد.</li>
+                    <li>وقتی می‌خواهید commitهای <span class="text_bold">clean و کاربردی</span> (غیر آزمایشی) به پروژه اصلی بفرستید — مثلاً برای Pull Request در پروژه‌های متن‌باز.</li>
+                    <li>وقتی تیم شما <span class="text_bold">سیاست واضحی برای تاریخچه</span> دارد و موافق بازنویسی commit محلی است.</li>
+                </ul>
+            </section>
+
+            <header>
+                <h2 id="titr-2.6" class="h2 article-title">۲.۶ – جمع‌بندی فصل</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    در این فصل با یکی از <span class="text_bold">مهم‌ترین و قدرتمندترین قابلیت‌های Git</span> یعنی انشعاب‌گیری (<span class="text_bold">Branching</span>) آشنا شدیم. شاخه‌ها به ما امکان می‌دهند <span class="text_bold">بدون ایجاد اختلال در نسخه پایدار پروژه</span>، روی ویژگی‌ها، رفع باگ‌ها یا آزمایش ایده‌های جدید کار کنیم.
+                </p>
+            </section>
+
+            <section class="about-text">
+                <p>
+                    در ابتدا دیدیم که شاخه‌ها در Git بسیار <span class="text_bold">سبک</span> هستند و تنها یک <span class="text_bold">اشاره‌گر به آخرین commit</span> محسوب می‌شوند؛ به همین دلیل ایجاد، جابه‌جایی و حذف شاخه‌ها بسیار سریع انجام می‌شود.  سپس با مفاهیم پایه‌ای مانند <span class="text_bold">ساخت یک شاخه، انتقال به آن و ادغام تغییرات از طریق merge</span> آشنا شدیم.
+                </p>
+            </section>
+
+            <section class="about-text">
+                <p>
+                    در بخش مدیریت شاخه‌ها یاد گرفتیم چگونه شاخه‌های موجود را مشاهده کنیم، نام شاخه‌ها را تغییر دهیم و شاخه‌های قدیمی یا بی‌استفاده را حذف کنیم. همچنین با <span class="text_bold">روندهای کاری رایج</span> مانند شاخه‌بندی ویژگی (Feature Branching)، شاخه توسعه (Develop Branch) و الگوهای معروف مثل <span class="text_bold">Git Flow</span> آشنا شدیم که هرکدام در پروژه‌های مختلف ساده تا سازمانی کاربرد دارند.
+                </p>
+            </section>
+
+            <section class="about-text">
+                <p>
+                    در نهایت با مفهوم <span class="text_bold">بازپایه‌گذاری (Rebasing)</span> و تفاوت آن با Merge آشنا شدیم. Rebase به ما اجازه می‌دهد <span class="text_bold">تاریخچه‌ای خطی و تمیز</span> ایجاد کنیم، اما باید با احتیاط از آن استفاده شود، چون تاریخچه commitها را <span class="text_bold">بازنویسی می‌کند</span>.
+                </p>
+            </section>
+
+            <section class="about-text">
+                <p>
+                    به طور خلاصه، این فصل اهمیت شاخه‌ها در <span class="text_bold">همکاری گروهی، مدیریت نسخه و کنترل بهتر توسعه نرم‌افزار</span> را نشان داد. با درک صحیح branching، merge و rebase می‌توانید پروژه‌های بزرگ‌تر و تیمی را <span class="text_bold">ساختارمند، قابل پیش‌بینی و حرفه‌ای‌تر</span> پیش ببرید.
+                </p>
             </section>
         </article>
 
