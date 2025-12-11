@@ -119,9 +119,9 @@
                 <li class="navbar-item">
                     <button class="navbar-link" data-nav-link>فصل ۲</button>
                 </li>
-<!--                <li class="navbar-item">-->
-<!--                    <button class="navbar-link" data-nav-link>فصل ۳</button>-->
-<!--                </li>-->
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>فصل ۳</button>
+                </li>
 <!--                <li class="navbar-item">-->
 <!--                    <button class="navbar-link" data-nav-link>فصل ۴</button>-->
 <!--                </li>-->
@@ -2011,151 +2011,168 @@
         </article>
 
         <article class="blog " data-page="فصل ۳">
+            <h2 class="h2 article-title">فصل ۳: گیت توزیع‌شده</h2>
+
+            <ul class="article-list code-example" style="margin-bottom: 24px">
+                <li><span>فهرست مطالب فصل</span></li>
+                <li><a href="#titr-3.1">  ۳.۱ - جریان‌های کاری توزیع‌شده در </a></li>
+                <li><a href="#titr-3.2"> ۲.۲ - شاخه‌بندی و ادغام پایه‌ای</a></li>
+                <li><a href="#titr-3.3"> ۲.۳ - مدیریت شاخه‌ها در Git</a></li>
+                <li><a href="#titr-3.4"> ۲.۴ - روندهای کاری شاخه‌ها</a></li>
+                <li><a href="#titr-3.5"> ۲.۵ - بازپایه‌گذاری در Git</a></li>
+                <li><a href="#titr-3.6">۲.۶ – جمع‌بندی فصل</a></li>
+            </ul>
+
             <header>
-                <h2 class="h2 article-title">Blog</h2>
+                <h2 id="titr-3.1" class="h2 article-title">فصل ۳.۱ — جریان‌های کاری توزیع‌شده در Git (<span class="text_bold">Distributed Workflows</span>)</h2>
             </header>
 
-            <section class="blog-posts">
-                <ul class="blog-posts-list">
-                    <li class="blog-post-item">
-                        <a href="#">
-                            <figure class="blog-banner-box">
-                                <img src="https://i.postimg.cc/DysCZrWs/blog-1.jpg" alt="Design conferences in 2024"
-                                     loading="lazy">
-                            </figure>
+            <section class="about-text">
+                <p>
+                    یکی از ویژگی‌های بسیار مهم Git این است که <span class="text_bold">توزیع‌شده (distributed)</span> است — یعنی هر کاربر عملاً یک <span class="text_bold">مخزن کامل</span> از تاریخچه پروژه دارد، نه صرفاً یک «کلاینت سبک» که به یک سرور مرکزی متکی باشد. این طراحی، امکانات و انعطاف زیادی برای <span class="text_bold">همکاری و جریان‌های کاری مختلف</span> فراهم می‌کند.
+                </p>
+            </section>
 
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-                                    <span class="dot"></span>
-                                    <time datetime="2024-02-23">Feb 23, 2024</time>
-                                </div>
+            <header>
+                <h2 class="h2 article-title">🔹 چرا Git توزیع-شده است و چه مزایایی دارد</h2>
+            </header>
 
-                                <h3 class="h3 blog-item-title">Design conferences in 2024</h3>
-                                <p class="blog-text">In 2024, several exciting design conferences are set to take
-                                    place, offering opportunities for professionals and enthusiasts to connect,
-                                    learn, and share innovative ideas.</p>
-                            </div>
-                        </a>
-                    </li>
+            <section class="about-text">
+                <p>
+                    وقتی شما با <span class="text_bold">clone</span> مخزن را دریافت می‌کنید، در واقع <span class="text_bold">کامل‌ترین نسخه از مخزن</span> را — با تمام تاریخچه و commitها — در اختیار دارید؛ نه فقط snapshot فعلی.
+                </p>
+                <p>
+                    این ویژگی باعث می‌شود که حتی اگر سرور مرکزی دچار مشکل شود یا خراب شود، <span class="text_bold">هر کلون محلی خود نوعی بکاپ کامل</span> از پروژه باشد — نقطه «تک نقطه‌ی شکست» (<span class="text_bold">single point of failure</span>) حذف می‌شود.
+                </p>
+                <p>
+                    همچنین با توجه به سیستم شاخه‌ها و ادغام انعطاف‌پذیر Git، می‌توان جریان کاری بسیار متنوع و متناسب با نیاز تیم یا پروژه طراحی کرد.
+                </p>
+            </section>
 
-                    <li class="blog-post-item">
-                        <a href="#">
-                            <figure class="blog-banner-box">
-                                <img src="https://i.postimg.cc/QC7qFDMs/blog-2.jpg" alt="Best fonts every designer"
-                                     loading="lazy">
-                            </figure>
+            <header>
+                <h2 class="h2 article-title">⚙️ مدل‌های رایج <span class="text_bold">Distributed Workflows</span> در Git</h2>
+            </header>
 
+            <section class="about-text">
+                <p>
+                    Git به دلیل ساختار توزیع‌شده‌اش امکان جریان‌های کاری متنوعی می‌دهد. در ادامه چند مدل رایج را بررسی می‌کنیم:
+                </p>
 
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-                                    <span class="dot"></span>
-                                    <time datetime="2024-01-29">Jan 29, 2024</time>
-                                </div>
+                <p><span class="text_bold">• جریان کاری متمرکز (Centralized Workflow)</span></p>
+                <p>
+                    تسهیل انتقال از سیستم‌های کنترل نسخه متمرکز (مثل SVN) به Git. در این مدل یک <span class="text_bold">مخزن مرجع</span> وجود دارد (مثلاً روی سرور یا GitHub) و همه توسعه‌دهنده‌ها clone می‌کنند، کار می‌کنند و بعدها به آن <span class="text_bold">push</span> می‌کنند.
+                </p>
+                <p>
+                    اگر دو نفر هم‌زمان تغییر بدهند، Git اجازه overwrite نمی‌دهد — نفر دوم باید ابتدا تغییرات را <span class="text_bold">pull</span> (یا fetch + merge) کند، سپس push. این مدل برای تیم‌هایی با <span class="text_bold">ساختار ساده یا شرکت‌های کوچک</span> مناسب است.
+                </p>
 
-                                <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-                                <p class="blog-text">When it comes to typography, choosing the right font is
-                                    essential for effective design. In this article, I'll bring a brief overview of
-                                    some of the best fonts that every designer should consider incorporating into
-                                    their toolkit.</p>
-                            </div>
-                        </a>
-                    </li>
+                <p><span class="text_bold">• جریان کاری «مدیر ادغام» (Integration-Manager Workflow)</span></p>
+                <p>
+                    در این الگو هر توسعه‌دهنده <span class="text_bold">مخزن عمومی (remote) مخصوص به خودش</span> دارد و حق نوشتن در آن را دارد. اما <span class="text_bold">مخزن رسمی پروژه فقط توسط یک «ادغام‌کننده / نگهدارنده»</span> (maintainer / integrator) کنترل می‌شود.
+                </p>
+                <p>
+                    فرایند: توسعه‌دهنده clone می‌کند → تغییراتش را به مخزن خودش push می‌کند → درخواست می‌دهد که نگهدارنده تغییرات را merge کند (<span class="text_bold">Pull Request / Patch</span>) → نگهدارنده بررسی + ادغام + push به مخزن اصلی.
+                </p>
+                <p>
+                    مزیت: contributors مستقل کار می‌کنند، در عین حال مخزن مرکزی تحت کنترل است. این مدل <span class="text_bold">بسیار رایج در پروژه‌های متن‌باز (open-source)</span> است.
+                </p>
 
-                    <li class="blog-post-item">
-                        <a href="#">
-                            <figure class="blog-banner-box">
-                                <img src="https://i.postimg.cc/W1T71QcL/blog-3.jpg" alt="Design digest #80"
-                                     loading="lazy">
-                            </figure>
+                <p><span class="text_bold">• مدل «دیکتاتور + معاونان» (Dictator and Lieutenants Workflow)</span></p>
+                <p>
+                    مناسب پروژه‌های <span class="text_bold">بزرگ با تعداد زیاد مشارکت‌کننده</span>. ساختار سلسله‌مراتبی: چند <span class="text_bold">معاون (lieutenants)</span> برای بخش‌های مختلف پروژه، و یک <span class="text_bold">مدیر اصلی (benevolent dictator)</span> که ادغام نهایی را انجام می‌دهد.
+                </p>
+                <p>
+                    هر معاون مسئول بخشی است، تغییرات آن بخش را جمع‌آوری می‌کند؛ سپس دیکتاتور آن‌ها را نهایی می‌کند و به <span class="text_bold">مخزن مرجع (reference repository)</span> ارسال می‌کند.
+                </p>
+                <p>
+                    این مدل برای پروژه‌هایی با <span class="text_bold">ساختار بزرگ، ماژولار یا تیم‌های جداشده</span> مناسب است.
+                </p>
+            </section>
 
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-                                    <span class="dot"></span>
-                                    <time datetime="2023-12-20">Dec 20, 2023</time>
-                                </div>
+            <header>
+                <h2 class="h2 article-title">🧑‍💻 مشارکت و نگهداری پروژه با Git توزیع‌شده</h2>
+            </header>
 
-                                <h3 class="h3 blog-item-title">Design digest #80</h3>
-                                <p class="blog-text">Hello, my friends. In this Design Digest, I'll show you a
-                                    curated collection of the latest trends, insights, and innovations in the design
-                                    world. This edition highlights key themes and discussions that are shaping the
-                                    future of design.</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="blog-post-item">
-                        <a href="#">
-                            <figure class="blog-banner-box">
-                                <img src="https://i.postimg.cc/2S0n8yxh/blog-4.jpg" alt="2023 UI interactions"
-                                     loading="lazy">
-                            </figure>
-
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-                                    <span class="dot"></span>
-                                    <time datetime="2023-11-29">Nov 29, 2023</time>
-                                </div>
-
-                                <h3 class="h3 blog-item-title">2023 UI interactions</h3>
-                                <p class="blog-text">As we move into 2024, 2023 was marked by the rapidly evolution
-                                    of the landscape of UI interactions, driven by advancements in technology and
-                                    user expectations. Dive with me in this text to see the main areas changed in
-                                    this year.</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="blog-post-item">
-                        <a href="#">
-                            <figure class="blog-banner-box">
-                                <img src="https://i.postimg.cc/YCCmVkw9/blog-5.jpg"
-                                     alt="The forgotten art of spacing" loading="lazy">
-                            </figure>
-
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-                                    <span class="dot"></span>
-                                    <time datetime="2023-11-12">Nov 12, 2023</time>
-                                </div>
-
-                                <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-                                <p class="blog-text">In the realm of design, spacing is often an overlooked yet
-                                    crucial element that can significantly impact the overall aesthetic and
-                                    functionality of a composition. This post will emphasize the importance of white
-                                    space, margins, and padding in creating visually appealing and effective
-                                    designs.</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="blog-post-item">
-                        <a href="#">
-                            <figure class="blog-banner-box">
-                                <img src="https://i.postimg.cc/zBCBvP16/blog-6.jpg" alt="Design digest #79"
-                                     loading="lazy">
-                            </figure>
-
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-                                    <span class="dot"></span>
-                                    <time datetime="2023-10-20">Oct 20, 2023</time>
-                                </div>
-
-                                <h3 class="h3 blog-item-title">Design digest #79</h3>
-                                <p class="blog-text">Hi, my friends. In this Design Digest I'll focus in the tools
-                                    and resources that we use daily in our projects. Also, I'll include examples of
-                                    software recommendations, online courses, and design communities that foster
-                                    collaboration and learning.</p>
-                            </div>
-                        </a>
-                    </li>
+            <section class="about-text">
+                <p>
+                    کتاب به ما یاد می‌دهد که نقش‌ها و همکاری در Git توزیع‌شده چطور می‌تواند باشد:
+                </p>
+                <ul style="margin-right: 25px">
+                    <li>به عنوان <span class="text_bold">مشارکت‌کننده (contributor)</span>: clone → تغییر → push به مخزن خود → درخواست merge (pull request / patch) → ادغام توسط integrator</li>
+                    <li>به عنوان <span class="text_bold">نگهدارنده / integrator (maintainer)</span>: تغییرات کاربران را بررسی، تست و ادغام می‌کند؛ سپس به مخزن اصلی push می‌کند برای بقیه.</li>
                 </ul>
+                <p>
+                    این تفکیک کمک می‌کند تا <span class="text_bold">هم کار مستقل توسعه‌دهندگان محفوظ بماند، هم کنترل کیفیت در مخزن مرکزی حفظ شود</span>.
+                </p>
+            </section>
+
+            <header>
+                <h2 id="titr-3.2" class="h2 article-title">فصل ۳.۲ - مشارکت در یک پروژه با Git</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    وقتی می‌خواهید به یک پروژه موجود — چه داخلی شرکت، چه پروژه متن‌باز — ملحق شوید و تغییراتی پیشنهاد بدهید، Git این <span class="text_bold">انعطاف</span> را به شما می‌دهد تا <span class="text_bold">بدون نیاز به دسترسی مستقیم به مخزن اصلی</span>، کارتان را انجام دهید. در ادامه شیوه‌ها و اصول مهم این مشارکت آمده است.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">🔹 اصول کلی مشارکت</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    هر <span class="text_bold">commit</span>‌ای که می‌فرستید باید <span class="text_bold">منطقی، مستقل و با پیام (commit message) مناسب</span> باشد. یعنی تغییرات را طوری تقسیم‌بندی کنید که بررسی، بازگشت یا ادغام آن‌ها ساده باشد.
+                </p>
+                <p>
+                    بهتر است <span class="text_bold">هر تغییر منطقی جداگانه باشد</span>؛ نه اینکه چند کار مختلف را در یک commit بزر‌گ انجام دهید.
+                </p>
+                <p>
+                    پیام commit حرفه‌ای بنویسید: <span class="text_bold">خط اول کوتاه، خلاصه، با حداکثر ~۵۰ کاراکتر</span>، سپس اگر نیاز است توضیح بیشتر.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">✅ روش‌های رایج مشارکت</h2>
+            </header>
+
+            <section class="about-text">
+                <p><span class="text_bold">• اگر دسترسی push مستقیم ندارید → Fork + Pull Request</span></p>
+                <p>
+                    پروژه را روی میزبان (مثلاً GitHub) <span class="text_bold">fork</span> کنید. اینطور یک کپی از مخزن دارید که کاملاً متعلق به شماست و حق push دارید.
+                </p>
+                <p>
+                    مخزن fork شده را <span class="text_bold">clone</span> کنید، روی <span class="text_bold">شاخه‌ای جدید (topic / feature branch)</span> کار کنید، commit بزنید و سپس تغییرات را push کنید.
+                </p>
+                <p>
+                    بعد از اینکه تغییرات آماده شد، یک <span class="text_bold">Pull Request (درخواست کشش)</span> به مخزن اصلی می‌فرستید — تا نگهدارندگان پروژه آن را بررسی و در صورت تأیید merge کنند.
+                </p>
+
+                <p><span class="text_bold">• اگر پروژه خصوصی است و شما عضوی از تیم هستید (دسترسی push دارید)</span></p>
+                <p>
+                    در این شرایط ممکن است مخزن مشترک باشد و همه بتوانند مستقیم push یا merge کنند. اما باز هم استفاده از <span class="text_bold">شاخه‌های جدا (feature / bugfix)</span> و commit/merge با نظم به حفظ کیفیت کد کمک می‌کند.
+                </p>
+
+                <p><span class="text_bold">• همکاری تیمی با شاخه موضوعی + ادغام مرکزی (Integration Manager Workflow)</span></p>
+                <p>
+                    اگر پروژه بزرگ است یا چند تیم روی آن کار می‌کنند، معمول است که هر توسعه‌دهنده یا تیم روی <span class="text_bold">شاخه جداگانه</span> کار کند و سپس تغییرات توسط <span class="text_bold">نگهدارنده (maintainer / integrator)</span> مرور و ادغام شوند. این مدل کمک می‌کند تا <span class="text_bold">کنترل کیفیت و هماهنگی تیم</span> به راحتی انجام شود.
+                </p>
+            </section>
+
+            <header>
+                <h2 class="h2 article-title">✨ توصیه برای مشارکت مؤثر</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                <ul style="margin-right: 25px">
+                    <li><span class="text_bold">پیام commit خوب</span>: خلاصه و دقیق. اشتباهات و تغییرات بزرگ را به چند commit منطقی تقسیم کن.</li>
+                    <li><span class="text_bold">شاخه feature جدا</span> برای هر تغییر / فیچر جدید ایجاد کن — نه مستقیم روی شاخه اصلی.</li>
+                    <li><span class="text_bold">تاریخچه clean نگه دار</span>: اگر لازم است، قبل از ارسال، commit‌ها را مرتب یا combine کن (مثلاً با <span class="text_bold">rebase -i</span> یا squash) تا بازبینی راحت‌تر شود.</li>
+                    <li><span class="text_bold">README / مستندات پروژه و راهنمای contribution</span> را مطالعه کن — ممکن است پروژه قواعد خاصی داشته باشد (سبک commit، قوانین branch/merge، تست، lint و ...)</li>
+                    <li>هنگام آماده شدن تغییرات برای ارسال — مطمئن شو شاخه‌ای که push می‌کنی <span class="text_bold">به‌روز است</span> (fetch/pull از upstream) تا تضاد (conflict) کمتری پیش بیاید.</li>
+                </ul>
+                </p>
             </section>
         </article>
 

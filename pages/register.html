@@ -19,7 +19,7 @@
         <img src="../assets/img/Git_icon.svg.png" alt="giticon" class="w-[145px] h-[145px] mx-auto">
         <h2 class="font-bakh_bold text-2xl mt-6 text-center">فرم ثبت‌نام بوت‌کمپ</h2>
 
-        <form id="form" action="https://formspree.io/f/xnnegaee" method="POST">
+        <form id="form" action="https://formspree.io/f/xkgdpnje" method="POST">
 
             <input name="name" class="focus:border-white/20 focus:border-2 hover:border-white/20 w-full px-5 py-3 rounded-lg border border-white/10 mt-7" type="text" placeholder="نام و نام خانوادگی" required>
             <input name="id" class="focus:border-white/20 focus:border-2 hover:border-white/20 w-full px-5 py-3 rounded-lg border border-white/10 mt-5" type="text" placeholder="شماره دانشجویی" required>
@@ -28,47 +28,16 @@
 
             <input type="hidden" name="_next" value="https://amirtvn04.github.io/git-bootcamp/">
 
-            <button type="submit"
-           class=" cursor-pointer bg-white py-3 w-full inline-block text-center rounded-[100px] text-[#240600] font-bakh text-lg shadow-[0px_2px_20px_0px_#f1503059] mt-7">ثبت اطلاعات</button>
+            <button id="submitBtn" type="submit"
+                    class="cursor-pointer bg-white py-3 w-full text-center rounded-[100px] text-[#240600] font-bakh text-lg hover:shadow-[0px_2px_20px_0px_#f1503059] focus:shadow-[0px_2px_20px_0px_#f1503059] focus:outline-0 transition-all mt-7 flex items-center justify-center gap-2">
+                <span id="btnText">ثبت اطلاعات</span>
+                <span id="btnLoader" class="hidden animate-spin h-5 w-5 border-2 border-[#240600] border-t-transparent rounded-full"></span>
+            </button>
         </form>
-        <div id="message" class="text-center" style="display:none; margin-top:10px;"></div>
-
     </div>
 </div>
 </body>
 
-<script>
-    document.getElementById("form").addEventListener("submit", async function(e){
-        e.preventDefault();
-
-        const form = e.target;
-        const data = new FormData(form);
-
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: data,
-            headers: { 'Accept': 'application/json' }
-        });
-
-        const msgDiv = document.getElementById("message");
-
-        if (response.ok) {
-            msgDiv.style.display = "block";
-            msgDiv.style.color = "green";
-            msgDiv.innerText = "ثبت اطلاعات با موفقیت انجام شد! در حال هدایت...";
-
-            setTimeout(() => {
-                window.location.href = "success.html";
-            }, 2000);
-
-            form.reset();
-        } else {
-            const result = await response.json();
-            msgDiv.style.display = "block";
-            msgDiv.style.color = "red";
-            msgDiv.innerText = result.error || "ارسال با خطا مواجه شد. دوباره تلاش کنید.";
-        }
-    });
-</script>
+<script type="module" src="../assets/js/fetch_sheet.js"></script>
 
 </html>
